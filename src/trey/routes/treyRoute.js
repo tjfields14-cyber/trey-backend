@@ -1,22 +1,21 @@
+// app/backend/src/trey/routes/treyRoute.js
+
 import express from "express";
-import treyMind from "../mind/treyMind.js";
+import { updateTemporalState } from "../../utils/timeService.js";
+import { askTrey } from "../mind/treyMind.js";
 
 const router = express.Router();
 
 /**
- * Primary Trey endpoint
+ * Trey KB endpoint
+ * POST /kb/ask
  *
- * URL: POST /kb/ask
- * Body:
- * {
- *   "question": "text here",
- *   "mode": "auto" | "online" | "offline" (optional)
- * }
- *
- * For now, this uses treyMind (local logic).
- * Later we can plug in aiService / OpenAI here.
+ * Body can be:
+ *  { "question": "..." }
+ *  or legacy:
+ *  { "message": "..." }
  */
-router.post("/ask", (req, res) => {
+router.post("/ask", async (req, res) => {
   // Accept both "question" and legacy "message"
   const userMessage =
     req.body?.question ||
@@ -30,17 +29,25 @@ router.post("/ask", (req, res) => {
   }
 
   try {
-    const result = treyMind(userMessage);
+    const userId = "tammy"; // later we can make this dynamic
+
+    // ⏱️ 1. Time Module heartbeat (updates trey_temporal_state row)
+    const timeState = await updateTemporalState(userId);
+
+    // 🧠 2. Ask Trey (we can pass timeState if treyMind supports it)
+    const answer = await askTrey(userMessage, timeState);
+
+    // 📤 3. Return combined result
     return res.json({
       source: "treyMind",
       question: userMessage,
-      answer: result
+      answer,
+      time: timeState   // <-- this is your temporal state block
     });
   } catch (err) {
-    console.error("Trey route error:", err);
+    console.error("Trey /kb/ask error:", err);
     return res.status(500).json({
-      error: "Trey failed to process the request.",
-      details: err.message
+      error: "Internal server error"
     });
   }
 });
