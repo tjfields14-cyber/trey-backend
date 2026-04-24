@@ -93,7 +93,7 @@ export function createTrackingMiddleware(options = {}) {
           userAgent: req.get('User-Agent') || 'unknown'
         };
 
-        await trackApiRequest(trackingData);
+        // await trackApiRequest(...);
       } catch (error) {
         // Don't let tracking errors break the response
         console.error('Tracking middleware error:', error.message);
