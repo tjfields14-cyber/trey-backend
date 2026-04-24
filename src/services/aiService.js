@@ -12,7 +12,7 @@ if (!OPENAI_API_KEY) {
  * callChatCompletion
  *
  * Simple wrapper around OpenAI's Chat Completions API.
- * Currently uses: gpt-4.1-mini
+ * Currently uses: gpt-4o-mini
  *
  * @param {string} prompt - The text/question to send to the model.
  * @returns {Promise<string>} - The model's reply text.
@@ -21,7 +21,7 @@ export async function callChatCompletion(prompt) {
   if (!OPENAI_API_KEY) {
     throw new Error(
       "OPENAI_API_KEY is not configured on the server. " +
-      "Set it in your /srv/fractured/config/app.env file."
+      "Set it in your environment variables."
     );
   }
 
@@ -30,6 +30,9 @@ export async function callChatCompletion(prompt) {
   }
 
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -37,12 +40,22 @@ export async function callChatCompletion(prompt) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "gpt-4.1-mini",
+        model: "gpt-4o-mini",
         messages: [
           { role: "user", content: prompt }
-        ]
-      })
+        ],
+        max_tokens: 1000,
+        temperature: 0.7
+      }),
+      signal: controller.signal
     });
+
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(`OpenAI API error: ${response.status} ${response.statusText} - ${errorData.error?.message || 'Unknown error'}`);
+    }
 
     // Try to parse JSON safely
     let data = null;
