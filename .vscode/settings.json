@@ -1,3 +1,4 @@
 {
-    "chat.useCustomizationsInParentRepositories": true
+    "chat.useCustomizationsInParentRepositories": true,
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
