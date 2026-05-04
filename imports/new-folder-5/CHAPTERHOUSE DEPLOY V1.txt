@@ -1,0 +1,1751 @@
+Perfect ✅
+
+Here’s the **locked-in, reordered step-by-step build sequence** so we finish **core app + admin features first**, then move into monetization and launch:
+
+---
+
+## **🔹 PHASE 1 – Core App Completion**
+
+**Goal:** Have a fully functional reader + author platform before adding extras.
+
+1. **Book Management**
+
+   * Add, edit, delete books in UI.
+   * Book details page with synopsis, cover, download/read button.
+
+2. **Genre Categories**
+
+   * Add/edit/remove genres from admin panel.
+   * Auto-update book filters when genres are added.
+
+3. **Author Profiles**
+
+   * Editable bios, headshots, social links.
+   * Auto-link to their published books.
+
+4. **Reader Accounts**
+
+   * Sign-up/login/logout.
+   * Track reading progress & downloads.
+
+---
+
+## **🔹 PHASE 2 – Admin Tools**
+
+**Goal:** Give you full control over platform content and users.
+
+5. **Admin Dashboard**
+
+   * Overview of user signups, book uploads, reviews.
+   * Quick stats and filtering tools.
+
+6. **Export Tools**
+
+   * Download reviews, email lists, and upload reports as CSV.
+
+7. **Content Moderation**
+
+   * Approve/reject new book uploads.
+   * Manage reported reviews.
+
+---
+
+## **🔹 PHASE 3 – Monetization**
+
+**Goal:** Start generating revenue.
+
+8. **Merch Store Integration**
+
+   * Connect merch listings to store or in-app checkout.
+
+9. **Affiliate & Book Sales**
+
+   * Payment gateway setup (Stripe).
+
+10. **Premium Memberships**
+
+    * Subscription model for exclusive content.
+
+---
+
+## **🔹 PHASE 4 – Publishing Toolkit**
+
+**Goal:** Streamline author uploads & pre-release campaigns.
+
+11. **Author Upload Portal**
+
+    * EPUB/PDF uploads, cover previews.
+
+12. **Metadata Input**
+
+    * ISBN, synopsis, tags, keywords.
+
+13. **Pre-release Tools**
+
+    * ARC copies, early access reader groups.
+
+---
+
+## **🔹 PHASE 5 – Public Launch**
+
+**Goal:** Market-ready site & app.
+
+14. **Landing Page**
+
+    * Brand story, featured books, signup CTA.
+
+15. **SEO Setup**
+
+    * Optimized for search discovery.
+
+16. **Mobile Optimization**
+
+    * Ensure fully responsive across devices.
+
+---
+
+If you want, I can **immediately start with PHASE 1, Step 1: Book Management**, build it fully, then move to Step 2 automatically without asking each time.
+That way, you’ll get **continuous progress** until Phase 1 is done.
+
+Do you want me to start **Book Management build** now?
+
+
+
+
+
+
+Got it ✅
+
+We’re kicking off **PHASE 1 – Step 1: Book Management** now.
+Here’s what I’m building in this step:
+
+**Features for Step 1 – Book Management**
+
+* 📚 **Add Book** (Title, Author, Genre, Cover, Synopsis, File Upload)
+* ✏️ **Edit Book** (Update any detail)
+* ❌ **Delete Book** (Confirm before removing)
+* 📄 **Book Details Page** (Shows all info + Read/Download button)
+* 🔍 **List & Search Books** (Filters for title, author, genre)
+
+When finished, you’ll be able to **manage all books** directly from the UI — no manual database edits.
+
+I’ll build:
+
+1. Database table schema for books in Supabase.
+2. Frontend pages for listing, adding, editing, deleting.
+3. Book details page.
+
+After that, we’ll **auto-move to Step 2: Genre Categories**.
+
+Do you want me to also **auto-generate sample book data** so you can test it immediately?
+
+
+Alright — no sample data.
+We’ll keep it clean so you only see what you add.
+
+That means the **next step** right now is:
+
+1. Create the **`books` table** in Supabase with columns:
+
+   * `id` (UUID, primary key, default value: `uuid_generate_v4()`)
+   * `title` (text)
+   * `author` (text)
+   * `genre` (text)
+   * `cover_url` (text)
+   * `synopsis` (text)
+   * `file_url` (text)
+   * `created_at` (timestamp, default `now()`)
+
+2. Update the app to **read/write** from this table.
+
+Do you want me to drop the exact **SQL** so you can paste it into Supabase right now?
+
+
+
+Got it ✅
+You basically want to **finish the entire app build first** — with all features, components, and placeholders — so that later you just plug in Supabase (or any backend), drop in your `.env.local` values, and it all runs.
+
+That means our **next steps in the build plan** will be:
+
+---
+
+**📌 Step-by-Step Next Phase — "Backend Ready but Not Connected"**
+
+1. **Finish Frontend Pages & Components**
+
+   * Books listing page
+   * Book details page
+   * Upload new book form (works locally for now)
+   * Genre management (add/remove genre locally)
+   * Admin dashboard UI for managing books, users, reviews
+
+2. **Create Local Mock Data Layer**
+
+   * JSON files that mimic the data Supabase will provide later
+   * All `fetch` calls point to local JSON for now (easy swap later)
+
+3. **Implement All UI Actions Without Saving**
+
+   * Uploads, edits, deletes → update local state only
+   * No database calls yet
+
+4. **One-Click Backend Swap**
+
+   * Every API call wrapped in a `dataService.js` file
+   * Later, swapping from local JSON → Supabase only requires updating that one file
+
+5. **Final Zip Export**
+
+   * Whole app zipped and ready to drop into GitHub
+   * Includes placeholder `.env.local` file with instructions
+
+---
+
+If you want, I can start by building the **full books listing + genre management** in the next zip.
+That way, when we flip the Supabase switch later, the work is 90% done.
+
+Do you want me to roll into **Step 1** right now?
+
+
+
+
+Perfect ✅
+We’ll move right into **Step 1: Finish Frontend Pages & Components** starting with:
+
+**📌 Features in This Build Update**
+
+1. **Books Listing Page** – Displays all books from local JSON
+2. **Book Details Page** – Shows title, author, genre, description
+3. **Genre Management UI** – Add/remove genres (local state only)
+4. **Navigation** – Simple header to switch between listing & genre pages
+
+**📂 Files to Create/Update**
+
+* `pages/books/index.js` → Book list
+* `pages/books/[id].js` → Book details
+* `pages/genres/index.js` → Genre management
+* `data/books.json` → Local book data
+* `data/genres.json` → Local genre data
+* `components/BookCard.jsx` → For displaying a book in a grid
+
+---
+
+Once I finish, I’ll **drop a full updated ZIP** so you can just open it later in GitHub Codespaces or locally.
+
+Do you want me to **include mock cover images** in this step or just keep text-only for now?
+
+
+
+
+
+Got it ✅
+I’ll prepare **one clean ZIP package** that contains:
+
+* **Full working Next.js project** (front-end)
+* **Supabase schema & seed files** (but you can run without Supabase until ready)
+* **`.env.local` template** (so you just paste in your keys later)
+* **Step-by-step instructions** in `README.md` (from absolute start to finish, GitHub → deploy → Supabase)
+
+Here’s exactly what you’ll get inside the ZIP:
+
+---
+
+### **📂 Folder Structure**
+
+```
+chapterhouse-app/
+ ├── .env.local.example      ← fill in with your keys later
+ ├── README.md               ← full step-by-step instructions
+ ├── package.json
+ ├── pages/
+ │    ├── index.js           ← home page
+ │    ├── books.js           ← books listing
+ │    └── api/               ← placeholder for future API routes
+ ├── components/             ← all UI components
+ ├── lib/
+ │    └── supabase.js        ← Supabase client (uses .env vars)
+ ├── public/
+ │    └── sample-images/     ← placeholder images for books
+ ├── styles/
+ │    └── globals.css
+ ├── data/
+ │    ├── books.json         ← sample book list
+ │    └── genres.json        ← sample genre list
+ ├── supabase/
+ │    ├── schema.sql         ← table creation SQL
+ │    └── seed.csv           ← example import data
+ └── ...
+```
+
+---
+
+### **🛠 Included Features**
+
+* Home page with “Chapterhouse” branding
+* Book list with title, author, genre, cover image
+* Add/view genres (local until Supabase connected)
+* Dashboard UI placeholder for earnings & stats
+* Supabase integration **ready** but optional
+* Mobile-responsive design
+
+---
+
+### **📜 README Contents (Step-by-Step)**
+
+The `README.md` will cover:
+
+1. **Delete old projects** (GitHub + Supabase if starting fresh)
+2. **Unzip my file**
+3. **Create a new GitHub repo** & push the folder
+4. **Run locally** in Codespaces or VS Code
+5. **Add Supabase keys** later when ready
+6. **Deploy to Vercel** (free)
+7. **Optional: Import seed data into Supabase**
+
+---
+
+If you’re ready, I can:
+
+1. **Assemble the full project folder**
+2. **Zip it**
+3. **Drop it here** so you can download and start
+
+Do you want me to also **fill in the README with screenshots** for each step so you can follow visually? That will make it *almost impossible* to get lost.
+
+
+
+
+Boom. Your fresh, from-scratch, don’t-break-anything starter is ready. 🙌
+
+📦 **Download the complete project:**
+**[chapterhouse-starter.zip](sandbox:/mnt/data/chapterhouse-starter.zip)**
+
+This includes:
+
+* A working **Next.js** app with:
+
+  * `/` home
+  * `/books` list + **live search**
+  * `/books/[id]` detail page
+  * `/genres` page with **add/delete** (local-only until you connect Supabase)
+  * `/admin` placeholder
+* **Mock covers** in `public/covers/` so the UI looks real
+* **Supabase-ready** client (`lib/supabase.js`) that stays dormant until you add env keys
+* **SQL schema** (`supabase/schema.sql`) to create tables, views, and policies later
+* **Step-by-step README** with included “screenshots” for GitHub, Codespaces, Vercel, Supabase setup
+* **`.env.local.example`** so you can just paste keys when you’re ready
+
+### TL;DR how to use it (SBS)
+
+1. Delete old GitHub/Supabase stuff (you already did).
+2. Unzip this file.
+3. Create a **new GitHub repo** → upload the folder contents (README has pictures).
+4. Open in **Codespaces** (or local VS Code).
+5. Run:
+
+```bash
+npm install
+npm run dev
+```
+
+6. Visit `/books`, `/genres`. It works now with **local data**.
+7. When you’re ready, create a Supabase project, copy the keys into `.env.local`, and run `supabase/schema.sql`.
+
+If you want me to now wire the data calls to Supabase (so the UI saves for real), say “flip it” and I’ll prep the integration patch + a new zip.
+
+
+
+
+
+
+Love it. We’ll wire a **public test account** + a **BFF profile** and a **one-word cleanup trigger** that nukes test data when you say “conclude.” Here’s the clean, secure way to do it.
+
+# SBS: Public test account + BFF profile + “conclude” cleanup
+
+## 1) Decide the test email + password
+
+Pick an email you control (or an alias) just for testing, e.g.
+`chapterhouse.test+public@yourmail.com` with a temporary password like `Temp!12345`.
+
+> You can change these later; we’ll keep them in env vars.
+
+## 2) Supabase: create the user
+
+In **Supabase → Auth → Users → Add user**
+
+* Email: your test email
+* Password: your temp password
+* Check “Auto-confirm user” (or confirm via email)
+
+## 3) Switch policies to role-based (no hardcoded emails)
+
+Run this SQL in **Supabase → SQL Editor** (adds `admins`, `profiles`, helper fn):
+
+```sql
+-- 3.1 Admins table (who has admin rights)
+create table if not exists public.admins (
+  email text primary key,
+  created_at timestamptz default now()
+);
+
+-- insert your real email + the test email
+insert into public.admins (email) values
+  ('YOUR_REAL_ADMIN@yourmail.com'),
+  ('chapterhouse.test+public@yourmail.com')
+on conflict do nothing;
+
+-- 3.2 Profiles (BFF profile fields)
+create table if not exists public.profiles (
+  user_id uuid primary key,
+  display_name text,
+  avatar_url text,
+  role text default 'reader', -- reader | author | admin
+  bff_name text,              -- e.g., "Nia"
+  bff_style jsonb,            -- colors, aura, etc.
+  created_at timestamptz default now()
+);
+
+alter table public.profiles enable row level security;
+
+-- Readers can view profiles
+create policy if not exists profiles_select_public
+on public.profiles for select to public using (true);
+
+-- Users can update their own profile
+create policy if not exists profiles_update_self
+on public.profiles for update to authenticated
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+-- 3.3 Helper: is_admin()
+create or replace function public.is_admin()
+returns boolean language sql stable as $$
+  select coalesce(auth.email() in (select email from public.admins), false)
+$$;
+
+-- Update earlier policies (examples) to use is_admin()
+-- Books admin write:
+drop policy if exists books_admin_write on public.books;
+create policy books_admin_write
+on public.books for all to authenticated
+using ( public.is_admin() )
+with check ( public.is_admin() );
+
+-- Genres admin write:
+drop policy if exists genres_admin_write on public.genres;
+create policy genres_admin_write
+on public.genres for all to authenticated
+using ( public.is_admin() )
+with check ( public.is_admin() );
+
+-- Reviews keep as-is (self-owned writes)
+```
+
+## 4) Seed the BFF profile for the test user
+
+Find your test user’s `id` in **Auth → Users**. Then:
+
+```sql
+insert into public.profiles (user_id, display_name, avatar_url, role, bff_name, bff_style)
+values (
+  'PASTE_TEST_USER_ID',
+  'Public Test',
+  'https://picsum.photos/seed/ch-bff/256',
+  'admin',
+  'Nia',
+  '{"aura":"gold","accent":"indigo","badges":["Ink Dropper"]}'::jsonb
+)
+on conflict (user_id) do update
+set role='admin';
+```
+
+## 5) Add env vars to the app
+
+Add this to **`.env.local`** (and to Vercel Project → Environment Variables):
+
+```
+NEXT_PUBLIC_TEST_MODE=true
+NEXT_PUBLIC_TEST_EMAIL=chapterhouse.test+public@yourmail.com
+# only needed on the server (NEVER expose to browser):
+SUPABASE_SERVICE_KEY=your-supabase-service-role-key
+TEST_CLEANUP_TOKEN=choose-a-long-random-string
+```
+
+> ⚠️ `SUPABASE_SERVICE_KEY` **must only exist in server env** (Vercel env, NOT exposed). Don’t commit it.
+
+## 6) Add a basic email+password login (test-only)
+
+Update `/pages/admin/login.js` to allow email/password when `NEXT_PUBLIC_TEST_MODE=true`:
+
+```jsx
+// pages/admin/login.js
+import { useState } from "react";
+import { supabase } from "@/lib/supabase";
+
+export default function AdminLogin(){
+  const [email,setEmail]=useState(process.env.NEXT_PUBLIC_TEST_EMAIL || "");
+  const [password,setPassword]=useState("");
+  const [msg,setMsg]=useState("");
+
+  async function signIn(e){
+    e.preventDefault();
+    if(!supabase) return setMsg("Add Supabase keys in .env.local first.");
+    // In test mode we allow password auth (disable later)
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    setMsg(error ? `❌ ${error.message}` : "✅ Logged in! Go to /admin/books");
+    if(!error) window.location.href="/admin/books";
+  }
+
+  return (
+    <div style={{maxWidth:420,margin:"64px auto",fontFamily:"sans-serif"}}>
+      <h1>Admin Login</h1>
+      <p style={{color:"#666"}}>Test mode is {process.env.NEXT_PUBLIC_TEST_MODE === "true" ? "ON" : "OFF"}.</p>
+      <form onSubmit={signIn} style={{display:"grid",gap:12}}>
+        <input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="email" required/>
+        <input type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="password" required/>
+        <button type="submit">Sign In</button>
+      </form>
+      <p style={{marginTop:8}}>{msg}</p>
+    </div>
+  );
+}
+```
+
+> Later, turn **password auth OFF** (or set `NEXT_PUBLIC_TEST_MODE=false`) to rely only on magic links.
+
+## 7) Add one-button cleanup endpoint (“conclude”)
+
+Server-only API route that wipes **test data** (not your real data) when you call it with a token.
+
+Create **`pages/api/test/cleanup.js`**:
+
+```js
+// pages/api/test/cleanup.js
+import { createClient } from "@supabase/supabase-js";
+
+export default async function handler(req, res) {
+  const token = req.headers["x-cleanup-token"];
+  if (token !== process.env.TEST_CLEANUP_TOKEN) {
+    return res.status(401).json({ ok:false, error:"unauthorized" });
+  }
+
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_KEY; // server-side only
+  if (!url || !serviceKey) return res.status(500).json({ ok:false, error:"missing server env" });
+
+  const admin = createClient(url, serviceKey, { auth: { persistSession: false } });
+
+  // look up test user
+  const testEmail = process.env.NEXT_PUBLIC_TEST_EMAIL;
+  const { data: users, error: uErr } = await admin.auth.admin.listUsers();
+  if (uErr) return res.status(500).json({ ok:false, error:uErr.message });
+
+  const testUser = users?.users?.find(u => u.email?.toLowerCase() === testEmail?.toLowerCase());
+  const testUserId = testUser?.id;
+
+  try {
+    // 1) Delete reviews by test user
+    if (testUserId) {
+      await admin.from("reviews").delete().eq("user_id", testUserId);
+      await admin.from("profiles").delete().eq("user_id", testUserId);
+    }
+
+    // 2) Optionally delete any books/genres created during testing
+    // If you tracked owner via created_by, run:
+    // await admin.from("books").delete().eq("created_by", testUserId);
+    // await admin.from("genres").delete().eq("created_by", testUserId);
+
+    // 3) Remove test email from admins to lock it out
+    await admin.from("admins").delete().eq("email", testEmail);
+
+    // 4) (Optional) Disable or delete auth user
+    // await admin.auth.admin.deleteUser(testUserId);
+
+    return res.json({ ok:true, cleared:true });
+  } catch (e) {
+    return res.status(500).json({ ok:false, error:e.message });
+  }
+}
+```
+
+How to invoke:
+
+```bash
+curl -X POST "https://YOUR-APP.vercel.app/api/test/cleanup" \
+  -H "x-cleanup-token: YOUR_TEST_CLEANUP_TOKEN"
+```
+
+## 8) Your spoken trigger: “conclude”
+
+When you tell me **“conclude”**, I’ll remind you to hit that endpoint (or I can paste the exact curl for your domain). That will:
+
+* remove the test account from admins
+* delete the test user’s reviews/profile
+* (optional) delete their test books/genres if you track `created_by`
+* (optional) delete the auth user if you enable that line
+
+---
+
+## 9) Optional: show BFF profile on the site
+
+Add a little “Profile” panel to admin:
+
+```jsx
+// e.g., components/AdminProfile.jsx
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
+
+export default function AdminProfile(){
+  const [p,setP]=useState(null);
+  useEffect(()=>{ (async()=>{
+    if(!supabase) return;
+    const { data:{ user } } = await supabase.auth.getUser();
+    if(!user) return;
+    // Ensure there is a profile row
+    await supabase.from("profiles").upsert({ user_id:user.id }, { onConflict:"user_id" });
+    const { data } = await supabase.from("profiles").select("*").eq("user_id",user.id).single();
+    setP(data);
+  })(); },[]);
+  if(!p) return null;
+  return (
+    <div className="card">
+      <h3>Profile</h3>
+      <p><strong>BFF:</strong> {p.bff_name || "Nia"}</p>
+      <p><strong>Role:</strong> {p.role}</p>
+    </div>
+  );
+}
+```
+
+---
+
+## 10) Safety checklist
+
+* Keep `SUPABASE_SERVICE_KEY` **server-only** (Vercel env, not client).
+* Flip `NEXT_PUBLIC_TEST_MODE=false` when done.
+* After cleanup, also remove the test user in **Auth → Users** if you didn’t auto-delete in the endpoint.
+
+---
+
+If you want, I can **package these code files into your project and drop a new ZIP** so you just unzip → set env → deploy.
+
+
+
+
+
+Love it. We’ll wire a **public test account** + a **BFF profile** and a **one-word cleanup trigger** that nukes test data when you say “conclude.” Here’s the clean, secure way to do it.
+
+# SBS: Public test account + BFF profile + “conclude” cleanup
+
+## 1) Decide the test email + password
+
+Pick an email you control (or an alias) just for testing, e.g.
+`chapterhouse.test+public@yourmail.com` with a temporary password like `Temp!12345`.
+
+> You can change these later; we’ll keep them in env vars.
+
+## 2) Supabase: create the user
+
+In **Supabase → Auth → Users → Add user**
+
+* Email: your test email
+* Password: your temp password
+* Check “Auto-confirm user” (or confirm via email)
+
+## 3) Switch policies to role-based (no hardcoded emails)
+
+Run this SQL in **Supabase → SQL Editor** (adds `admins`, `profiles`, helper fn):
+
+```sql
+-- 3.1 Admins table (who has admin rights)
+create table if not exists public.admins (
+  email text primary key,
+  created_at timestamptz default now()
+);
+
+-- insert your real email + the test email
+insert into public.admins (email) values
+  ('YOUR_REAL_ADMIN@yourmail.com'),
+  ('chapterhouse.test+public@yourmail.com')
+on conflict do nothing;
+
+-- 3.2 Profiles (BFF profile fields)
+create table if not exists public.profiles (
+  user_id uuid primary key,
+  display_name text,
+  avatar_url text,
+  role text default 'reader', -- reader | author | admin
+  bff_name text,              -- e.g., "Nia"
+  bff_style jsonb,            -- colors, aura, etc.
+  created_at timestamptz default now()
+);
+
+alter table public.profiles enable row level security;
+
+-- Readers can view profiles
+create policy if not exists profiles_select_public
+on public.profiles for select to public using (true);
+
+-- Users can update their own profile
+create policy if not exists profiles_update_self
+on public.profiles for update to authenticated
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+-- 3.3 Helper: is_admin()
+create or replace function public.is_admin()
+returns boolean language sql stable as $$
+  select coalesce(auth.email() in (select email from public.admins), false)
+$$;
+
+-- Update earlier policies (examples) to use is_admin()
+-- Books admin write:
+drop policy if exists books_admin_write on public.books;
+create policy books_admin_write
+on public.books for all to authenticated
+using ( public.is_admin() )
+with check ( public.is_admin() );
+
+-- Genres admin write:
+drop policy if exists genres_admin_write on public.genres;
+create policy genres_admin_write
+on public.genres for all to authenticated
+using ( public.is_admin() )
+with check ( public.is_admin() );
+
+-- Reviews keep as-is (self-owned writes)
+```
+
+## 4) Seed the BFF profile for the test user
+
+Find your test user’s `id` in **Auth → Users**. Then:
+
+```sql
+insert into public.profiles (user_id, display_name, avatar_url, role, bff_name, bff_style)
+values (
+  'PASTE_TEST_USER_ID',
+  'Public Test',
+  'https://picsum.photos/seed/ch-bff/256',
+  'admin',
+  'Nia',
+  '{"aura":"gold","accent":"indigo","badges":["Ink Dropper"]}'::jsonb
+)
+on conflict (user_id) do update
+set role='admin';
+```
+
+## 5) Add env vars to the app
+
+Add this to **`.env.local`** (and to Vercel Project → Environment Variables):
+
+```
+NEXT_PUBLIC_TEST_MODE=true
+NEXT_PUBLIC_TEST_EMAIL=chapterhouse.test+public@yourmail.com
+# only needed on the server (NEVER expose to browser):
+SUPABASE_SERVICE_KEY=your-supabase-service-role-key
+TEST_CLEANUP_TOKEN=choose-a-long-random-string
+```
+
+> ⚠️ `SUPABASE_SERVICE_KEY` **must only exist in server env** (Vercel env, NOT exposed). Don’t commit it.
+
+## 6) Add a basic email+password login (test-only)
+
+Update `/pages/admin/login.js` to allow email/password when `NEXT_PUBLIC_TEST_MODE=true`:
+
+```jsx
+// pages/admin/login.js
+import { useState } from "react";
+import { supabase } from "@/lib/supabase";
+
+export default function AdminLogin(){
+  const [email,setEmail]=useState(process.env.NEXT_PUBLIC_TEST_EMAIL || "");
+  const [password,setPassword]=useState("");
+  const [msg,setMsg]=useState("");
+
+  async function signIn(e){
+    e.preventDefault();
+    if(!supabase) return setMsg("Add Supabase keys in .env.local first.");
+    // In test mode we allow password auth (disable later)
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    setMsg(error ? `❌ ${error.message}` : "✅ Logged in! Go to /admin/books");
+    if(!error) window.location.href="/admin/books";
+  }
+
+  return (
+    <div style={{maxWidth:420,margin:"64px auto",fontFamily:"sans-serif"}}>
+      <h1>Admin Login</h1>
+      <p style={{color:"#666"}}>Test mode is {process.env.NEXT_PUBLIC_TEST_MODE === "true" ? "ON" : "OFF"}.</p>
+      <form onSubmit={signIn} style={{display:"grid",gap:12}}>
+        <input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="email" required/>
+        <input type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="password" required/>
+        <button type="submit">Sign In</button>
+      </form>
+      <p style={{marginTop:8}}>{msg}</p>
+    </div>
+  );
+}
+```
+
+> Later, turn **password auth OFF** (or set `NEXT_PUBLIC_TEST_MODE=false`) to rely only on magic links.
+
+## 7) Add one-button cleanup endpoint (“conclude”)
+
+Server-only API route that wipes **test data** (not your real data) when you call it with a token.
+
+Create **`pages/api/test/cleanup.js`**:
+
+```js
+// pages/api/test/cleanup.js
+import { createClient } from "@supabase/supabase-js";
+
+export default async function handler(req, res) {
+  const token = req.headers["x-cleanup-token"];
+  if (token !== process.env.TEST_CLEANUP_TOKEN) {
+    return res.status(401).json({ ok:false, error:"unauthorized" });
+  }
+
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_KEY; // server-side only
+  if (!url || !serviceKey) return res.status(500).json({ ok:false, error:"missing server env" });
+
+  const admin = createClient(url, serviceKey, { auth: { persistSession: false } });
+
+  // look up test user
+  const testEmail = process.env.NEXT_PUBLIC_TEST_EMAIL;
+  const { data: users, error: uErr } = await admin.auth.admin.listUsers();
+  if (uErr) return res.status(500).json({ ok:false, error:uErr.message });
+
+  const testUser = users?.users?.find(u => u.email?.toLowerCase() === testEmail?.toLowerCase());
+  const testUserId = testUser?.id;
+
+  try {
+    // 1) Delete reviews by test user
+    if (testUserId) {
+      await admin.from("reviews").delete().eq("user_id", testUserId);
+      await admin.from("profiles").delete().eq("user_id", testUserId);
+    }
+
+    // 2) Optionally delete any books/genres created during testing
+    // If you tracked owner via created_by, run:
+    // await admin.from("books").delete().eq("created_by", testUserId);
+    // await admin.from("genres").delete().eq("created_by", testUserId);
+
+    // 3) Remove test email from admins to lock it out
+    await admin.from("admins").delete().eq("email", testEmail);
+
+    // 4) (Optional) Disable or delete auth user
+    // await admin.auth.admin.deleteUser(testUserId);
+
+    return res.json({ ok:true, cleared:true });
+  } catch (e) {
+    return res.status(500).json({ ok:false, error:e.message });
+  }
+}
+```
+
+How to invoke:
+
+```bash
+curl -X POST "https://YOUR-APP.vercel.app/api/test/cleanup" \
+  -H "x-cleanup-token: YOUR_TEST_CLEANUP_TOKEN"
+```
+
+## 8) Your spoken trigger: “conclude”
+
+When you tell me **“conclude”**, I’ll remind you to hit that endpoint (or I can paste the exact curl for your domain). That will:
+
+* remove the test account from admins
+* delete the test user’s reviews/profile
+* (optional) delete their test books/genres if you track `created_by`
+* (optional) delete the auth user if you enable that line
+
+---
+
+## 9) Optional: show BFF profile on the site
+
+Add a little “Profile” panel to admin:
+
+```jsx
+// e.g., components/AdminProfile.jsx
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
+
+export default function AdminProfile(){
+  const [p,setP]=useState(null);
+  useEffect(()=>{ (async()=>{
+    if(!supabase) return;
+    const { data:{ user } } = await supabase.auth.getUser();
+    if(!user) return;
+    // Ensure there is a profile row
+    await supabase.from("profiles").upsert({ user_id:user.id }, { onConflict:"user_id" });
+    const { data } = await supabase.from("profiles").select("*").eq("user_id",user.id).single();
+    setP(data);
+  })(); },[]);
+  if(!p) return null;
+  return (
+    <div className="card">
+      <h3>Profile</h3>
+      <p><strong>BFF:</strong> {p.bff_name || "Nia"}</p>
+      <p><strong>Role:</strong> {p.role}</p>
+    </div>
+  );
+}
+```
+
+---
+
+## 10) Safety checklist
+
+* Keep `SUPABASE_SERVICE_KEY` **server-only** (Vercel env, not client).
+* Flip `NEXT_PUBLIC_TEST_MODE=false` when done.
+* After cleanup, also remove the test user in **Auth → Users** if you didn’t auto-delete in the endpoint.
+
+---
+
+If you want, I can **package these code files into your project and drop a new ZIP** so you just unzip → set env → deploy.
+
+
+
+
+
+
+
+
+All flipped to live data. Here’s your **Supabase-connected build**:
+
+📦 **Download:**
+**[chapterhouse-supabase-connected.zip](sandbox:/mnt/data/chapterhouse-supabase-connected.zip)**
+
+### What changed vs the mock build
+
+* `/books` now reads from **`book_catalog_stats`** (title/author/genre/rating/review\_count).
+* `/books/[id]` loads a **single book** and its **reviews**, and lets logged-in users **submit a review** (RLS-safe).
+* `/genres` lists all genres; if you’re logged in and listed in the **`admins`** table, you can **add/delete** genres.
+* `/admin/login` supports **magic link** by default; turn on password auth with `NEXT_PUBLIC_TEST_MODE=true`.
+* API **cleanup** endpoint included (same as before) for the “conclude” wipe.
+
+### Super quick SBS to get it running
+
+1. **Create Supabase project**, then in SQL Editor paste/run `supabase/schema.sql`.
+2. **Insert your admin email**:
+
+```sql
+insert into public.admins(email) values ('YOUR_REAL_ADMIN@yourmail.com') on conflict do nothing;
+```
+
+3. **Create `.env.local`** from the example and fill:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=...supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+# optional for testing:
+NEXT_PUBLIC_TEST_MODE=true
+NEXT_PUBLIC_TEST_EMAIL=chapterhouse.test+public@yourmail.com
+# server-only if you want cleanup endpoint:
+SUPABASE_SERVICE_KEY=...
+TEST_CLEANUP_TOKEN=some-long-random
+```
+
+4. **Run it**:
+
+```bash
+npm install
+npm run dev
+```
+
+5. Visit:
+
+* `/books` → live catalog
+* `/books/[id]` → details + reviews
+* `/genres` → add/delete if admin
+* `/admin/login` → sign in
+
+When you deploy to Vercel, copy the same env vars into the project settings.
+When you say **“conclude”**, I’ll hand you the exact curl to trigger the cleanup endpoint on your deployed domain.
+
+Want me to extend this build next with **book upload (cover + EPUB to Storage)** and a simple **admin Books manager**?
+
+
+
+
+
+
+
+
+🔥 Upgraded! I added a full **Admin Books Manager** and an **Upload flow** (cover + EPUB to Supabase Storage), wired to your live DB.
+
+📦 **Download the new build:**
+**[chapterhouse-admin-uploads.zip](sandbox:/mnt/data/chapterhouse-admin-uploads.zip)**
+
+### What’s included
+
+* **/admin/upload** — Upload a book (Title, Author, Description, Genre, Cover image, EPUB file)
+* **/admin/books** — List, search, **edit**, and **delete** books; quick link to view each book page
+* Uses **Supabase Storage** buckets `covers` and `epubs` and inserts into `books`
+* **Reads live** from the `book_catalog_stats` view
+* README updated with storage bucket + policy instructions
+
+### One-time setup (SBS)
+
+1. **Run schema** if you haven’t: open Supabase → **SQL Editor** → run `supabase/schema.sql`.
+2. **Create buckets** in Supabase → **Storage**:
+
+   * `covers` (Public: read)
+   * `epubs` (Public: read)
+3. **Storage policies**: allow **public SELECT** and **authenticated INSERT** for each bucket (README shows sample SQL).
+4. **Admins list**: make sure your admin email is in `public.admins`:
+
+   ```sql
+   insert into public.admins(email) values ('YOUR_REAL_ADMIN@yourmail.com') on conflict do nothing;
+   ```
+5. **Env vars** (`.env.local` or Vercel Project → Environment Variables):
+
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=...
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+   NEXT_PUBLIC_TEST_MODE=true   # optional for password login on /admin/login
+   NEXT_PUBLIC_TEST_EMAIL=chapterhouse.test+public@yourmail.com
+   SUPABASE_SERVICE_KEY=...     # needed only for cleanup endpoint
+   TEST_CLEANUP_TOKEN=...
+   ```
+6. **Run**:
+
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+### Try it
+
+* Go to **/admin/login** → sign in (magic link or password if test mode)
+* Visit **/genres** and add a category (must be admin)
+* Go to **/admin/upload** → upload cover + EPUB → it creates a book
+* Check **/books** (public) and **/admin/books** (manage)
+
+When you want to nuke the test data, say **“conclude”** and I’ll hand you the exact cleanup `curl` command for your deployed domain.
+
+Want me to add **review moderation** and an **email export (CSV)** next, or focus on **author profile pages**?
+
+
+
+
+
+
+Absolutely—let’s do **both**: review moderation **and** email export. I’ll keep it tight and step-by-step so you can drop it straight into your project.
+
+---
+
+# SBS: Review Moderation (approve/reject + flagging)
+
+## 1) SQL: add moderation fields
+
+Run in Supabase → SQL Editor:
+
+```sql
+alter table public.reviews
+  add column if not exists status text default 'pending' check (status in ('pending','approved','rejected')),
+  add column if not exists flagged boolean default false;
+
+-- Everyone can read approved reviews; authors/admins will handle others via UI
+-- (We’ll keep existing RLS for insert/update self; admin override via is_admin())
+```
+
+## 2) Public view that only exposes approved reviews
+
+```sql
+create or replace view public.reviews_public as
+select id, book_id, rating, comment, created_at
+from public.reviews
+where status = 'approved';
+```
+
+> Your book pages can switch to `reviews_public` if you want only-approved reviews visible to readers. (You can still query `reviews` on admin pages.)
+
+## 3) Admin UI: /admin/reviews
+
+Create `pages/admin/reviews.js`:
+
+```jsx
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
+
+export default function AdminReviews(){
+  const [user,setUser]=useState(null);
+  const [isAdmin,setIsAdmin]=useState(false);
+  const [rows,setRows]=useState([]);
+  const [filter,setFilter]=useState("pending");
+  const [msg,setMsg]=useState("");
+
+  useEffect(()=>{ (async()=>{
+    if(!supabase) return;
+    const { data:{ user } } = await supabase.auth.getUser();
+    setUser(user||null);
+    if(user){
+      const { data: recs } = await supabase.from("admins").select("*").eq("email", user.email);
+      setIsAdmin((recs||[]).length>0);
+    }
+    load();
+  })(); },[]);
+
+  async function load() {
+    const q = supabase.from("reviews").select("id, book_id, rating, comment, status, flagged, created_at").order("created_at",{ascending:false});
+    const { data, error } = await (filter ? q.eq("status", filter) : q);
+    if(!error) setRows(data||[]);
+  }
+
+  async function setStatus(id, status){
+    setMsg("");
+    const { error } = await supabase.from("reviews").update({ status }).eq("id", id);
+    if(error) setMsg("❌ "+error.message); else { setMsg("✅ Updated"); load(); }
+  }
+
+  async function toggleFlag(id, flagged){
+    setMsg("");
+    const { error } = await supabase.from("reviews").update({ flagged }).eq("id", id);
+    if(error) setMsg("❌ "+error.message); else load();
+  }
+
+  if(!supabase) return <p>Add Supabase keys in .env.local</p>;
+  if(!user) return <p><a href="/admin/login">Log in</a> to moderate.</p>;
+  if(!isAdmin) return <p>Access denied (admin only).</p>;
+
+  return (
+    <div>
+      <h1>Review Moderation</h1>
+      <div className="card" style={{display:"flex",gap:8,alignItems:"center",marginBottom:12}}>
+        <select className="input" value={filter} onChange={e=>setFilter(e.target.value)}>
+          <option value="pending">Pending</option>
+          <option value="approved">Approved</option>
+          <option value="rejected">Rejected</option>
+          <option value="">All</option>
+        </select>
+        <button className="btn" onClick={load}>Refresh</button>
+        <span>{msg}</span>
+      </div>
+      <ul className="grid" style={{gridTemplateColumns:'repeat(auto-fill,minmax(320px,1fr))'}}>
+        {rows.map(r=>(
+          <li key={r.id} className="card">
+            <div><strong>★{r.rating}</strong> · {new Date(r.created_at).toLocaleString()}</div>
+            <div style={{margin:"6px 0"}}>{r.comment || "—"}</div>
+            <div className="flex">
+              <button className="btn" onClick={()=>setStatus(r.id, "approved")}>Approve</button>
+              <button className="btn secondary" onClick={()=>setStatus(r.id, "rejected")}>Reject</button>
+              <label className="btn secondary" style={{display:"inline-flex",gap:6,alignItems:"center"}}>
+                <input type="checkbox" checked={!!r.flagged} onChange={e=>toggleFlag(r.id, e.target.checked)} />
+                Flag
+              </label>
+            </div>
+            <div className="badge" style={{marginTop:6}}>Status: {r.status}</div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
+
+## 4) Optional: show only approved reviews on book page
+
+In `pages/books/[id].js`, swap the reviews fetch:
+
+```js
+// from:
+const { data:r } = await supabase.from("reviews").select("*").eq("book_id",id).order("created_at",{ascending:false});
+
+// to (public-only):
+const { data:r } = await supabase.from("reviews_public").select("*").eq("book_id",id).order("created_at",{ascending:false});
+```
+
+(Keep the insert the same; new reviews land as `pending` and appear after approval.)
+
+---
+
+# SBS: Email Export (CSV)
+
+You have two good options. I’ll give you both:
+
+## Option A — Export from `profiles` (no service key)
+
+Best if you want **self-managed, opt-in** contact info.
+
+### 1) Make sure `profiles` has emails (add an `email` column)
+
+```sql
+alter table public.profiles
+  add column if not exists email text;
+
+-- On login in your app, upsert the user’s email into profiles (client-side).
+```
+
+Add a small client-side sync wherever you get the user (e.g., `/admin/index.js` after `getUser()`):
+
+```js
+if (user) {
+  await supabase.from("profiles").upsert({ user_id: user.id, email: user.email }, { onConflict: "user_id" });
+}
+```
+
+### 2) API route to export CSV from `profiles`
+
+Create `pages/api/export/emails.js`:
+
+```js
+import { createClient } from "@supabase/supabase-js";
+
+export default async function handler(req, res) {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const supabase = createClient(url, key);
+
+  // Optional: require admin session via a bearer token header or signed URL (for simplicity, keep public for now and place behind an admin-only link in UI)
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("email, display_name, created_at")
+    .not("email","is",null);
+
+  if (error) return res.status(500).json({ error: error.message });
+
+  const rows = data.map(r => [r.email, r.display_name || "", r.created_at || ""]);
+  const csv = ["email,display_name,created_at", ...rows.map(r=>r.map(x => `"${String(x).replace(/"/g,'""')}"`).join(","))].join("\n");
+
+  res.setHeader("Content-Type", "text/csv");
+  res.setHeader("Content-Disposition", "attachment; filename=chapterhouse-emails.csv");
+  res.status(200).send(csv);
+}
+```
+
+### 3) Admin link to download
+
+Add to `/admin/index.js`:
+
+```jsx
+<li><a href="/api/export/emails" target="_blank" rel="noreferrer">Export Emails (CSV)</a></li>
+```
+
+> Pros: no service key needed; respects what you store in `profiles`.
+> Cons: only emails you’ve synced into `profiles` will export.
+
+---
+
+## Option B — Export from `auth.users` (service-key server-only)
+
+This exports **all registered emails**, using Supabase **service role** in a server route (never exposed to client).
+
+### 1) API route using service key
+
+Create `pages/api/export/emails-admin.js`:
+
+```js
+import { createClient } from "@supabase/supabase-js";
+
+export default async function handler(req, res) {
+  // Simple header check – you can reuse TEST_CLEANUP_TOKEN or define a new ADMIN_EXPORT_TOKEN
+  const token = req.headers["x-admin-export-token"];
+  if (token !== process.env.TEST_CLEANUP_TOKEN) {
+    return res.status(401).json({ error: "unauthorized" });
+  }
+
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_KEY;
+  if (!url || !serviceKey) return res.status(500).json({ error: "missing server env" });
+
+  const admin = createClient(url, serviceKey, { auth: { persistSession: false } });
+
+  const { data, error } = await admin.auth.admin.listUsers();
+  if (error) return res.status(500).json({ error: error.message });
+
+  const users = data?.users || [];
+  const rows = users.map(u => [u.email || "", u.user_metadata?.name || "", u.created_at || ""]);
+  const csv = ["email,name,created_at", ...rows.map(r=>r.map(x => `"${String(x).replace(/"/g,'""')}"`).join(","))].join("\\n");
+
+  res.setHeader("Content-Type", "text/csv");
+  res.setHeader("Content-Disposition", "attachment; filename=chapterhouse-auth-users.csv");
+  res.status(200).send(csv);
+}
+```
+
+### 2) How to download
+
+Use curl (or a small admin-only button that calls this with the token header):
+
+```bash
+curl -H "x-admin-export-token: YOUR_TEST_CLEANUP_TOKEN" \
+  -L "https://YOUR-APP.vercel.app/api/export/emails-admin" \
+  -o chapterhouse-auth-users.csv
+```
+
+> Pros: grabs all auth emails, even if you didn’t sync profiles.
+> Cons: requires **service key** (server-only) + a secure trigger (header token).
+
+---
+
+## Bonus: CSV export for reviews (for mail merge or analysis)
+
+```js
+// pages/api/export/reviews.js
+import { createClient } from "@supabase/supabase-js";
+export default async function handler(req, res) {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const supabase = createClient(url, key);
+  const { data, error } = await supabase
+    .from("reviews")
+    .select("book_id, rating, comment, status, created_at");
+  if (error) return res.status(500).json({ error: error.message });
+  const header = "book_id,rating,comment,status,created_at";
+  const rows = data.map(r => [r.book_id, r.rating, r.comment||"", r.status, r.created_at]);
+  const csv = [header, ...rows.map(r=>r.map(x => `"${String(x).replace(/\"/g,'\"\"')}"`).join(","))].join("\\n");
+  res.setHeader("Content-Type", "text/csv");
+  res.setHeader("Content-Disposition", "attachment; filename=chapterhouse-reviews.csv");
+  res.status(200).send(csv);
+}
+```
+
+Add a link in `/admin/index.js`:
+
+```jsx
+<li><a href="/api/export/reviews" target="_blank" rel="noreferrer">Export Reviews (CSV)</a></li>
+```
+
+---
+
+## Want me to package these now?
+
+Say the word and I’ll drop a new **ZIP** that includes:
+
+* `pages/admin/reviews.js` (moderation UI)
+* `pages/api/export/emails.js` (profiles-based export)
+* `pages/api/export/emails-admin.js` (auth-based export w/ token)
+* `pages/api/export/reviews.js`
+* Minor tweaks to `/admin/index.js`
+* The SQL changes for moderation + `reviews_public` view
+
+Then you can upload → run → done.
+
+
+
+
+
+
+
+
+All set. I bundled **review moderation**, **email exports**, and the updated **README** into one drop — plus your **genre categories** admin is included and linked.
+
+📦 **Download:**
+**[chapterhouse-admin-moderation-exports.zip](sandbox:/mnt/data/chapterhouse-admin-moderation-exports.zip)**
+
+### What’s inside (new)
+
+* `supabase/moderation.sql` → adds `status`, `flagged`, and `reviews_public` view
+* `pages/admin/reviews.js` → approve/reject/flag reviews
+* `pages/api/export/emails.js` → profiles-based CSV export
+* `pages/api/export/emails-admin.js` → admin-only CSV export (uses server service key + token)
+* `pages/api/export/reviews.js` → reviews CSV export
+* `pages/admin/index.js` → dashboard links to Reviews + Exports + Upload + Books + Genres
+* `pages/books/[id].js` → now reads `reviews_public` (approved-only) on the public page
+* **README** updated with clear, step-by-step instructions (SBS)
+
+### Quick SBS to enable the new pieces
+
+1. In Supabase → **SQL Editor**, run:
+
+   * `supabase/schema.sql` (if not done before)
+   * `supabase/moderation.sql` (new)
+2. In Supabase → **Storage**: ensure buckets `covers` and `epubs` (Public read) exist.
+3. Add env vars (`.env.local` and Vercel → Project settings):
+
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=...
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+   NEXT_PUBLIC_TEST_MODE=true   # optional for password login testing
+   NEXT_PUBLIC_TEST_EMAIL=chapterhouse.test+public@yourmail.com
+   SUPABASE_SERVICE_KEY=...     # server-only for admin export & cleanup
+   TEST_CLEANUP_TOKEN=...       # reuse this for admin export header token
+   ```
+4. `npm install && npm run dev`
+5. Visit:
+
+   * `/admin/login` → sign in
+   * `/genres` → add categories
+   * `/admin/upload` → upload cover + EPUB
+   * `/admin/books` → edit/delete books
+   * `/admin/reviews` → approve/reject/flag reviews
+   * `/api/export/emails` → download `profiles` emails CSV
+   * `/api/export/emails-admin` (with header token) → download **auth** users CSV
+   * `/api/export/reviews` → download reviews CSV
+
+When you’re ready to wipe test data, say **“conclude”** and I’ll give you the exact curl for your deployed domain to hit the cleanup endpoint.
+
+
+
+
+
+
+Got you. Here’s a clean, copy-ready **QA Test Report** for the current Chapterhouse build. If you want, I can export this as a DOCX or PDF—just say which.
+
+# Chapterhouse – QA Test Report
+
+## 1) Summary
+
+**Build:** `chapterhouse-admin-moderation-exports`
+**Date:** *(fill in)*
+**Scope:** Core reader flows, admin flows (genres, upload, books manager), reviews moderation, CSV exports, cleanup endpoint.
+**Result:** *(Pass w/ minor issues | Blocked | Needs fixes)*
+**Owner:** *(you)*
+
+---
+
+## 2) Test Environment
+
+* **Frontend:** Next.js (local dev or Vercel)
+* **DB:** Supabase (schema.sql + moderation.sql applied)
+* **Storage:** Buckets `covers` + `epubs` (Public read)
+* **Auth:** Email magic link; Test Mode (optional)
+* **Env Vars:**
+
+  ```
+  NEXT_PUBLIC_SUPABASE_URL=…
+  NEXT_PUBLIC_SUPABASE_ANON_KEY=…
+  NEXT_PUBLIC_TEST_MODE=true/false
+  NEXT_PUBLIC_TEST_EMAIL=chapterhouse.test+public@yourmail.com
+  SUPABASE_SERVICE_KEY=… (server-only)
+  TEST_CLEANUP_TOKEN=…
+  ```
+
+---
+
+## 3) Test Accounts
+
+* **Admin (test)**: `chapterhouse.test+public@yourmail.com` / *(temp password)*
+* **Reader (optional)**: *(email)* / *(login method)*
+
+---
+
+## 4) Scope & Exit Criteria
+
+**In scope**
+
+* Books list & detail
+* Genres management
+* Admin login & access gating
+* Book upload (cover + EPUB)
+* Books manager (edit/delete)
+* Reviews flow (submit → pending → approve)
+* Exports (emails, reviews)
+* Cleanup endpoint
+
+**Exit criteria**
+
+* Critical paths work with no blockers
+* Admin-only actions properly gated
+* CSV exports download and open cleanly
+* No console errors during normal use
+
+---
+
+## 5) Test Cases & Results
+
+### A. Public Reader Flows
+
+1. **Home loads** (`/`) → links present
+
+   * Expected: No errors; header nav visible
+   * Result: ☐ Pass ☐ Fail ☐ N/A  Notes: \_\_\_
+2. **Books list** (`/books`) loads from `book_catalog_stats`
+
+   * Search + genre filter works
+   * Expected: Cards show title/author/genre/rating
+   * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+3. **Book details** (`/books/[id]`)
+
+   * Shows cover, metadata, description
+   * Reviews displayed from `reviews_public` only
+   * Expected: No pending/rejected visible
+   * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+
+### B. Auth & Admin Gate
+
+4. **Admin login** (`/admin/login`)
+
+   * Magic link by default; password in test mode
+   * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+5. **Admin dashboard** (`/admin`)
+
+   * Non-admin blocked; admin allowed
+   * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+
+### C. Genres Management
+
+6. **List genres** (`/genres`)
+
+   * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+7. **Add genre (admin only)**
+
+   * Appears immediately; unique name enforced
+   * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+8. **Delete genre (admin only)**
+
+   * If linked to books, check behavior (set null)
+   * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+
+### D. Book Upload & Management
+
+9. **Upload book** (`/admin/upload`)
+
+   * Upload cover (image) + EPUB; create row in `books`
+   * Public URLs returned; visible on `/books`
+   * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+10. **Books manager** (`/admin/books`)
+
+    * Edit fields → Save persists
+    * Delete removes book & it disappears from `/books`
+    * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+
+### E. Reviews & Moderation
+
+11. **Submit review** (as authenticated)
+
+    * New review lands as `pending`
+    * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+12. **Moderation panel** (`/admin/reviews`)
+
+    * Approve → appears on book page
+    * Reject → never shows on public page
+    * Flag toggle works
+    * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+
+### F. CSV Exports
+
+13. **Export emails (profiles)** `/api/export/emails`
+
+    * Downloads `chapterhouse-emails.csv`
+    * Columns: email, display\_name, created\_at
+    * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+14. **Export emails (auth/admin)** `/api/export/emails-admin`
+
+    * Requires header `x-admin-export-token`
+    * Uses service key server-side
+    * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+15. **Export reviews** `/api/export/reviews`
+
+    * CSV with `book_id,rating,comment,status,created_at`
+    * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+
+### G. Cleanup Endpoint
+
+16. **Cleanup** `/api/test/cleanup`
+
+    * Requires `x-cleanup-token` header
+    * Removes test admin entry, test profile, test reviews
+    * Result: ☐ Pass ☐ Fail  Notes: \_\_\_
+
+---
+
+## 6) Findings Summary
+
+* **Total cases:** 16
+* **Passed:** *#*
+* **Failed:** *#*
+* **Blocked:** *#*
+* **Notes:** *(e.g., flaky network on Vercel preview, storage policies needed adjustments, etc.)*
+
+---
+
+## 7) Defects
+
+| ID     | Area    | Severity | Summary                           | Steps to Reproduce | Expected        | Actual          | Status      |
+| ------ | ------- | -------- | --------------------------------- | ------------------ | --------------- | --------------- | ----------- |
+| CH-001 | Upload  | High     | EPUB upload fails for large files | …                  | Upload succeeds | 413 error       | Open        |
+| CH-002 | Reviews | Medium   | Magic link not delivered on Gmail | …                  | Email arrives   | Delayed or spam | Investigate |
+| …      | …       | …        | …                                 | …                  | …               | …               | …           |
+
+---
+
+## 8) Recommendations
+
+* Add **client-side validation** on upload (file size, MIME)
+* Configure **Storage policies** with least-privilege (keep public read; limit insert to authenticated)
+* Add **rate limits** for review submission (prevent spam)
+* Enable **error logging** (Vercel + Supabase Logs)
+* Add **pagination** to `/books` for large catalogs
+
+---
+
+## 9) Go-Live Checklist
+
+* [ ] `schema.sql` + `moderation.sql` run in production
+* [ ] `admins` table seeded with correct emails
+* [ ] Storage buckets `covers` & `epubs` created + policies verified
+* [ ] Environment variables added in Vercel (including service key if using admin export/cleanup)
+* [ ] Test account set and working; **remove or disable test mode** before launch
+* [ ] Cleanup endpoint tested with token
+* [ ] 404 and 500 pages render gracefully
+* [ ] Lighthouse basic pass on home and books pages
+
+---
+
+If you want, I can **export this report as a DOCX** with your branding and today’s date, or drop it into your repo as `TEST_REPORT.md`.
+
+
+
+Awesome — let’s lock in the Supabase integration, step by step. Do these in order and you’ll be fully wired.
+
+# Supabase Integration (SBS)
+
+## 1) Create your Supabase project
+
+* Go to supabase.com → **New Project**
+* Choose org → set **Project name** (e.g., `chapterhouse`)
+* Choose a strong DB password → **Create project**
+* In Project Settings → **API**, copy:
+
+  * **Project URL** → `NEXT_PUBLIC_SUPABASE_URL`
+  * **anon public key** → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+  * (Later/server-only) **service role key** → `SUPABASE_SERVICE_KEY`
+
+## 2) Run the schema & moderation SQL
+
+Open **SQL Editor** and run these two files from the repo you downloaded:
+
+* `supabase/schema.sql` (tables: `books`, `genres`, `reviews`, `admins`, `profiles`, views, RLS, `is_admin()`)
+* `supabase/moderation.sql` (adds `status`, `flagged`, and `reviews_public` view)
+
+> If you don’t see `moderation.sql` in your copy, grab it from the latest ZIP I gave you (admin-moderation-exports).
+
+## 3) Create Storage buckets
+
+Supabase → **Storage → Create new bucket**
+
+* `covers` (Public: **ON**)
+* `epubs` (Public: **ON**)
+
+If it asks for policies, allow:
+
+* **Public SELECT** on each bucket
+* **Authenticated INSERT** (uploads from admin)
+
+(There’s example policy SQL in the README of the uploads build; shout if you want me to paste it again.)
+
+## 4) Seed your admin + optional test user
+
+Run in SQL Editor:
+
+```sql
+insert into public.admins(email)
+values ('YOUR_REAL_ADMIN@yourmail.com')
+on conflict do nothing;
+```
+
+Optional test user flow:
+
+* Auth → Users → **Add user**
+
+  * Email: `chapterhouse.test+public@yourmail.com`
+  * Temp password: `Temp!12345` (or anything)
+  * Auto-confirm: ON
+* Add to admins:
+
+```sql
+insert into public.admins(email)
+values ('chapterhouse.test+public@yourmail.com')
+on conflict do nothing;
+```
+
+## 5) Add environment variables (local)
+
+In your project root, copy `.env.local.example` → `.env.local`, then fill:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=YOUR_URL_HERE
+NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_ANON_KEY_HERE
+
+# optional test login mode for /admin/login (password form)
+NEXT_PUBLIC_TEST_MODE=true
+NEXT_PUBLIC_TEST_EMAIL=chapterhouse.test+public@yourmail.com
+
+# server-only (do NOT commit; only set in Vercel later unless you need local API routes)
+SUPABASE_SERVICE_KEY=YOUR_SERVICE_ROLE_KEY
+TEST_CLEANUP_TOKEN=a-long-random-string
+```
+
+> If running locally and you want the cleanup/admin export endpoints to work, you can temporarily put the service key in your local `.env.local`. For production, set it only in Vercel.
+
+## 6) Run the app locally
+
+```bash
+npm install
+npm run dev
+```
+
+Visit:
+
+* `/books` → pulls from `book_catalog_stats`
+* `/books/[id]` → details + **approved** reviews (`reviews_public`)
+* `/genres` → add/delete only if logged in as admin
+* `/admin/login` → sign in (password form if `TEST_MODE=true`, otherwise magic link)
+* `/admin/upload` → upload cover + EPUB (requires buckets)
+* `/admin/books` → edit/delete
+* `/admin/reviews` → approve/reject/flag reviews
+
+## 7) Deploy to Vercel
+
+* **Import GitHub repo** → Add Environment Variables:
+
+  * `NEXT_PUBLIC_SUPABASE_URL`
+  * `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+  * `NEXT_PUBLIC_TEST_MODE` (true while testing; set false before launch)
+  * `NEXT_PUBLIC_TEST_EMAIL`
+  * `SUPABASE_SERVICE_KEY` (server only)
+  * `TEST_CLEANUP_TOKEN`
+* **Deploy**
+* Test the same routes on your live URL.
+
+## 8) Cleanup command (when you say “conclude”)
+
+Call this to remove test artifacts (admin entry + test profile/reviews):
+
+```bash
+curl -X POST "https://YOUR-APP.vercel.app/api/test/cleanup" \
+  -H "x-cleanup-token: YOUR_TEST_CLEANUP_TOKEN"
+```
+
+---
+
+## Quick Troubleshooting
+
+* **403 / 401 on uploads**
+
+  * Check you’re logged in as admin (in `admins` table) and bucket **Public Read** is enabled.
+* **Books/Genres list empty**
+
+  * Confirm schema ran; check `book_catalog_stats` view exists. Insert a sample book or upload via `/admin/upload`.
+* **Reviews not showing**
+
+  * New reviews are `pending`; approve them at `/admin/reviews`. Public page reads `reviews_public`.
+* **Admin login not working**
+
+  * If using magic link (test mode off), check Supabase Auth email templates and allowed redirect URLs.
+  * If using password (test mode on), make sure the user exists and is confirmed.
+
+---
+
+If you want, I can also:
+
+* pre-seed a **couple of genres** and a **demo book** directly into your DB,
+* or bundle a fresh **all-in-one ZIP** with your `.env.local.example` set up and the latest README + test report included.
+
+Want me to package that final ZIP now?
+
+
+
+
+
+
+
+
+
+
+
+
+
+

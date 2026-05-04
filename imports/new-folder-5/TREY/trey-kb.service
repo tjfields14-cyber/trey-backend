@@ -1,0 +1,13 @@
+[Unit]
+Description=Trey KnowledgeBase Daemon
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Trey_KB_Daemon_Starter
+ExecStart=/usr/bin/python3 kb_daemon.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

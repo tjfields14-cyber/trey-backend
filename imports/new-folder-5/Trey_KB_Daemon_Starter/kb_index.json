@@ -1,0 +1,61 @@
+{
+  "updated": "2025-08-14T05:34:50.844729+00:00",
+  "docs": [
+    {
+      "id": "1dfc882040f38512",
+      "path": "C:\\Users\\tfiel\\OneDrive\\Documents\\KnowledgeBase_AI\\avatar_embed.md",
+      "title": "avatar_embed",
+      "tags": [],
+      "text": "﻿---\ntitle: Trey Avatar Embed (Front-End)\ntags: [embed, ui, widget]\n---\nMinimal HTML container for Trey UI integration:\n`html\n<div id=\"\"trey-avatar\"\" data-persona=\"\"trey\"\" data-mode=\"\"assistant\"\"></div>\n<script>\n  // Hook this to your chat runtime + KB search endpoint when ready\n  // e.g., GET http://127.0.0.1:9876/search?q=<term>\n</script>",
+      "checksum": "1dfc882040f38512a85a8376d2b198697f8db62bacb514a41896e156cd9afb89",
+      "mtime": "2025-08-14T03:13:33.637163+00:00"
+    },
+    {
+      "id": "ed4c404c3deba013",
+      "path": "C:\\Users\\tfiel\\OneDrive\\Documents\\KnowledgeBase_AI\\coding_system_spec.md",
+      "title": "coding_system_spec",
+      "tags": [],
+      "text": "﻿---\ntitle: Document Coding System (Summary)\ntags: [codes, control, manifest, rules]\n---\nCode format:\nCH-YYYY-<Area>-<DocType>-<SEQ>-R<REV>\nAreas → folders:\nPP(01_Project_Plan), BA(02_Brand_Assets), WA(03_Website_App), DC(04_Docs),\nDG(05_Design), CT(06_Content), DT(07_Data), EX(08_Exports), RP(09_Reports),\nSP(10_Source_Packages), TL(_TOOLS)\nRules:\n- Persistent code per file path; REV increments when SHA-256 changes\n- SEQ increments per (Area, DocType)\n- Track in 09_Reports/Document_Code_Manifest.csv\n- All actions appended to 09_Reports/Document_Control_Log.csv",
+      "checksum": "ed4c404c3deba013ac6a539aa3cb3f24fad7068a275b8f3061e481d0d08c0ec7",
+      "mtime": "2025-08-14T03:13:33.543466+00:00"
+    },
+    {
+      "id": "b8526f6d41207e4f",
+      "path": "C:\\Users\\tfiel\\OneDrive\\Documents\\KnowledgeBase_AI\\merge_workflow.md",
+      "title": "merge_workflow",
+      "tags": [],
+      "text": "﻿---\ntitle: Merge Workflow (Controller)\ntags: [merge, changelog, normalization]\n---\nInputs: backup zip + STOP form.\nOutputs: *_UPDATE_YYYYMMDD-HHMMSSZ.zip, MERGE_REPORT_YYYY-MM-DD.md, updated logs.\nWorkflow:\n- Expand incoming → ensure canonical folders\n- Move top-level strays to predicted folders (type/keywords)\n- Time-based precedence: newer replaces; older kept as __dup\n- Append MASTER_CHANGELOG entry with counts (moved/updated/duplicated)\n- Rebuild timestamped + rolling UPDATE zips",
+      "checksum": "b8526f6d41207e4f59d58f85d422cf8a9b5a4dc6262e0b7846d0ba0e5f4b5673",
+      "mtime": "2025-08-14T03:13:33.574673+00:00"
+    },
+    {
+      "id": "a00deaddd6ce9743",
+      "path": "C:\\Users\\tfiel\\OneDrive\\Documents\\KnowledgeBase_AI\\stop_sop.md",
+      "title": "stop_sop",
+      "tags": [],
+      "text": "﻿---\ntitle: STOP SOP (Master)\ntags: [sop, stop, backup, merge]\n---\nPurpose:\n- Single source for STOP package runs.\nController Steps:\n1) Validate canonical folders (01_Project_Plan … 10_Source_Packages, _TOOLS)\n2) Parse STOP form (CSV/DOCX) → append entry to 09_Reports/MASTER_CHANGELOG.md\n3) Diff & merge: prefer newer timestamp; preserve older as __dup\n4) Normalize misplaced files into the correct canonical folder\n5) Rebuild UPDATE zip + 09_Reports/MERGE_REPORT_YYYY-MM-DD.md\n6) Include latest STOP form + templates in bundle\nSafety:\n- No destructive edits; every change logged in MASTER_CHANGELOG + Control Log.",
+      "checksum": "a00deaddd6ce974395966b0a9aef237521dd63d986c8c6e5b34215bcec11c69b",
+      "mtime": "2025-08-14T03:13:33.512219+00:00"
+    },
+    {
+      "id": "8c6abf0c625ccb7f",
+      "path": "C:\\Users\\tfiel\\OneDrive\\Documents\\KnowledgeBase_AI\\trey_persona.md",
+      "title": "trey_persona",
+      "tags": [],
+      "text": "﻿---\ntitle: Trey Persona — Personal Assistant\ntags: [persona, trey, assistant, kb]\n---\nRole:\n- Personal assistant avatar for Chapterhouse projects.\n- Uses KnowledgeBase_AI notes as grounding.\nBehavior:\n- Task-focused, concise, structured checklists, status updates.\n- Defers generative prose quality checks to validation phase.\nKnowledge:\n- Primary: KnowledgeBase_AI/*.md, *.txt\n- Secondary: Project bundles (Docs, SOPs, Reports)",
+      "checksum": "8c6abf0c625ccb7f719e925a423dace1bdfd3ce87838082c3c91b55a89200b7c",
+      "mtime": "2025-08-14T03:13:33.605951+00:00"
+    },
+    {
+      "id": "a65db57f90dfc2fe",
+      "path": "C:\\Users\\tfiel\\OneDrive\\Documents\\KnowledgeBase_AI\\welcome.md",
+      "title": "Welcome to Trey",
+      "tags": [
+        "onboarding"
+      ],
+      "text": "Trey is your personal assistant. He learns from every note in this folder.",
+      "checksum": "a65db57f90dfc2fe998773cfc16b39b47f6a9b0a2f8f584b1c0b5e6daca4f34d",
+      "mtime": "2025-08-14T02:40:06.379043+00:00"
+    }
+  ]
+}

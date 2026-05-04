@@ -1,0 +1,533 @@
+FRACTURED BACKEND + TREY BRIDGE v1
+FULL SESSION SUMMARY + ERROR LOG
+Generated: 2025-12-03T23:25:17.330390Z (UTC)
+
+==================================================
+1. HIGH-LEVEL OVERVIEW
+==================================================
+
+You now have a working “mini backend platform” on your Ubuntu server that can:
+- Run a Node/Express backend inside Docker
+- Connect to a Postgres database (also in Docker)
+- Store chapters of your manuscript
+- Summarize chapters using OpenAI
+- Create AI edits of chapters and merge them back into the canonical text (with history)
+- Export all chapters to a DOCX “book” file
+- Store knowledge-base queries (kb_queries table)
+- Answer questions via /kb/ask using OpenAI
+- Accept questions directly from your Windows machine using a PowerShell helper, Ask-Trey
+
+This gives you a solid base for a future Trey ↔ Server ↔ ChatGPT bridge and for building the Trey widget on top.
+
+==================================================
+2. DIRECTORY + DOCKER LAYOUT
+==================================================
+
+Host paths (on your Ubuntu server):
+- /srv/fractured/docker
+  - docker-compose.yml  (or compose.yaml)
+  - config/
+    - db.env     (Postgres config)
+    - app.env    (App env: DATABASE_URL, OPENAI_API_KEY, etc.)
+- /srv/fractured/app/backend
+  - Dockerfile
+  - package.json
+  - package-lock.json (optional)
+  - src/
+    - app.js           (main Express server)
+    - db/
+      - index.js       (Postgres pool)
+      - schema/        (logical folder for SQL)
+    - services/
+      - aiService.js   (OpenAI calls)
+    - controllers/     (future use)
+    - routes/          (future use)
+    - utils/           (future use)
+    - migrations/      (future use)
+
+Docker services (from docker-compose):
+- fractured-db   → postgres:16-alpine
+- fractured-app  → docker-web (Node 20-alpine, serving /app/src/app.js)
+
+Key mapping in docker-compose:
+- Backend container listens on port 3000
+- Host binds: 0.0.0.0:3000 -> 3000 (so Windows can reach http://192.168.137.2:3000)
+
+==================================================
+3. ENVIRONMENT CONFIG
+==================================================
+
+Postgres env file: /srv/fractured/config/db.env
+------------------------------------------------
+POSTGRES_DB=fracturedb
+POSTGRES_USER=fractured_user
+POSTGRES_PASSWORD=change_this_password   (you can change later)
+
+App env file: /srv/fractured/config/app.env
+-------------------------------------------
+DATABASE_URL=postgres://fractured_user:change_this_password@db:5432/fracturedb
+OPENAI_API_KEY=sk-... (your *current* valid project or user key)
+NODE_ENV=production   (optional but recommended)
+
+In docker-compose, the app service uses:
+- env_file:
+  - /srv/fractured/config/app.env
+
+You confirmed OPENAI_API_KEY is *not* the accidentally pasted one; you replaced it with the correct new key.
+
+==================================================
+4. DATABASE SCHEMA (MANUSCRIPT + KB)
+==================================================
+
+You created the database and tables inside the fractured-db container with psql.
+
+Entering psql:
+- docker exec -it fractured-db psql -U fractured_user -d fracturedb
+
+Tables (relevant ones from this session):
+
+1) chapters
+-----------
+Columns (conceptually):
+- id BIGSERIAL PRIMARY KEY
+- chapter_number INT NOT NULL
+- title TEXT
+- text TEXT NOT NULL
+- word_count INT
+- summary TEXT
+- merged_edit_id BIGINT (last merged edit)
+- created_at TIMESTAMPTZ DEFAULT NOW()
+- updated_at TIMESTAMPTZ DEFAULT NOW()
+
+2) chapter_edits
+----------------
+- id BIGSERIAL PRIMARY KEY
+- chapter_id BIGINT REFERENCES chapters(id) ON DELETE CASCADE
+- instructions TEXT
+- edited_text TEXT
+- created_at TIMESTAMPTZ DEFAULT NOW()
+
+3) chapter_versions
+-------------------
+Used for pre-merge snapshots:
+- id BIGSERIAL PRIMARY KEY
+- chapter_id BIGINT REFERENCES chapters(id) ON DELETE CASCADE
+- text TEXT
+- summary TEXT
+- word_count INT
+- label TEXT
+- created_at TIMESTAMPTZ DEFAULT NOW()
+
+4) kb_documents   (for future KB document storage)
+--------------------------------------------------
+- id BIGSERIAL PRIMARY KEY
+- title TEXT NOT NULL
+- source TEXT
+- doc_type TEXT
+- tags TEXT[]
+- content TEXT NOT NULL
+- created_at TIMESTAMPTZ DEFAULT NOW()
+- updated_at TIMESTAMPTZ DEFAULT NOW()
+
+5) kb_chunks      (for future text chunking)
+--------------------------------------------
+- id BIGSERIAL PRIMARY KEY
+- document_id BIGINT REFERENCES kb_documents(id) ON DELETE CASCADE
+- chunk_index INT NOT NULL
+- content TEXT NOT NULL
+- token_count INT
+- created_at TIMESTAMPTZ DEFAULT NOW()
+
+6) kb_queries     (for Trey questions + answers)
+------------------------------------------------
+Created with:
+
+CREATE TABLE IF NOT EXISTS kb_queries (
+  id          BIGSERIAL PRIMARY KEY,
+  source      TEXT,
+  question    TEXT NOT NULL,
+  answer      TEXT,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+==================================================
+5. EXPRESS BACKEND ENDPOINTS
+==================================================
+
+Core endpoints implemented in src/app.js:
+
+Health + DB
+-----------
+GET /health
+- Returns JSON: { status: "ok", service: "fractured-backend", time: ... }
+
+GET /db/ping
+- Runs SELECT NOW() on Postgres and returns dbTime.
+
+OpenAI sanity test
+------------------
+GET /ai-test
+- Calls OpenAI via callChatCompletion with a simple prompt.
+- Returns: { status: "ok", reply: "Fracture backend online" } when working.
+
+Chapters: CRUD-ish
+------------------
+POST /chapters
+- Body: { chapterNumber, title, text }
+- Calculates word_count.
+- INSERT INTO chapters and returns the row.
+
+GET /chapters
+- Returns all chapters sorted by chapter_number, id.
+
+GET /chapters/:id
+- Returns one chapter by id.
+
+Chapter summaries
+-----------------
+POST /chapters/:id/summary
+- Loads chapter by id.
+- Builds a summarization prompt (dark fantasy / horror tone, 1–2 paragraphs, styleHint optional).
+- Calls OpenAI and stores result in chapters.summary.
+- Returns updated chapter and summary.
+
+GET /chapters/:id/summary
+- Returns { id, chapter_number, title, summary } only.
+
+Chapter AI edits
+----------------
+POST /chapters/:id/edit
+- Loads chapter.
+- Builds line-edit prompt:
+  - Keep voice, POV, tense
+  - Keep all events and worldbuilding
+  - Focus on clarity and rhythm
+  - Always return a fully written chapter, not notes.
+- Calls OpenAI.
+- Inserts into chapter_edits (instructions, edited_text).
+- Returns the new edit row.
+
+GET /chapters/:id/edits
+- Lists all edits for a chapter (id, chapter_id, instructions, created_at).
+
+GET /edits/:editId
+- Returns a specific edit (full row, including edited_text).
+
+Merge edit into chapter (with snapshot)
+---------------------------------------
+POST /chapters/:id/merge-edit
+Body: { editId, label }
+
+Logic:
+1) Connect a Postgres client and BEGIN a transaction.
+2) Load chapter (by chapterId) and edit (by editId).
+3) Verify edit.chapter_id matches chapterId.
+4) Insert a snapshot into chapter_versions including previous text, summary, word_count, and label ("pre-merge from edit X" or your custom label).
+5) Calculate new word_count from edit.edited_text.
+6) UPDATE chapters SET
+   - text = editedText
+   - word_count = new count
+   - merged_edit_id = editId
+   - updated_at = NOW()
+7) COMMIT and return updated chapter.
+
+Admin UI
+--------
+GET /admin
+- Renders an HTML page that lists all chapters in a simple table:
+  - # (chapter_number)
+  - Title
+  - Words
+  - Summary? (✔️ or —)
+  - Actions: Summarize, Edit
+
+- Includes small JS helpers:
+  - summarizeChapter(id) → onclick: prompt for styleHint, calls POST /chapters/:id/summary, updates status div.
+  - editChapter(id) → onclick: prompt for instructions, calls POST /chapters/:id/edit, then tells you which /edits/:id to view or merge.
+
+Export DOCX
+-----------
+GET /export/docx
+- Queries all chapters in order.
+- Uses a Node DOCX library (from services / utils – we wired it earlier in the session) to generate a single DOCX file named book.docx in the container.
+- Streams that DOCX back as a download.
+- You tested this, then used scp to copy the file from server → laptop.
+
+Knowledge Base Ask
+------------------
+POST /kb/ask
+Body: { source, question }
+
+Behavior:
+1) Validate that OPENAI_API_KEY is available in env. Otherwise:
+   - { status: "error", error: "OPENAI_API_KEY is not configured on the server" }
+2) Build an LLM prompt (for now, simple — just uses the question directly; later it will use kb_documents/kb_chunks for retrieval).
+3) Call OpenAI via callChatCompletion.
+4) Insert into kb_queries (source, question, answer).
+5) Return { status: "ok", source, question, answer }.
+
+You verified:
+- From the server via curl:
+  - POST /kb/ask with a Beloved emotional wound question.
+- From Windows via PowerShell:
+  - Same endpoint hit on http://192.168.137.2:3000/kb/ask
+
+Both worked and logged rows into kb_queries.
+
+Root
+----
+GET /
+- Simple HTML stating: “Fractured Backend API – If you see this, backend is running, time: ...”
+
+==================================================
+6. POWERSHELL: ASK-TREY HELPER
+==================================================
+
+On your Windows machine, you defined a PowerShell function Ask-Trey, along these lines:
+
+function Ask-Trey {{
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Question
+  )
+
+  $body = @{
+    source   = "trey-widget"
+    question = $Question
+  } | ConvertTo-Json
+
+  $response = Invoke-RestMethod -Uri "http://192.168.137.2:3000/kb/ask" `
+    -Method POST `
+    -ContentType "application/json" `
+    -Body $body
+
+  return $response
+}}
+
+You tested it:
+- Ask-Trey -Question "What is Beloved's core emotional wound?"
+- Ask-Trey -Question "Summarize Beloved's mythos in 3 sentences."
+- Ask-Trey -Question "In one paragraph, describe the tone of the Fracture world."
+
+Each returned clean JSON with status, source, question, and answer.
+
+==================================================
+7. MAJOR ERRORS + FIXES (ERROR LOG)
+==================================================
+
+1) “Cannot GET /ai-test”
+------------------------
+Cause:
+- At the very beginning, app.js did not yet have the /ai-test endpoint, or the Docker build was not pointing to the right file.
+
+Fix:
+- Created src/app.js with the /ai-test route using callChatCompletion.
+- Updated Dockerfile WORKDIR and CMD to run node src/app.js.
+- After rebuild, GET /ai-test returned:
+  - { "status": "ok", "reply": "Fracture backend online" }
+
+2) “missing ) after argument list” in app.js
+--------------------------------------------
+Cause:
+- While adding the HTML admin dashboard and JS (Summarize/Edit) code, an extra curly brace and/or a mismatched bracket crept into the script. The compiled ESM module raised SyntaxError around the closing }); at the bottom.
+
+Symptoms:
+- docker logs fractured-app showed:
+  - file:///app/src/app.js:551
+  - SyntaxError: missing ) after argument list
+  - Node kept restarting the container.
+
+Fix:
+- We inspected app.js near the HTML section.
+- You ran: sed -n '500,600p' /srv/fractured/app/backend/src/app.js to see the tail.
+- We removed the stray “} else { … }” block and leftover braces from the script tag.
+- Re-mounted a clean admin HTML block with well-formed JS functions:
+  - summarizeChapter(id)
+  - editChapter(id)
+- After fixing and rebuilding, /health, /db/ping, /ai-test worked again.
+
+3) YAML “mapping key already defined” errors
+-------------------------------------------
+Error:
+- docker compose down / up showed:
+  - yaml: unmarshal errors: line 25: mapping key "services" already defined ...
+  - Also for "networks".
+
+Cause:
+- docker-compose.yml ended up with duplicate top-level keys:
+  - services: declared twice
+  - networks: declared twice
+
+Fix:
+- Opened the file (nano /srv/fractured/docker/docker-compose.yml).
+- Removed the duplicate second block so there is exactly one “services:” and one “networks:” at the top level.
+- Re-ran docker compose up -d --build successfully.
+
+4) “OPENAI_API_KEY is not configured on the server”
+---------------------------------------------------
+Error response from /kb/ask:
+- { "status":"error","error":"OPENAI_API_KEY is not configured on the server" }
+
+Cause:
+- App container did not have the OPENAI_API_KEY in its environment:
+  - docker exec -it fractured-app env | grep OPENAI → no result.
+
+Fix:
+- Checked /srv/fractured/config/app.env and ensured:
+  - OPENAI_API_KEY=sk-... (your new working key)
+- Ensured docker-compose’s app service had:
+  - env_file:
+    - /srv/fractured/config/app.env
+- Rebuilt and restarted docker-compose.
+- Confirmed in container:
+  - docker exec -it fractured-app env | grep OPENAI
+- /kb/ask started returning real answers.
+
+5) psql “extension 'vector' is not available”
+---------------------------------------------
+Error:
+- CREATE EXTENSION IF NOT EXISTS vector;
+  → ERROR: extension "vector" is not available...
+
+Cause:
+- The standard postgres:16-alpine image does not include pgvector by default.
+
+Fix / current status:
+- We skipped vector for now and still created:
+  - kb_documents
+  - kb_chunks
+  - kb_queries
+- We will add pgvector later by using a specialized Postgres image or installing the extension via apt and a custom Dockerfile for the DB.
+
+6) “Unable to connect to remote server” (PowerShell → server)
+-------------------------------------------------------------
+Error:
+- Invoke-RestMethod -Uri "http://192.168.137.2:3000/kb/ask" failed from Windows with network error.
+
+Cause:
+- At that moment, docker-compose was binding the Node container only to 127.0.0.1 inside the host or networking rules weren’t set.
+
+Fix:
+- Updated docker-compose app service ports to:
+  - "3000:3000"
+- Rebuilt containers.
+- Verified from Ubuntu:
+  - curl http://127.0.0.1:3000/health worked.
+- Then from Windows:
+  - Invoke-RestMethod -Uri "http://192.168.137.2:3000/health" (and /kb/ask) worked.
+
+7) “bash: syntax error near unexpected token” when pasting SQL in shell
+-----------------------------------------------------------------------
+Error:
+- Pasting CREATE TABLE ... directly into bash gave:
+  - bash: syntax error near unexpected token '('
+
+Cause:
+- SQL commands must be run inside psql, not the bash shell.
+
+Fix:
+- Used:
+  - docker exec -it fractured-db psql -U fractured_user -d fracturedb
+- Then pasted the CREATE TABLE statements inside the psql prompt (fracturedb=#).
+
+8) Admin HTML script mis-paste
+------------------------------
+Issue:
+- When trying to enhance admin HTML, some new JS was pasted incorrectly, resulting in broken HTML/JS.
+
+Fix:
+- We reverted to a simpler but valid version of admin page:
+  - Clean table + two buttons
+  - Small JS with prompt() and fetch() calls
+  - Single <script> block with correct braces
+- Verified by:
+  - curl -sS http://127.0.0.1:3000/admin
+- And by ensuring docker logs had no more syntax errors.
+
+==================================================
+8. CURRENT STATUS (END OF SESSION SNAPSHOT)
+==================================================
+
+Working:
+- Docker stack up:
+  - fractured-db (Postgres 16)
+  - fractured-app (Node 20, Express backend)
+- Health + DB ping:
+  - /health
+  - /db/ping
+- OpenAI sanity:
+  - /ai-test → "Fracture backend online"
+- Manuscript APIs:
+  - /chapters (POST, GET)
+  - /chapters/:id
+  - /chapters/:id/summary (POST, GET)
+  - /chapters/:id/edit (POST)
+  - /chapters/:id/edits (GET)
+  - /edits/:editId (GET)
+  - /chapters/:id/merge-edit (POST)
+- Admin page:
+  - /admin (basic HTML table with Summarize and Edit buttons)
+- DOCX export:
+  - /export/docx creates a book.docx you successfully copied via scp.
+- Knowledge Base Ask:
+  - /kb/ask (POST) logs questions + answers in kb_queries and returns them.
+- Windows integration:
+  - Ask-Trey PowerShell function successfully calls /kb/ask on server.
+
+Not yet done (future work):
+- Real KB ingestion: reading your actual lore/manuscript files into kb_documents/kb_chunks.
+- Implementing a retrieval layer so /kb/ask uses context from your KB instead of pure LLM.
+- Trey widget front-end UI (desktop overlay / web embed).
+- Auth, rate limiting, roles, and quotas for multi-user scenarios.
+- Backup automation (pg_dump scripts, scheduled cron, etc.).
+
+==================================================
+9. HOW TO RESTART EVERYTHING CLEANLY
+==================================================
+
+On Ubuntu server:
+-----------------
+cd /srv/fractured/docker
+
+# Stop current stack
+docker compose down
+
+# Rebuild and start
+docker compose up -d --build
+
+# Check containers
+docker ps
+
+# Sanity tests
+curl -sS http://127.0.0.1:3000/health
+curl -sS http://127.0.0.1:3000/db/ping
+curl -sS http://127.0.0.1:3000/ai-test
+
+On Windows (PowerShell):
+------------------------
+# Define Ask-Trey (once per session or in your profile)
+function Ask-Trey {{
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Question
+  )
+
+  $body = @{
+    source   = "trey-widget"
+    question = $Question
+  } | ConvertTo-Json
+
+  $response = Invoke-RestMethod -Uri "http://192.168.137.2:3000/kb/ask" `
+    -Method POST `
+    -ContentType "application/json" `
+    -Body $body
+
+  return $response
+}}
+
+# Ask something
+Ask-Trey -Question "What is Beloved's core emotional wound?"
+
+==================================================
+END OF TXT SUMMARY
+==================================================

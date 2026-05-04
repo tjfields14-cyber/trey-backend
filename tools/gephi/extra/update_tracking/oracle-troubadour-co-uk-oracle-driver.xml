@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="oracle.troubadour.co.uk.oracle.driver">
+    <module_version install_time="1776407590003" last="true" origin="Gephi Thirdparties Plugins" specification_version="0.0.1">
+        <file crc="3247214910" name="config/Modules/oracle-troubadour-co-uk-oracle-driver.xml"/>
+        <file crc="1686208254" name="modules/oracle-troubadour-co-uk-oracle-driver.jar"/>
+    </module_version>
+</module>

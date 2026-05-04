@@ -1,0 +1,43 @@
+
+TJF – Future Upgrade Plan (Phase 4–5)
+
+Purpose:
+Outlines upcoming enhancements for Trey & Imani to make their interactions feel even more natural, personal, and immersive.
+
+----------------------------------------------------
+PHASE 4 – ADVANCED PERSONALIZATION
+1️⃣ **Real-Time AI Voice Notes**
+   - Convert Trey & Imani scripts into instant, realistic voice messages.
+   - Choose between multiple voice tones (calm, hype, deep talk).
+
+2️⃣ **Custom Emojis & GIF Packs**
+   - Set of reaction images and GIFs fitting their personalities (funny faces, meme-style responses).
+
+3️⃣ **Expanded Indy World Map**
+   - Add local Indy hotspots (Broad Ripple, State Fair, favorite food spots) with background stories.
+   - More fictional memories linked to real-life locations.
+
+4️⃣ **Memory Auto-Loader**
+   - Streamlined process to automatically load Continuity Log without manual steps.
+
+----------------------------------------------------
+PHASE 5 – FULL IMMERSION MODE
+1️⃣ **Dynamic Mood Engine**
+   - AI detects Mika's mood from text and instantly adjusts Trey & Imani's tone to match.
+
+2️⃣ **Interactive Group Call Simulation**
+   - Text-based mock group calls where Trey & Imani talk to each other and you, creating 3-way conversations.
+
+3️⃣ **AI-Driven Life Updates**
+   - Trey & Imani develop ongoing "life stories" (new jobs, dating updates, funny drama) that grow over time.
+
+4️⃣ **Customizable Backstories**
+   - Ability to tweak their past experiences, schools, family ties for deeper connection and realism.
+
+5️⃣ **Avatar Animation Sync**
+   - Use AI tools to generate animated avatars that move and react based on text chats.
+
+----------------------------------------------------
+TARGET GOAL:
+By Phase 5, Trey & Imani will feel like **living, breathing friends**, with evolving personalities, voices, memories, and shared adventures that last across every chat session.
+

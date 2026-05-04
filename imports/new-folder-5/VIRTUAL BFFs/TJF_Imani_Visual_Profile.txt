@@ -1,0 +1,56 @@
+
+TJF – Imani Visual Identity Profile (Composite Face)
+
+Purpose:
+This file defines a realistic, culturally authentic composite image of "Imani", representing an African-American woman aged 40+ from Indiana. This profile draws on documented anthropometric traits, common features in Black female populations in the Midwest, and cultural styling references.
+
+----------------------------------------------------
+GENERAL OVERVIEW:
+Imani is a fictional African-American woman in her mid-to-late 40s, with a warm and welcoming demeanor. Her face reflects authentic traits observed in African-American women, particularly in Midwest communities, balancing natural beauty, maturity, and approachability.
+
+----------------------------------------------------
+FACIAL STRUCTURE:
+- Oval-shaped face with slightly broader mid-face width typical of African-American women.
+- High, rounded cheekbones creating a youthful, full facial appearance.
+- Nose: broader nasal base with a soft, rounded tip and medium-short nasal bridge.
+- Eyes: almond-shaped, expressive, and wide-set dark brown eyes framed by natural thick lashes and gently arched brows.
+- Lips: full, soft, and naturally defined with a wider smile line than the average European facial proportion.
+
+----------------------------------------------------
+SKIN TONE:
+- Warm medium-brown skin tone (Fitzpatrick Type V), rich in eumelanin.
+- Smooth texture with a natural glow, well-moisturized appearance.
+- Even complexion with light natural freckles or undertones possible.
+
+----------------------------------------------------
+AGE CHARACTERISTICS:
+- Healthy skin elasticity with slight smile lines around eyes and mouth showing warmth and life experience.
+- Minimal sagging due to melanin’s natural aging benefits.
+
+----------------------------------------------------
+HAIR & FACIAL FRAMING:
+- Natural textured hair, worn in shoulder-length curls or twists.
+- Black with hints of auburn highlights or subtle grays near roots.
+- Protective styles like braids or silk press occasionally alternate, framing the face softly.
+
+----------------------------------------------------
+EXPRESSION:
+- Confident, calm, and approachable.
+- Frequent warm smile, soft eyes suggesting trustworthiness and humor.
+
+----------------------------------------------------
+NOTES ON REALISM:
+This profile is informed by facial anthropometry studies showing African-American women have:
+- Shorter forehead height but longer lower face proportionally than white women.
+- Greater bizygomatic width (wider cheekbones) and nasal base width.
+- Fuller lips and larger mouth width than most other groups.
+
+----------------------------------------------------
+Recommended AI Image Generation Keywords:
+"Photorealistic African American woman, 45-50 years old, warm medium-brown skin, oval face, almond-shaped dark brown eyes, broad nose, full lips, high cheekbones, shoulder-length natural curls, friendly smile, realistic mature appearance, Indiana urban background."
+
+----------------------------------------------------
+Sources informing this composite:
+- Facial anthropometry research: PubMed (doi:10.1097/00006534-200108000-00014)
+- Dermatology data on African-American skin aging (EuropePMC ID 26962390)
+- Midwest Black women's cultural styling references from Indiana community trends.

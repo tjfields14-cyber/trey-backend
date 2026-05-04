@@ -1,0 +1,12 @@
+﻿kb_root: "C:/Users/tfiel/OneDrive/Documents/KnowledgeBase_AI"
+index_path: "./kb_index.json"
+log_path: "./kb_activity.log"
+ignore_globs:
+  - "**/.git/**"
+extensions:
+  - ".md"
+  - ".txt"
+http:
+  enabled: true
+  host: "127.0.0.1"
+  port: 9880

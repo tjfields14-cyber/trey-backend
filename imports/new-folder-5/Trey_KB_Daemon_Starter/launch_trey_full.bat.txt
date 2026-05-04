@@ -1,0 +1,6 @@
+@echo off
+cd /d "C:\Users\tfiel\OneDrive\Documents\Trey_KB_Daemon_Starter"
+start "" powershell -ExecutionPolicy Bypass -File "start_trey_kb.ps1"
+timeout /t 3 > nul
+start "" powershell -ExecutionPolicy Bypass -Command "python 'trey_widget.py'"
+exit

@@ -1,0 +1,12 @@
+Trey System Error Log Summary
+===========================
+
+Main issues you hit:
+- Old Node.js version on Ubuntu (12.x) -> upgraded to v20.19.6
+- HTML/ESM syntax problems in app.js -> switched to JSON root response
+- Duplicate imports/exports in treyRoute.js -> cleaned up
+- Port 3000 already in use -> used sudo lsof -i :3000 and kill -9
+- npm from wrong folder on Windows -> always use C:\Users\tfiel\Documents
+- Tailwind warnings -> added proper content paths in tailwind.config.js
+
+See the full recap file for more detail.

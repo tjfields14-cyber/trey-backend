@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="ouestware.neo4j.plugin">
+    <module_version install_time="1776407590161" last="true" origin="Gephi Thirdparties Plugins" specification_version="4.0.1">
+        <file crc="3641605175" name="config/Modules/ouestware-neo4j-plugin.xml"/>
+        <file crc="3031142661" name="modules/ext/ouestware.neo4j-plugin/io-reactivex-rxjava2/rxjava.jar"/>
+        <file crc="4120077279" name="modules/ext/ouestware.neo4j-plugin/org-neo4j-driver/neo4j-java-driver.jar"/>
+        <file crc="3788435730" name="modules/ext/ouestware.neo4j-plugin/org-reactivestreams/reactive-streams.jar"/>
+        <file crc="4241140843" name="modules/ouestware-neo4j-plugin.jar"/>
+    </module_version>
+</module>

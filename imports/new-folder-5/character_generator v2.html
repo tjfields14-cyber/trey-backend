@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Character Dossier Generator</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+      padding: 16px;
+      gap: 16px;
+      box-sizing: border-box;
+    }
+    .panel {
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 12px;
+      box-sizing: border-box;
+      overflow: auto;
+    }
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+    label {
+      display: block;
+      font-size: 0.85rem;
+      margin-top: 8px;
+      margin-bottom: 2px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 4px 6px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #bbb;
+      font-size: 0.9rem;
+      font-family: inherit;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 40px;
+    }
+    .row {
+      display: flex;
+      gap: 8px;
+    }
+    .row > div {
+      flex: 1;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    button.primary {
+      background-color: #2563eb;
+      color: white;
+    }
+    button.secondary {
+      background-color: #e5e7eb;
+      color: #111827;
+      margin-left: 8px;
+    }
+    #output {
+      width: 100%;
+      height: calc(100% - 60px);
+      font-family: "Consolas", "Fira Code", monospaced;
+      font-size: 0.85rem;
+      white-space: pre;
+    }
+    .small-note {
+      font-size: 0.75rem;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- LEFT PANEL: FORM -->
+    <div class="panel">
+      <h1>Character Dossier Generator</h1>
+      <p class="small-note">
+        Fill this form, click <strong>Generate .md</strong>, then copy the result into a new
+        <code>YOUR_CHARACTER_NAME.md</code> file for Trey.
+      </p>
+
+      <h3>Identity</h3>
+      <div class="row">
+        <div>
+          <label for="id">Character ID (ALL_CAPS_UNDERSCORES)</label>
+          <input type="text" id="id" placeholder="VALENTINE_RAYFIELD" />
+        </div>
+        <div>
+          <label for="displayName">Display Name</label>
+          <input type="text" id="displayName" placeholder="Valentine Rayfield" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="Valentine" />
+        </div>
+        <div>
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Rayfield" />
+        </div>
+      </div>
+
+      <label for="aliases">Aliases (comma-separated)</label>
+      <input type="text" id="aliases" placeholder="Val, The Split One" />
+
+      <div class="row">
+        <div>
+          <label for="role">Role</label>
+          <select id="role">
+            <option value="protagonist">protagonist</option>
+            <option value="antagonist">antagonist</option>
+            <option value="supporting" selected>supporting</option>
+            <option value="cameo">cameo</option>
+          </select>
+        </div>
+        <div>
+          <label for="status">Status</label>
+          <select id="status">
+            <option value="alive" selected>alive</option>
+            <option value="dead">dead</option>
+            <option value="missing">missing</option>
+            <option value="unknown">unknown</option>
+          </select>
+        </div>
+      </div>
+
+      <h3>Basic Info</h3>
+      <div class="row">
+        <div>
+          <label for="age">Age (number)</label>
+          <input type="number" id="age" placeholder="28" />
+        </div>
+        <div>
+          <label for="gender">Gender</label>
+          <input type="text" id="gender" placeholder="female" />
+        </div>
+        <div>
+          <label for="pronouns">Pronouns</label>
+          <input type="text" id="pronouns" placeholder="she/her" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="species">Species</label>
+          <input type="text" id="species" placeholder="Shapeshifter" />
+        </div>
+        <div>
+          <label for="subtype">Subtype</label>
+          <input type="text" id="subtype" placeholder="Dual-Soul" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="homeRealm">Home Realm</label>
+          <input type="text" id="homeRealm" placeholder="Earth Realm" />
+        </div>
+        <div>
+          <label for="currentLocation">Current Location</label>
+          <input type="text" id="currentLocation" placeholder="Indianapolis, IN" />
+        </div>
+      </div>
+
+      <h3>Factions & Tags</h3>
+      <label for="faction">Primary Faction</label>
+      <input type="text" id="faction" placeholder="Fringe Shifters" />
+
+      <label for="tags">Tags (comma-separated)</label>
+      <input type="text" id="tags" placeholder="main_cast, dual_soul, shapeshifter" />
+
+      <h3>Relationships</h3>
+      <p class="small-note">
+        One per line, format: <code>TARGET_ID | label | status</code><br />
+        Example: <code>KADAIR | husband | separated</code>
+      </p>
+      <textarea id="relationships" placeholder="KADAIR | husband | separated&#10;JOHNARI | soul-twin | bound"></textarea>
+
+      <h3>Power & Continuity</h3>
+      <div class="row">
+        <div>
+          <label for="powerLevel">Power Level (1–10)</label>
+          <input type="number" id="powerLevel" placeholder="7" />
+        </div>
+        <div>
+          <label for="combatStyle">Combat Style</label>
+          <input type="text" id="combatStyle" placeholder="close-quarters, knives" />
+        </div>
+      </div>
+
+      <label for="magicType">Magic Type</label>
+      <input type="text" id="magicType" placeholder="Essence-based" />
+
+      <div class="row">
+        <div>
+          <label for="firstAppearance">First Appearance (ID)</label>
+          <input type="text" id="firstAppearance" placeholder="BOOK1_CH1" />
+        </div>
+        <div>
+          <label for="lastAppearance">Last Known Appearance (ID)</label>
+          <input type="text" id="lastAppearance" placeholder="BOOK1_CH23" />
+        </div>
+      </div>
+
+      <h3>Markdown Body (Optional Pre-Fill)</h3>
+      <p class="small-note">
+        You can edit this later in your editor. This is just a starting scaffold.
+      </p>
+      <label for="logline">Logline</label>
+      <textarea id="logline" placeholder="A dual-souled shapeshifter whose human life unravels as the Fracture calls her other self home."></textarea>
+
+      <button class="primary" onclick="generate()">Generate .md</button>
+      <button class="secondary" onclick="copyOutput()">Copy to Clipboard</button>
+    </div>
+
+    <!-- RIGHT PANEL: OUTPUT -->
+    <div class="panel">
+      <h2>Generated .md Output</h2>
+      <textarea id="output" readonly></textarea>
+    </div>
+  </div>
+
+  <script>
+    function yamlSafe(str) {
+      if (!str) return null;
+      const escaped = String(str).replace(/"/g, '\\"');
+      return `"${escaped}"`;
+    }
+
+    function parseList(str) {
+      if (!str) return [];
+      return str
+        .split(',')
+        .map(s => s.trim())
+        .filter(s => s.length > 0);
+    }
+
+    function parseRelationships(str) {
+      if (!str) return [];
+      const lines = str.split(/[\r\n]+/);
+      const out = [];
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed) continue;
+        const parts = trimmed.split('|').map(p => p.trim());
+        if (parts.length >= 2) {
+          out.push({
+            target_id: parts[0],
+            label: parts[1],
+            status: parts[2] || 'unknown'
+          });
+        }
+      }
+      return out;
+    }
+
+    function todayISO() {
+      return new Date().toISOString().slice(0, 10);
+    }
+
+    function generate() {
+      const id = document.getElementById('id').value.trim();
+      const displayName = document.getElementById('displayName').value.trim();
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const aliasesStr = document.getElementById('aliases').value;
+      const role = document.getElementById('role').value;
+      const status = document.getElementById('status').value;
+
+      const ageStr = document.getElementById('age').value.trim();
+      const age = ageStr ? parseInt(ageStr, 10) : null;
+      const gender = document.getElementById('gender').value.trim();
+      const pronouns = document.getElementById('pronouns').value.trim();
+      const species = document.getElementById('species').value.trim();
+      const subtype = document.getElementById('subtype').value.trim();
+      const homeRealm = document.getElementById('homeRealm').value.trim();
+      const currentLocation = document.getElementById('currentLocation').value.trim();
+
+      const faction = document.getElementById('faction').value.trim();
+      const tagsStr = document.getElementById('tags').value;
+
+      const relationshipsStr = document.getElementById('relationships').value;
+      const powerLevelStr = document.getElementById('powerLevel').value.trim();
+      const powerLevel = powerLevelStr ? parseInt(powerLevelStr, 10) : null;
+      const combatStyle = document.getElementById('combatStyle').value.trim();
+      const magicType = document.getElementById('magicType').value.trim();
+
+      const firstAppearance = document.getElementById('firstAppearance').value.trim();
+      const lastAppearance = document.getElementById('lastAppearance').value.trim();
+      const logline = document.getElementById('logline').value.trim();
+
+      const aliases = parseList(aliasesStr);
+      const tags = parseList(tagsStr);
+      const relationships = parseRelationships(relationshipsStr);
+
+      const createdAt = todayISO();
+      const updatedAt = todayISO();
+
+      function writeList(key, arr) {
+        if (!arr || arr.length === 0) return key + ": []\n";
+        let out = key + ":\n";
+        for (const item of arr) {
+          out += `  - ${yamlSafe(item)}\n`;
+        }
+        return out;
+      }
+
+      function writeRelationships(list) {
+        if (!list || list.length === 0) return "relationships: []\n";
+        let out = "relationships:\n";
+        for (const r of list) {
+          out += `  - target_id: ${yamlSafe(r.target_id)}\n`;
+          out += `    label: ${yamlSafe(r.label)}\n`;
+          out += `    status: ${yamlSafe(r.status)}\n`;
+        }
+        return out;
+      }
+
+      const yamlLines = [];
+
+      yamlLines.push("---");
+      yamlLines.push("# Auto-generated character dossier front-matter");
+      yamlLines.push("type: character");
+      yamlLines.push(`id: ${yamlSafe(id)}`);
+      yamlLines.push("name:");
+      yamlLines.push(`  first: ${yamlSafe(firstName)}`);
+      yamlLines.push(`  last: ${yamlSafe(lastName)}`);
+      yamlLines.push(`display_name: ${yamlSafe(displayName || (firstName + " " + lastName))}`);
+
+      yamlLines.push(writeList("aliases", aliases).trimEnd());
+      yamlLines.push(`role: ${yamlSafe(role)}`);
+      yamlLines.push(`status: ${yamlSafe(status)}`);
+
+      yamlLines.push(`age: ${age !== null && !Number.isNaN(age) ? age : "null"}`);
+      yamlLines.push(`gender: ${gender ? yamlSafe(gender) : "unknown"}`);
+      yamlLines.push(`pronouns: ${pronouns ? yamlSafe(pronouns) : "they/them"}`);
+
+      yamlLines.push(`species: ${species ? yamlSafe(species) : "Human"}`);
+      yamlLines.push(`subtype: ${subtype ? yamlSafe(subtype) : "null"}`);
+      yamlLines.push(`home_realm: ${homeRealm ? yamlSafe(homeRealm) : "null"}`);
+      yamlLines.push(`current_location: ${currentLocation ? yamlSafe(currentLocation) : "null"}`);
+
+      yamlLines.push(`faction: ${faction ? yamlSafe(faction) : "null"}`);
+
+      yamlLines.push(writeList("tags", tags).trimEnd());
+
+      yamlLines.push(writeRelationships(relationships).trimEnd());
+
+      yamlLines.push(`power_level: ${powerLevel !== null && !Number.isNaN(powerLevel) ? powerLevel : "null"}`);
+      yamlLines.push(`combat_style: ${combatStyle ? yamlSafe(combatStyle) : "null"}`);
+      yamlLines.push(`magic_type: ${magicType ? yamlSafe(magicType) : "null"}`);
+
+      yamlLines.push(`first_appearance: ${firstAppearance ? yamlSafe(firstAppearance) : "null"}`);
+      yamlLines.push(`last_known_appearance: ${lastAppearance ? yamlSafe(lastAppearance) : "null"}`);
+
+      yamlLines.push(`created_at: ${yamlSafe(createdAt)}`);
+      yamlLines.push(`updated_at: ${yamlSafe(updatedAt)}`);
+      yamlLines.push("---");
+
+      const nameHeader = displayName || (firstName && lastName ? `${firstName} ${lastName}` : "[Character Name Here]");
+      const bodyLines = [];
+
+      bodyLines.push(`# ${nameHeader}`);
+      bodyLines.push("");
+      bodyLines.push("## Logline");
+      bodyLines.push(logline || "[Write a one-sentence hook for this character here.]");
+      bodyLines.push("");
+      bodyLines.push("## Physical Description");
+      bodyLines.push("- Height:");
+      bodyLines.push("- Build:");
+      bodyLines.push("- Hair:");
+      bodyLines.push("- Eyes:");
+      bodyLines.push("- Distinguishing marks / features:");
+      bodyLines.push("- Usual clothing / vibe:");
+      bodyLines.push("");
+      bodyLines.push("## Personality");
+      bodyLines.push("- Core traits:");
+      bodyLines.push("- Flaws:");
+      bodyLines.push("- Fears:");
+      bodyLines.push("- Secret desires:");
+      bodyLines.push("- Baseline emotional climate:");
+      bodyLines.push("");
+      bodyLines.push("## Backstory");
+      bodyLines.push("[Write the character's backstory here.]");
+      bodyLines.push("");
+      bodyLines.push("## Abilities");
+      bodyLines.push("- Primary abilities:");
+      bodyLines.push("- Secondary abilities:");
+      bodyLines.push("- Limitations / weaknesses:");
+      bodyLines.push("- Triggers (when powers spike or misfire):");
+      bodyLines.push("");
+      bodyLines.push("## Key Events");
+      bodyLines.push("1. [Age / Time] — [Event]");
+      bodyLines.push("2. [Age / Time] — [Event]");
+      bodyLines.push("3. [Age / Time] — [Event]");
+      bodyLines.push("");
+      bodyLines.push("## Relationships (Narrative Notes)");
+      bodyLines.push("[Add details about how they feel about other characters, conflicts, loyalties, etc.]");
+      bodyLines.push("");
+      bodyLines.push("## Arc Notes");
+      bodyLines.push("- Starting point:");
+      bodyLines.push("- Midpoint transformation:");
+      bodyLines.push("- Ending point:");
+      bodyLines.push("- Open questions for future books:");
+      bodyLines.push("");
+      bodyLines.push("## Notes for Trey");
+      bodyLines.push("[Optional notes specific to how Trey should treat or retrieve this character.]");
+
+      const fullText = yamlLines.join("\n") + "\n" + bodyLines.join("\n") + "\n";
+      document.getElementById('output').value = fullText;
+    }
+
+    function copyOutput() {
+      const textarea = document.getElementById('output');
+      textarea.select();
+      textarea.setSelectionRange(0, 999999);
+      document.execCommand('copy');
+      alert('Generated .md copied to clipboard.');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+EDITOR PAGE (React + Tailwind + shadcn/ui)
+
+Files:
+- UI_Skeletons/React/Editor.tsx
+- UI_Skeletons/Notes/Editor_Setup_Notes.txt
+
+Components used (shadcn/ui):
+- card, button, input, textarea, badge, tabs, separator, dropdown-menu, tooltip
+
+Install (Next.js examples):
+1) npm i tailwindcss lucide-react framer-motion
+2) npx shadcn-ui@latest init
+3) npx shadcn-ui@latest add card button input textarea badge tabs separator dropdown-menu tooltip
+
+Drop-in usage:
+- App Router: app/editor/page.tsx
+    import EditorPage from "@/ui/Editor"; // if you move file to a component path
+    export default function Page() { return <EditorPage/>; }
+
+Notes:
+- The editor canvas uses a simple <Textarea> placeholder. Swap with TipTap/Slate when ready.
+- Left sidebar (Tabs) lists Outline / Assets / Notes / Research / KB placeholders.
+- TreyPanel is a mock; wire it to your chat/KB backend later.
+- All counts/titles are hardcoded; replace with real data hooks.
+- Keep following your archive rule: store .tsx + .txt backup in /UI_Skeletons and log in Audit Trail.
+
+Session ID: CAPTERHOUSE_8-2025-08-19-01
+Timestamp: 2025-08-20 01:42:30 UTC

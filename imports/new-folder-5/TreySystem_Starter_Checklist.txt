@@ -1,0 +1,27 @@
+Trey System Starter Checklist
+=============================
+
+Ubuntu backend
+--------------
+[ ] ssh fracturedsvc@192.168.137.2
+[ ] cd /srv/fractured/app/backend
+[ ] node src/app.js
+[ ] Confirm: "Fractured backend listening on port 3000"
+[ ] curl http://localhost:3000/
+[ ] curl POST /trey with a sample message
+
+Windows frontend
+----------------
+[ ] Open PowerShell or VS Code terminal
+[ ] cd C:\Users\tfiel\Documents
+[ ] npm install (if needed)
+[ ] npm run dev
+[ ] Open http://localhost:5173/ in browser
+[ ] Confirm Chapterhouse UI + Trey widget render
+
+Network
+-------
+[ ] Test-NetConnection 192.168.137.2 -Port 3000
+[ ] Invoke-WebRequest to http://192.168.137.2:3000/trey
+
+If all boxes are checked, Trey is fully online.

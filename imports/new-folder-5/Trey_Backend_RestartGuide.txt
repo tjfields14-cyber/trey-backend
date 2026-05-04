@@ -1,0 +1,24 @@
+Trey Backend Restart Guide
+=========================
+
+On Ubuntu
+---------
+1) ssh fracturedsvc@192.168.137.2
+2) cd /srv/fractured/app/backend
+3) Check port 3000:
+   sudo lsof -i :3000
+4) If a node process exists, kill it:
+   sudo kill -9 <PID>
+5) Start backend:
+   node src/app.js
+6) Test:
+   curl http://localhost:3000/
+   curl -X POST http://localhost:3000/trey      -H "Content-Type: application/json"      -d '{"message":"test from ubuntu"}'
+
+On Windows
+----------
+1) Open PowerShell or VS Code terminal
+2) cd C:\Users\tfiel\Documents
+3) npm run dev
+4) Open http://localhost:5173/ in browser
+5) Type a message into Trey and confirm reply.

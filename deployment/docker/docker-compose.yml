@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+
+  pearl-runtime:
+
+    build: .
+
+    ports:
+      - "8000:8000"
+
+  pearl-portal:
+
+    build: ./portal/aura-portal
+
+    ports:
+      - "3000:3000"

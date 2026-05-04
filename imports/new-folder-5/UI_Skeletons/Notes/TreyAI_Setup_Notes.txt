@@ -1,0 +1,22 @@
+TREY AI PAGE (React + Tailwind + shadcn/ui)
+
+Files:
+- TreyAI.tsx (drop into /app/trey/page.tsx or similar)
+
+Components used:
+- card, button, input, badge, tabs, separator, scroll-area
+- icons: Search, Send, Copy, Pin, Sparkles (lucide-react)
+
+Quick steps (Next.js):
+1) npm i lucide-react framer-motion
+2) shadcn/ui: npx shadcn-ui@latest add card button input badge tabs separator scroll-area
+3) Create page file and export default component.
+
+Wiring ideas:
+- Search: call your KB index API and map into KBCard props.
+- Chat: POST to /api/trey with message; append to chat state on response.
+- Pin: save selected chat/KB items to user’s pinned notes collection.
+- Access control: ensure only authorized roles (e.g., PA, PM) can pin to shared boards.
+
+Session ID: CAPTERHOUSE_8-2025-08-19-01
+Timestamp: 2025-08-20 01:46:01 UTC

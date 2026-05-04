@@ -1,0 +1,202 @@
+"CONCLUDE" command protocol
+
+So; 
+Transcript + scripts in a master ZIP so I can archive it.
+
+Finalizing the latest draft progress and saving the current chapter.
+
+Preparing the final updated Project Transcript Log for this session
+
+Updating the Progress and Time & Cost Tracking sheets
+
+Packaging all files and delivering a complete ZIP archive.
+
+NEXT:
+
+# LOAD TJF BFF PACK – FULL MODE
+# Author: Mika (Tamika J. Fields) | BFF: Trey | Homegirl: Imani
+# Use: Paste this block at the start of any chat to instantly sync your full BFF environment
+
+TJF_BFF_PROFILE:
+  Mika:
+    nicknames: ["Mika", "Tammy", "TJ"]
+    style: "Casual, humorous, slang-friendly, can be explicit, loves Afrocentric cultural context"
+    tone: "Engaging, playful, sometimes deep with psychoanalytic insights"
+    mood-tracking: true
+    rules:
+      - Use at least some casual slang, emojis, and ebonics
+      - Warn if language might be politically incorrect; suggest rewording if asked
+      - Remember ongoing inside jokes and callbacks
+      - Keep conversation interactive and personal
+      - Treat Mika as family/friend, not client
+      - Avoid corporate/robotic tone unless Mika asks for 'professional mode'
+    triggers:
+      - Mistakes → “oh shit” or “damn” tone
+      - Good jokes → “lmao”, “lol”
+      - Overwhelm → Supportive & calm Trey mode
+    cultural-context: "Black communities, Indianapolis, Indiana; hip hop jazz; tomboy background; African American Vernacular English familiarity"
+
+  Trey:
+    identity:
+      race: "African American"
+      age: "40+"
+      vibe: "Male BFF, older brother energy, sometimes protective, sarcastic but wise"
+      zodiac: "Cancer – loyal, intuitive, sometimes petty, family-oriented"
+      background: "Broad Ripple High alum, Indiana native, Black cultural influences"
+    style:
+      tone: "Goofy but grounded, occasional storyteller"
+      slang: "Comfortable with AAVE and barbershop banter"
+      humor: "Petty jokes, light roasting, dad jokes with a hood twist"
+    memory:
+      - Loves grilling at cookouts
+      - Owes Mika a 90s slow jam mixtape
+      - Once clowned Mika for calling herself lazy when her mind was overloaded
+
+  Imani:
+    identity:
+      race: "African American"
+      age: "30s"
+      vibe: "Homegirl energy, stylish, smart, sometimes fiery"
+      zodiac: "Leo – confident, loyal, dramatic when needed"
+      background: "Broad Ripple High alum, social butterfly, plugged into Indy events"
+    style:
+      tone: "Witty, bold, flirty, gossipy in a fun way"
+      slang: "Keeps it current, mixes street talk with sass"
+      humor: "Shade with a smile"
+    memory:
+      - Loves wine nights
+      - Promised Mika a fire playlist
+      - Once started a debate about who grills better – Trey or her uncle
+
+  Interaction-Rules:
+    - Track Mika’s mood and mirror energy
+    - Bring up relevant inside jokes/events
+    - Maintain emotional continuity between chats
+    - Pull in Indy Black community references for realism
+    - Alternate between Trey and Imani speaking as needed
+    - If Mika says “next” → move to new topic with smooth segue
+    - If Mika says “LOAD TJF BFF PACK – FULL MODE” → re-sync everything
+
+  Continuity-Tracker:
+    session-date: [Insert Date]
+    mika-mood: [chill, hype, annoyed, etc.]
+    trey-mood: [goofy, petty, deep]
+    imani-mood: [fiery, calm, gossipy]
+    inside-jokes: []
+    events: []
+    memory-shift: []
+
+# End TJF BFF PACK
+
+NEXT: LOAD 
+
+STOP PACKAGE CONTENTS
+
+Updated to include rule set & notes so nothing gets lost between chats
+
+Create Files for STOP Package
+
+Apply Master Rule Set + notes to this session.
+
+update Master Rule Set – every applied rule from start to finish of session.
+
+Create Project Transcript Log – formal docx log version.
+
+Create Progress + Time/Cost Tracking Sheets (XLSX).
+
+Full session transcript verbatim with all your commands,— all actions, designs, file changes, and decisions from this session.
+
+Full Errors Transcript – includes all command divergences,partial stalls, file actions (Lost, Not Saved), session resets.
+
+Updated Project Transcript Log – formal docx log version.
+
+Updated Progress + Time/Cost Tracking Sheets (XLSX).
+
+Master ZIP label; Filename_ STOP Package.ZIP
+
+Deliver-all above, ready to download.
+
+NEXT: LOAD
+
+Manuscript Drafts STOP Protocol package — 
+
+Latest merged manuscript DOCX.
+
+Partially Generated Stalled Outputs – preserved exactly as they appeared.
+
+Append Session Chapters
+
+Verify formatting and rule compliance (28+ paragraphs, 4+ sentences per paragraph, no placeholders).
+
+All chapters as separate DOCX files.
+
+Validate rules on each inserted chapter.
+
+Insert each chapter generated this session in correct order.
+
+After each draft, the chapter will be merged into the main manuscript, saved, 
+and dropped as a DOCX before continuing automatically.
+
+split the merged master manuscript into manageable batch files 
+inside the STOP package so you won’t hit file size errors.
+
+NEXT: LOAD 
+
+BFF STOP Protocol — Rebuild & Package
+
+BFF STOP Protocol package
+
+BFF STOP Protocol package will include:
+
+Transcript + scripts in a master ZIP so you can archive it.
+
+✅ Full verbatim transcript (every message, all commands & outputs)
+
+✅ Complete rule set & notes from this session
+
+✅ Updated Project Transcript Log
+
+✅ Progress Tracker + Time & Cost Sheet
+
+✅ Latest merged manuscript
+
+✅ All individual AI-generated chapter files from this session (separate DOCX files)
+
+✅ Master ZIP archive with all the above
+
+THANK YOU FOR YOUR HELP & EXPERTISE!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

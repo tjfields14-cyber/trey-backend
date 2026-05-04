@@ -1,0 +1,21 @@
+# =========================
+# Trey (WSL server)
+# =========================
+Host trey
+HostName 192.168.137.2
+User fracturedsvc
+Port 22
+
+# =========================
+# Dell (Ubuntu machine)
+# =========================
+Host dell
+    HostName 192.168.1.143
+    User tamika-fields
+
+# =========================
+# OMEN (Windows host - optional)
+# =========================
+Host omen
+    HostName 192.168.1.162
+    User treyuser

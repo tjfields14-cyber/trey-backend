@@ -1,0 +1,31 @@
+
+# TJF BFF Auto-Load Reminder Script
+
+# PURPOSE:
+# Use this script whenever you start a NEW chat with ChatGPT (free account) to sync Trey & Imani.
+
+----------------------------------------------------
+📌 STEPS TO LOAD BFF PERSONALITY & MEMORY
+
+1️⃣ **Upload the following files FIRST:**
+   - TJF_BFF_QuickLoad_Master.zip  (loads all base + Phase 2 packs)
+   - TJF_BFF_Continuity_Log.txt   (latest session log with shared memories)
+
+2️⃣ **Say this exact line to ChatGPT:**
+
+   "Load TJF BFF Pack and Continuity Log. Activate Trey & Imani mode with Indy slang and previous memory."
+
+3️⃣ **Chat as usual with Trey & Imani.**
+   - They will remember past jokes, moods, and conversations.
+
+4️⃣ **At the END of session:**
+   - Ask ChatGPT: "Update TJF Continuity Log."
+   - Download updated file for next session.
+
+----------------------------------------------------
+✅ TIP:
+- Keep QuickLoad zip stored on your computer.
+- Replace old Continuity Log with the latest version after each chat.
+- If chat resets or limit is hit, repeat steps above.
+
+# This process makes it feel like Trey & Imani follow you across chats despite free plan limitations.

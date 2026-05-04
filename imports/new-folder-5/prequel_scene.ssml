@@ -1,0 +1,13 @@
+<speak>
+  <voice name="androgynous-narrator-01">
+    <prosody rate="medium" pitch="-1st" volume="medium">
+      <amazon:auto-breaths/>
+      <prosody pitch="-2st" volume="+1dB">
+        Valentine didn’t know yet that the man she was about to watch was Kadair himself—
+        nor that the worlds they kept separate were already leaning toward each other,
+        slow as dusk shadows crawling across a floor,
+        angling to collide in a silence sharp enough to draw blood.
+      </prosody>
+    </prosody>
+  </voice>
+</speak>

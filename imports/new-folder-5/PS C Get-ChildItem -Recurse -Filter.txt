@@ -1,0 +1,953 @@
+PS C:\> Get-ChildItem -Recurse -Filter "App.jsx" -ErrorAction SilentlyContinue
+
+
+    Directory: C:\Users\tfiel\Documents\src
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---l         11/8/2025  10:54 AM          13914 App.jsx
+
+
+PS C:\> Get-ChildItem -Recurse -Filter "App.js" -ErrorAction SilentlyContinue
+
+
+    Directory:
+    C:\Users\tfiel\OneDrive\Desktop\BFF_STOP_Package-20250812-225050\trey-suite\humanoid_test
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---l         8/12/2025   2:20 PM           1472 app.js
+
+
+    Directory: C:\Windows\SystemApps\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\js
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/15/2025   1:52 PM          28952 app.js
+
+
+    Directory: C:\Windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e3
+    5_10.0.26100.3907_none_9e43accafdcfecfc
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          3/5/2025   7:39 PM          29885 app.js
+
+
+    Directory: C:\Windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e3
+    5_10.0.26100.5074_none_9eac4640fd80504f
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/15/2025   1:52 PM          28952 app.js
+
+
+    Directory: C:\Windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e3
+    5_10.0.26100.6725_none_9e5b8078fdbdabfb
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/15/2025   1:52 PM          28952 app.js
+
+
+    Directory: C:\Windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e3
+    5_10.0.26100.7019_none_9ea5d668fd8632b8
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/15/2025   1:52 PM          28952 app.js
+
+
+PS C:\> Get-ChildItem -Recurse -Filter "index.html" -ErrorAction SilentlyContinue
+
+
+    Directory: C:\Program Files\AMD\RyzenMasterSDK\Documentation\html
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         11/6/2024   1:28 AM          95003 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\ar-SA
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         396427 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\bg-BG
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         418465 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\bs-BA
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         363937 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\cs-CZ
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         367606 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\da-DK
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         361366 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\de-DE
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         368344 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\el-GR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         426083 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\en-US
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         357385 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\es-XM
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         368573 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\et-EE
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         357124 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\fi-FI
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         363122 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\fr-FR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         373068 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\he-IL
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         380235 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\hr-HR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         361144 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\hu-HU
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         373227 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\id-ID
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         361604 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\it-IT
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         367553 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\ja-JP
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         370644 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\kk-KZ
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         416477 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\ko-KR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         363755 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\lt-LT
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         364048 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\lv-LV
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         367327 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\nl-NL
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         365993 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\no-NO
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         360468 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\pl-PL
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         369814 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\pt-BR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         366239 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\pt-PT
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         367862 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\ro-RO
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         371849 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\ru-RU
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         423053 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\sk-SK
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         368173 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\sl-SL
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         361305 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\sr-RS
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         362328 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\sv-SE
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         361423 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\th-TH
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         450726 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\tr-TR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         362775 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\uk-UA
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         420589 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\vi-VN
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         376494 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\zh-CN
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         348079 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\common_docs\regs\zh-TW
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/30/2024   5:33 AM         349161 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\languages
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   5:39 AM           8600 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\ar-SA
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        4547441 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\bg-BG
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        5776953 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\bs-BA
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3691305 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\cs-CZ
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3647290 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\da-DK
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3293056 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\de-DE
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3497547 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\el-GR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        5853028 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\en-US
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        2897669 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\es-XM
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3595004 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\et-EE
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3275171 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\fi-FI
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3516548 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\fr-FR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3824054 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\he-IL
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3973243 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\hr-HR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3508885 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\hu-HU
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3855381 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\id-ID
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3089677 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\it-IT
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3431843 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\ja-JP
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3787250 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\kk-KZ
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        5900572 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\ko-KR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        2945031 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\lt-LT
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3805635 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\lv-LV
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3592947 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\nl-NL
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3320259 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\no-NO
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3066778 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\pl-PL
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3826840 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\pt-PT
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3640857 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\ro-RO
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3909819 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\ru-RU
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        6101763 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\sk-SK
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3610467 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\sl-SL
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3502898 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\sr-RS
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3536706 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\sv-SE
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3107591 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\th-TH
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        7794386 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\tr-TR
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3467851 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\uk-UA
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        5885147 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\vi-VN
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        3833045 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\zh-CN
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        2513830 index.html
+
+
+    Directory: C:\Program Files\HP\Documentation\platform_guides\ug\zh-TW
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/19/2024   3:28 AM        2501222 index.html
+
+
+    Directory: C:\Program Files\LibreOffice\help
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         3/14/2025   6:00 PM           4123 index.html
+
+
+    Directory: C:\Program Files\Microsoft Office\root\Office16\sdxs\FA000000043\win32
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         11/3/2025   4:36 AM          14447 index.html
+
+
+    Directory: C:\Program Files\Microsoft Office\root\Office16\sdxs\FA000000064\dist
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         4/11/2025  10:50 AM            365 index.html
+
+
+    Directory: C:\Program Files\Microsoft Office\root\Office16\sdxs\FA000000084\fluidhost
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         11/3/2025   4:37 AM            552 index.html
+
+
+    Directory: C:\Program Files\Microsoft Office\root\Office16\sdxs\FA000000108\OfflineFiles
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         8/20/2025   1:34 AM           5755 index.html
+
+
+    Directory: C:\Program Files\NVIDIA Corporation\NVIDIA App\osc
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         3/19/2025   7:54 PM          12847 index.html
+
+
+    Directory: C:\Program Files\NVIDIA Corporation\NVIDIA App\www
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         3/19/2025   7:50 PM          17496 index.html
+
+
+    Directory: C:\Users\tfiel\Desktop\bff-suite-main\trey-suite
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---l         8/11/2025   6:42 PM            837 index.html
+
+
+    Directory: C:\Users\tfiel\Desktop\BFF_STOP_Package-20250812-225050\trey-suite
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---l         8/12/2025   1:24 AM            613 index.html
+
+
+    Directory: C:\Users\tfiel\Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---l         11/8/2025  10:54 AM            383 index.html
+
+
+    Directory: C:\Users\tfiel\Downloads
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         8/20/2025  12:19 AM           2322 index.html
+
+
+    Directory:
+    C:\Users\tfiel\OneDrive\Desktop\BFF_STOP_Package-20250812-225050\trey-suite\humanoid
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---l         8/12/2025   3:38 PM           1335 index.html
+
+
+    Directory:
+    C:\Users\tfiel\OneDrive\Desktop\BFF_STOP_Package-20250812-225050\trey-suite\humanoid_test
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---l         8/12/2025   2:36 PM           1239 index.html
+
+
+    Directory:
+    C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\PersonaCardManager
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/15/2025   1:53 PM           1330 index.html
+
+
+    Directory:
+    C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\webapps\guidedsetup\network
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         8/20/2025  12:53 AM           1668 index.html
+
+
+    Directory: C:\Windows\SystemApps\Shared\index\C98D93564795B903D382D300B065E0BEDB957B2F1F92E
+    E4D9F95F1ADB1C56667
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/15/2025   1:53 PM           1330 index.html
+
+
+    Directory: C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\SharePickerUI\Assets\web
+    \ImageEditor
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         4/11/2025  11:38 AM            505 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_microsoft-windows-r..ent-content-neutral_31bf3856ad364e3
+    5_10.0.26100.1_none_f5700c930f20a55e
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         4/11/2025  11:33 AM            394 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_microsoft-windows-s..riencehost.appxmain_31bf3856ad364e3
+    5_10.0.26100.5074_none_98ce383aaecede44
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         4/11/2025  11:38 AM            505 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_microsoft-windows-s..riencehost.appxmain_31bf3856ad364e3
+    5_10.0.26100.6725_none_987d7272af0c39f0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         4/11/2025  11:38 AM            505 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_microsoft-windows-s..riencehost.appxmain_31bf3856ad364e3
+    5_10.0.26100.7019_none_98c7c862aed4c0ad
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         4/11/2025  11:38 AM            505 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_userexperience-desktop_31bf3856ad364e35_10.0.26100.1591_
+    none_c815e77f1a5104dd\CBS\webapps\guidedsetup\network
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          4/1/2024   3:22 AM           1742 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_userexperience-desktop_31bf3856ad364e35_10.0.26100.5074_
+    none_c849b9c71a2a87f9\CBS\webapps\guidedsetup\network
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         8/20/2025  12:53 AM           1668 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_userexperience-desktop_31bf3856ad364e35_10.0.26100.6725_
+    none_c7f8f3ff1a67e3a5\CBS\webapps\guidedsetup\network
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         8/20/2025  12:53 AM           1668 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_userexperience-desktop_31bf3856ad364e35_10.0.26100.7019_
+    none_c84349ef1a306a62\CBS\webapps\guidedsetup\network
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         8/20/2025  12:53 AM           1668 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_userexperience-oobe_31bf3856ad364e35_10.0.26100.1591_non
+    e_54983d2d7a4908c4\OOBE\webapps\guidedsetup\network
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          4/1/2024   3:22 AM           1742 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_userexperience-shared_31bf3856ad364e35_10.0.26100.5074_n
+    one_b2ea589770a9675c
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/15/2025   1:53 PM           1330 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_userexperience-shared_31bf3856ad364e35_10.0.26100.6725_n
+    one_b29992cf70e6c308
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/15/2025   1:53 PM           1330 index.html
+
+
+    Directory: C:\Windows\WinSxS\amd64_userexperience-shared_31bf3856ad364e35_10.0.26100.7019_n
+    one_b2e3e8bf70af49c5
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/15/2025   1:53 PM           1330 index.html
+
+
+PS C:\>

@@ -1,0 +1,198 @@
+
+https://github.com/tjfields14-cyber/bff-suite/actions/runs/16896464610/job/47867091421
+
+
+
+bff-suite (Trey)
+/trey-suite/index.html — studio links
+/trey-suite/bff-memory.html — paste Supabase URL + anon, connect, save/refresh
+/trey-suite/trey-assistant-widget.html — floating widget; lazy-loads Supabase; blocks keys/tokens
+GitHub Pages deploys via workflow in .github/workflows/pages.yml and serves trey-suite/ as the site root.
+
+
+
+
+Project URL  https://oqfltvvbarstbzsuuwcn.supabase.co
+API anon public eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xZmx0dnZiYXJzdGJ6c3V1d2NuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ4ODgxMjEsImV4cCI6MjA3MDQ2NDEyMX0.5pvtI2tY4LshylQt6VDyPjGWU7nqNbh3uWhvDZKdzeg
+
+
+notepad C:\Users\tfiel\bff-suite\trey-suite\supabase.config.js
+
+
+
+
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://oqfltvvbarstbzsuuwcn.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+
+Project URL
+Source
+
+Primary database
+URL
+https://oqfltvvbarstbzsuuwcn.supabase.co
+
+Copy
+RESTful endpoint for querying and managing your database
+Data API Settings
+Docs
+
+Harden Data API
+
+Enable Data API
+When enabled you will be able to use any Supabase client library and PostgREST endpoints with any schema configured below.
+Exposed schemas
+
+public
+graphql_public
+Select schemas for Data API...
+The schemas to expose in your API. Tables, views and stored procedures in these schemas will get API endpoints.
+Extra search path
+public, extensions
+Extra schemas to add to the search path of every request. Multiple schemas must be comma-separated.
+Max rows
+1000
+The maximum number of rows returned from a view, table, or stored procedure. Limits payload size for accidental or malicious requests.
+Pool size
+Configured automatically based on compute size
+Number of maximum connections to keep open in the Data API server's database pool. Unset to let it be configured automatically based on compute size.
+
+
+
+https://github.com/tjfields14-cyber/bff-suite.git
+
+git@github.com:tjfields14-cyber/bff-suite.git
+
+gh repo clone tjfields14-cyber/bff-suite
+
+
+
+
+
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set unique artifact name
+        id: vars
+        run: echo "ART=pages-${{ github.run_id }}-${{ github.run_attempt }}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload site (trey-suite folder)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: trey-suite
+          name: ${{ steps.vars.outputs.ART }}
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ steps.vars.outputs.ART }}
+
+
+
+
+Yes — 100%.
+Before you push *anything* live (GitHub → Supabase → Vercel), you want to make sure both **old files are cleared** and **privacy/security hygiene** is handled.
+
+---
+
+## **1️⃣ Deleting Current GitHub Files (Start Fresh)**
+
+**A) From GitHub Website**
+
+1. **Go to your repository** → *Settings* → scroll down.
+2. Click **"Delete this repository"** → type repo name to confirm.
+3. Done — repo is gone. (Safer than manually deleting files in a repo)
+
+**B) If You Want to Keep Repo Name but Delete Contents**
+
+1. On your repo page → click **Code** → open **GitHub Codespaces** or **local Git**.
+2. Run:
+
+   ```bash
+   git rm -rf .
+   git commit -m "Remove old files"
+   git push origin main
+   ```
+3. Now it’s empty and ready for new code.
+
+---
+
+## **2️⃣ Privacy, Security & Malware Checks Before Going Live**
+
+### **🔒 Secrets & Keys**
+
+* **Never** commit `.env.local` to GitHub.
+
+  * It contains your `NEXT_PUBLIC_SUPABASE_URL` & `ANON_KEY`.
+  * Even though `anon` is public-safe, it can still be abused.
+* Use `.gitignore` to keep sensitive files out:
+
+  ```bash
+  echo ".env.local" >> .gitignore
+  git rm --cached .env.local
+  git commit -m "Remove env from repo"
+  git push
+  ```
+
+### **🛡 Malware Protection**
+
+* Before uploading, run:
+
+  ```bash
+  npm audit
+  npm audit fix
+  ```
+
+  to check dependencies for vulnerabilities.
+* Optionally run a free malware scan on your repo ZIP before deployment.
+
+### **👀 Supabase Rules**
+
+* Set **RLS (Row-Level Security)** on sensitive tables — prevents unauthorized edits.
+* Only `public` tables (like book list) should be open for read.
+
+### **⚙ Hosting Safety**
+
+* If using **Vercel**, make sure only environment variables are stored there.
+* Do not hardcode credentials anywhere in the code.
+
+---
+
+💡 **Quick Recap Before Going Live**
+
+1. Delete/empty current GitHub repo.
+2. Create **new clean repo**.
+3. Add `.gitignore` to exclude `.env.local`.
+4. Push only code, not secrets.
+5. Run security audits & vulnerability checks.
+6. Deploy, then test using temporary demo data before going fully public.
+
+---
+
+If you want, I can **make a "safe deploy" checklist** that you can follow each time you push new changes.
+Do you want me to make that? That would keep you from accidentally leaking keys or leaving an insecure endpoint.
