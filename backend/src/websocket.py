@@ -291,7 +291,7 @@ async def main():
 
         runtime_socket,
 
-        "localhost",
+        "0.0.0.0",
 
         8765
     ):
