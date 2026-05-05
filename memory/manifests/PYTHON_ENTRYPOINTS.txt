@@ -1,0 +1,1158 @@
+
+.venv\Lib\site-packages\typing_extensions.py:615:def _caller(depth=1, default='__main__'):
+.venv\Lib\site-packages\anyio\to_interpreter.py:106:            _interpreters.set___main___attrs(
+.venv\Lib\site-packages\anyio\to_process.py:166:                main_module_path = getattr(sys.modules["__main__"], "__file__", None)
+.venv\Lib\site-packages\anyio\to_process.py:233:                del sys.modules["__main__"]
+.venv\Lib\site-packages\anyio\to_process.py:236:                    # __main__ (like multiprocessing does) to avoid infinite recursion
+.venv\Lib\site-packages\anyio\to_process.py:242:                            sys.modules["__main__"] = main
+.venv\Lib\site-packages\anyio\to_process.py:265:if __name__ == "__main__":
+.venv\Lib\site-packages\click\decorators.py:478:            if package_name == "__main__":
+.venv\Lib\site-packages\click\utils.py:541:    :param _main: The ``__main__`` module. This should only be passed
+.venv\Lib\site-packages\click\utils.py:550:        _main = sys.modules["__main__"]
+.venv\Lib\site-packages\click\utils.py:575:    if name != "__main__":
+.venv\Lib\site-packages\colorama\tests\ansi_test.py:75:if __name__ == '__main__':
+.venv\Lib\site-packages\colorama\tests\ansitowin32_test.py:293:if __name__ == '__main__':
+.venv\Lib\site-packages\colorama\tests\initialise_test.py:188:if __name__ == '__main__':
+.venv\Lib\site-packages\colorama\tests\isatty_test.py:56:if __name__ == '__main__':
+.venv\Lib\site-packages\colorama\tests\winterm_test.py:130:if __name__ == '__main__':
+.venv\Lib\site-packages\dotenv\__main__.py:5:if __name__ == "__main__":
+.venv\Lib\site-packages\dotenv\main.py:348:            main = __import__("__main__", None, None, fromlist=["__file__"])
+.venv\Lib\site-packages\fastapi\__init__.py:1:"""FastAPI framework, high performance, easy to learn, fast to code, ready for production"""
+.venv\Lib\site-packages\fastapi\__init__.py:7:from .applications import FastAPI as FastAPI
+.venv\Lib\site-packages\fastapi\__main__.py:1:from fastapi.cli import main
+.venv\Lib\site-packages\fastapi\applications.py:6:from fastapi import routing
+.venv\Lib\site-packages\fastapi\applications.py:7:from fastapi.datastructures import Default, DefaultPlaceholder
+.venv\Lib\site-packages\fastapi\applications.py:8:from fastapi.exception_handlers import (
+.venv\Lib\site-packages\fastapi\applications.py:13:from fastapi.exceptions import RequestValidationError, WebSocketRequestValidationError
+.venv\Lib\site-packages\fastapi\applications.py:14:from fastapi.logger import logger
+.venv\Lib\site-packages\fastapi\applications.py:15:from fastapi.middleware.asyncexitstack import AsyncExitStackMiddleware
+.venv\Lib\site-packages\fastapi\applications.py:16:from fastapi.openapi.docs import (
+.venv\Lib\site-packages\fastapi\applications.py:21:from fastapi.openapi.utils import get_openapi
+.venv\Lib\site-packages\fastapi\applications.py:22:from fastapi.params import Depends
+.venv\Lib\site-packages\fastapi\applications.py:23:from fastapi.types import DecoratedCallable, IncEx
+.venv\Lib\site-packages\fastapi\applications.py:24:from fastapi.utils import generate_unique_id
+.venv\Lib\site-packages\fastapi\applications.py:38:AppType = TypeVar("AppType", bound="FastAPI")
+.venv\Lib\site-packages\fastapi\applications.py:41:class FastAPI(Starlette):
+.venv\Lib\site-packages\fastapi\applications.py:43:    `FastAPI` app class, the main entrypoint to use FastAPI.
+.venv\Lib\site-packages\fastapi\applications.py:46:    [FastAPI docs for First Steps](https://fastapi.tiangolo.com/tutorial/first-steps/).
+.venv\Lib\site-packages\fastapi\applications.py:51:    from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:53:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:86:                You normally wouldn't use this parameter with FastAPI, it is inherited
+.venv\Lib\site-packages\fastapi\applications.py:89:                In FastAPI, you normally would use the *path operation methods*,
+.venv\Lib\site-packages\fastapi\applications.py:103:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).
+.venv\Lib\site-packages\fastapi\applications.py:108:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:110:                app = FastAPI(title="ChimichangApp")
+.venv\Lib\site-packages\fastapi\applications.py:114:        ] = "FastAPI",
+.venv\Lib\site-packages\fastapi\applications.py:124:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).
+.venv\Lib\site-packages\fastapi\applications.py:129:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:131:                app = FastAPI(summary="Deadpond's favorite app. Nuff said.")
+.venv\Lib\site-packages\fastapi\applications.py:146:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).
+.venv\Lib\site-packages\fastapi\applications.py:151:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:153:                app = FastAPI(
+.venv\Lib\site-packages\fastapi\applications.py:181:                the OpenAPI specification nor the version of FastAPI being used.
+.venv\Lib\site-packages\fastapi\applications.py:186:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).
+.venv\Lib\site-packages\fastapi\applications.py:191:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:193:                app = FastAPI(version="0.0.1")
+.venv\Lib\site-packages\fastapi\applications.py:209:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#openapi-url).
+.venv\Lib\site-packages\fastapi\applications.py:214:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:216:                app = FastAPI(openapi_url="/api/v1/openapi.json")
+.venv\Lib\site-packages\fastapi\applications.py:254:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-tags).
+.venv\Lib\site-packages\fastapi\applications.py:259:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:271:                            "url": "https://fastapi.tiangolo.com/",
+.venv\Lib\site-packages\fastapi\applications.py:276:                app = FastAPI(openapi_tags=tags_metadata)
+.venv\Lib\site-packages\fastapi\applications.py:313:                [FastAPI docs for Behind a Proxy](https://fastapi.tiangolo.com/advanced/behind-a-proxy/#additional-servers).
+.venv\Lib\site-packages\fastapi\applications.py:318:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:320:                app = FastAPI(
+.venv\Lib\site-packages\fastapi\applications.py:338:                [FastAPI docs for Global Dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/global-dependencies/).
+.venv\Lib\site-packages\fastapi\applications.py:343:                from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:347:                app = FastAPI(dependencies=[Depends(func_dep_1), Depends(func_dep_2)])
+.venv\Lib\site-packages\fastapi\applications.py:359:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#default-response-class).
+.venv\Lib\site-packages\fastapi\applications.py:364:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:365:                from fastapi.responses import ORJSONResponse
+.venv\Lib\site-packages\fastapi\applications.py:367:                app = FastAPI(default_response_class=ORJSONResponse)
+.venv\Lib\site-packages\fastapi\applications.py:382:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:384:                app = FastAPI(redirect_slashes=True)  # the default
+.venv\Lib\site-packages\fastapi\applications.py:409:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#docs-urls).
+.venv\Lib\site-packages\fastapi\applications.py:414:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:416:                app = FastAPI(docs_url="/documentation", redoc_url=None)
+.venv\Lib\site-packages\fastapi\applications.py:433:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#docs-urls).
+.venv\Lib\site-packages\fastapi\applications.py:438:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:440:                app = FastAPI(docs_url="/documentation", redoc_url="redocumentation")
+.venv\Lib\site-packages\fastapi\applications.py:475:                In FastAPI you would normally do this with `app.add_middleware()`
+.venv\Lib\site-packages\fastapi\applications.py:479:                [FastAPI docs for Middleware](https://fastapi.tiangolo.com/tutorial/middleware/).
+.venv\Lib\site-packages\fastapi\applications.py:493:                In FastAPI, you would normally use the decorator
+.venv\Lib\site-packages\fastapi\applications.py:497:                [FastAPI docs for Handling Errors](https://fastapi.tiangolo.com/tutorial/handling-errors/).
+.venv\Lib\site-packages\fastapi\applications.py:509:                Read more in the [FastAPI docs for `lifespan`](https://fastapi.tiangolo.com/advanced/events/).
+.venv\Lib\site-packages\fastapi\applications.py:522:                [FastAPI docs for `lifespan`](https://fastapi.tiangolo.com/advanced/events/).
+.venv\Lib\site-packages\fastapi\applications.py:534:                [FastAPI docs for `lifespan`](https://fastapi.tiangolo.com/advanced/events/).
+.venv\Lib\site-packages\fastapi\applications.py:547:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).
+.venv\Lib\site-packages\fastapi\applications.py:552:                app = FastAPI(terms_of_service="http://example.com/terms/")
+.venv\Lib\site-packages\fastapi\applications.py:574:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).
+.venv\Lib\site-packages\fastapi\applications.py:579:                app = FastAPI(
+.venv\Lib\site-packages\fastapi\applications.py:602:                    field. Available since OpenAPI 3.1.0, FastAPI 0.99.0.
+.venv\Lib\site-packages\fastapi\applications.py:609:                [FastAPI docs for Metadata and Docs URLs](https://fastapi.tiangolo.com/tutorial/metadata/#metadata-for-api).
+.venv\Lib\site-packages\fastapi\applications.py:614:                app = FastAPI(
+.venv\Lib\site-packages\fastapi\applications.py:647:                [FastAPI docs for Behind a Proxy](https://fastapi.tiangolo.com/advanced/behind-a-proxy/).
+.venv\Lib\site-packages\fastapi\applications.py:652:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:654:                app = FastAPI(root_path="/api/v1")
+.venv\Lib\site-packages\fastapi\applications.py:667:                [FastAPI docs for Behind a Proxy](https://fastapi.tiangolo.com/advanced/behind-a-proxy/#disable-automatic-server-from-root-path).
+.venv\Lib\site-packages\fastapi\applications.py:672:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:674:                app = FastAPI(root_path_in_servers=False)
+.venv\Lib\site-packages\fastapi\applications.py:688:                [FastAPI docs for Additional Responses in OpenAPI](https://fastapi.tiangolo.com/advanced/additional-responses/).
+.venv\Lib\site-packages\fastapi\applications.py:691:                [FastAPI docs for Bigger Applications](https://fastapi.tiangolo.com/tutorial/bigger-applications/#include-an-apirouter-with-a-custom-prefix-tags-responses-and-dependencies).
+.venv\Lib\site-packages\fastapi\applications.py:704:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\applications.py:717:                **Note**: This is available since OpenAPI 3.1.0, FastAPI 0.99.0.
+.venv\Lib\site-packages\fastapi\applications.py:720:                [FastAPI docs for OpenAPI Webhooks](https://fastapi.tiangolo.com/advanced/openapi-webhooks/).
+.venv\Lib\site-packages\fastapi\applications.py:734:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#deprecate-a-path-operation).
+.venv\Lib\site-packages\fastapi\applications.py:748:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\applications.py:760:                [FastAPI docs about how to Configure Swagger UI](https://fastapi.tiangolo.com/how-to/configure-swagger-ui/).
+.venv\Lib\site-packages\fastapi\applications.py:775:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:809:                [FastAPI docs about how to separate schemas for input and output](https://fastapi.tiangolo.com/how-to/separate-openapi-schemas)
+.venv\Lib\site-packages\fastapi\applications.py:827:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:834:                app = FastAPI(openapi_external_docs=external_docs)
+.venv\Lib\site-packages\fastapi\applications.py:858:                [FastAPI docs for Strict Content-Type](https://fastapi.tiangolo.com/advanced/strict-content-type/).
+.venv\Lib\site-packages\fastapi\applications.py:866:                Extra keyword arguments to be stored in the app, not used by FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:898:                FastAPI will generate OpenAPI version 3.1.0, and will output that as
+.venv\Lib\site-packages\fastapi\applications.py:907:                This is not passed as a parameter to the `FastAPI` class to avoid
+.venv\Lib\site-packages\fastapi\applications.py:908:                giving the false idea that FastAPI would generate a different OpenAPI
+.venv\Lib\site-packages\fastapi\applications.py:914:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:916:                app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:933:                "https://fastapi.tiangolo.com/advanced/sub-applications/"
+.venv\Lib\site-packages\fastapi\applications.py:943:                [FastAPI docs for OpenAPI Webhooks](https://fastapi.tiangolo.com/advanced/openapi-webhooks/).
+.venv\Lib\site-packages\fastapi\applications.py:955:                You normally wouldn't use this in FastAPI, for most of the cases you
+.venv\Lib\site-packages\fastapi\applications.py:956:                would instead use FastAPI dependencies.
+.venv\Lib\site-packages\fastapi\applications.py:978:                [FastAPI docs for Testing Dependencies with Overrides](https://fastapi.tiangolo.com/advanced/testing-dependencies/).
+.venv\Lib\site-packages\fastapi\applications.py:1040:                # Add FastAPI-specific AsyncExitStackMiddleware for closing files.
+.venv\Lib\site-packages\fastapi\applications.py:1070:        Generate the OpenAPI schema of the application. This is called by FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:1080:        [FastAPI docs for OpenAPI](https://fastapi.tiangolo.com/how-to/extending-openapi/).
+.venv\Lib\site-packages\fastapi\applications.py:1320:                [FastAPI docs for WebSockets](https://fastapi.tiangolo.com/advanced/websockets/).
+.venv\Lib\site-packages\fastapi\applications.py:1329:        [FastAPI docs for WebSockets](https://fastapi.tiangolo.com/advanced/websockets/).
+.venv\Lib\site-packages\fastapi\applications.py:1334:        from fastapi import FastAPI, WebSocket
+.venv\Lib\site-packages\fastapi\applications.py:1336:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:1373:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:1385:                [FastAPI docs for Bigger Applications - Multiple Files](https://fastapi.tiangolo.com/tutorial/bigger-applications/#include-an-apirouter-with-a-custom-prefix-tags-responses-and-dependencies).
+.venv\Lib\site-packages\fastapi\applications.py:1390:                from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:1395:                app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:1414:                [FastAPI docs for Additional Responses in OpenAPI](https://fastapi.tiangolo.com/advanced/additional-responses/).
+.venv\Lib\site-packages\fastapi\applications.py:1417:                [FastAPI docs for Bigger Applications](https://fastapi.tiangolo.com/tutorial/bigger-applications/#include-an-apirouter-with-a-custom-prefix-tags-responses-and-dependencies).
+.venv\Lib\site-packages\fastapi\applications.py:1432:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:1436:                app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:1458:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:1462:                app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:1480:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#default-response-class).
+.venv\Lib\site-packages\fastapi\applications.py:1485:                from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:1486:                from fastapi.responses import ORJSONResponse
+.venv\Lib\site-packages\fastapi\applications.py:1490:                app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:1512:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\applications.py:1527:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:1536:        [FastAPI docs for Bigger Applications](https://fastapi.tiangolo.com/tutorial/bigger-applications/).
+.venv\Lib\site-packages\fastapi\applications.py:1541:        from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:1545:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:1602:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\applications.py:1606:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\applications.py:1619:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\applications.py:1632:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\applications.py:1644:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\applications.py:1657:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:1675:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:1722:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\applications.py:1725:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:1737:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:1749:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:1761:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:1779:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:1796:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:1813:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\applications.py:1826:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\applications.py:1839:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\applications.py:1863:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\applications.py:1875:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\applications.py:1890:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:1901:        from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:1903:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:1975:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\applications.py:1979:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\applications.py:1992:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\applications.py:2005:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\applications.py:2017:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\applications.py:2030:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:2048:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:2095:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\applications.py:2098:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:2110:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:2122:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:2134:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:2152:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:2169:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:2186:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\applications.py:2199:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\applications.py:2212:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\applications.py:2236:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\applications.py:2248:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\applications.py:2263:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:2274:        from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:2281:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:2353:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\applications.py:2357:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\applications.py:2370:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\applications.py:2383:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\applications.py:2395:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\applications.py:2408:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:2426:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:2473:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\applications.py:2476:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:2488:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:2500:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:2512:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:2530:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:2547:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:2564:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\applications.py:2577:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\applications.py:2590:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\applications.py:2614:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\applications.py:2626:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\applications.py:2641:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:2652:        from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:2659:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:2731:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\applications.py:2735:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\applications.py:2748:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\applications.py:2761:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\applications.py:2773:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\applications.py:2786:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:2804:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:2851:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\applications.py:2854:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:2866:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:2878:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:2890:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:2908:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:2925:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:2942:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\applications.py:2955:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\applications.py:2968:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\applications.py:2992:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\applications.py:3004:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\applications.py:3019:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:3030:        from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:3032:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:3104:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\applications.py:3108:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\applications.py:3121:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\applications.py:3134:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\applications.py:3146:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\applications.py:3159:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:3177:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:3224:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\applications.py:3227:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:3239:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:3251:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:3263:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:3281:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:3298:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:3315:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\applications.py:3328:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\applications.py:3341:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\applications.py:3365:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\applications.py:3377:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\applications.py:3392:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:3403:        from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:3405:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:3477:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\applications.py:3481:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\applications.py:3494:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\applications.py:3507:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\applications.py:3519:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\applications.py:3532:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:3550:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:3597:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\applications.py:3600:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:3612:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:3624:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:3636:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:3654:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:3671:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:3688:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\applications.py:3701:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\applications.py:3714:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\applications.py:3738:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\applications.py:3750:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\applications.py:3765:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:3776:        from fastapi import FastAPI, Response
+.venv\Lib\site-packages\fastapi\applications.py:3778:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:3850:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\applications.py:3854:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\applications.py:3867:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\applications.py:3880:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\applications.py:3892:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\applications.py:3905:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:3923:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:3970:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\applications.py:3973:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:3985:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:3997:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:4009:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:4027:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:4044:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:4061:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\applications.py:4074:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\applications.py:4087:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\applications.py:4111:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\applications.py:4123:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\applications.py:4138:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:4149:        from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:4156:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:4228:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\applications.py:4232:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\applications.py:4245:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\applications.py:4258:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\applications.py:4270:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\applications.py:4283:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:4301:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\applications.py:4348:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\applications.py:4351:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:4363:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:4375:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:4387:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\applications.py:4405:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:4422:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\applications.py:4439:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\applications.py:4452:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\applications.py:4465:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\applications.py:4489:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\applications.py:4501:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\applications.py:4516:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\applications.py:4527:        from fastapi import FastAPI
+.venv\Lib\site-packages\fastapi\applications.py:4529:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:4576:        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+.venv\Lib\site-packages\fastapi\applications.py:4596:        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/#alternative-events-deprecated).
+.venv\Lib\site-packages\fastapi\applications.py:4615:        [FastAPI docs for Middleware](https://fastapi.tiangolo.com/tutorial/middleware/).
+.venv\Lib\site-packages\fastapi\applications.py:4623:        from fastapi import FastAPI, Request, Response
+.venv\Lib\site-packages\fastapi\applications.py:4625:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\applications.py:4661:        [FastAPI docs for Handling Errors](https://fastapi.tiangolo.com/tutorial/handling-errors/).
+.venv\Lib\site-packages\fastapi\applications.py:4666:        from fastapi import FastAPI, Request
+.venv\Lib\site-packages\fastapi\applications.py:4667:        from fastapi.responses import JSONResponse
+.venv\Lib\site-packages\fastapi\applications.py:4675:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\background.py:17:    [FastAPI docs for Background Tasks](https://fastapi.tiangolo.com/tutorial/background-tasks/).
+.venv\Lib\site-packages\fastapi\background.py:22:    from fastapi import BackgroundTasks, FastAPI
+.venv\Lib\site-packages\fastapi\background.py:24:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\background.py:59:        [FastAPI docs for Background Tasks](https://fastapi.tiangolo.com/tutorial/background-tasks/).
+.venv\Lib\site-packages\fastapi\cli.py:2:    from fastapi_cli.cli import main as cli_main
+.venv\Lib\site-packages\fastapi\cli.py:10:        message = 'To use the fastapi command, please install "fastapi[standard]":\n\n\tpip install "fastapi[standard]"\n'
+.venv\Lib\site-packages\fastapi\datastructures.py:32:    [FastAPI docs for Request Files](https://fastapi.tiangolo.com/tutorial/request-files/).
+.venv\Lib\site-packages\fastapi\datastructures.py:39:    from fastapi import FastAPI, File, UploadFile
+.venv\Lib\site-packages\fastapi\datastructures.py:41:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\encoders.py:22:from fastapi.exceptions import PydanticV1NotSupportedError
+.venv\Lib\site-packages\fastapi\encoders.py:23:from fastapi.types import IncEx
+.venv\Lib\site-packages\fastapi\encoders.py:222:    This is used internally by FastAPI to make sure anything you return can be
+.venv\Lib\site-packages\fastapi\encoders.py:229:    [FastAPI docs for JSON Compatible Encoder](https://fastapi.tiangolo.com/tutorial/encoder/).
+.venv\Lib\site-packages\fastapi\encoders.py:341:            "pydantic.v1 models are no longer supported by FastAPI."
+.venv\Lib\site-packages\fastapi\exception_handlers.py:1:from fastapi.encoders import jsonable_encoder
+.venv\Lib\site-packages\fastapi\exception_handlers.py:2:from fastapi.exceptions import RequestValidationError, WebSocketRequestValidationError
+.venv\Lib\site-packages\fastapi\exception_handlers.py:3:from fastapi.utils import is_body_allowed_for_status_code
+.venv\Lib\site-packages\fastapi\exception_handlers.py:4:from fastapi.websockets import WebSocket
+.venv\Lib\site-packages\fastapi\exceptions.py:25:    [FastAPI docs for Handling Errors](https://fastapi.tiangolo.com/tutorial/handling-errors/).
+.venv\Lib\site-packages\fastapi\exceptions.py:30:    from fastapi import FastAPI, HTTPException
+.venv\Lib\site-packages\fastapi\exceptions.py:32:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\exceptions.py:54:                [FastAPI docs for Handling Errors](https://fastapi.tiangolo.com/tutorial/handling-errors/#use-httpexception)
+.venv\Lib\site-packages\fastapi\exceptions.py:66:                [FastAPI docs for Handling Errors](https://fastapi.tiangolo.com/tutorial/handling-errors/#use-httpexception)
+.venv\Lib\site-packages\fastapi\exceptions.py:77:                [FastAPI docs for Handling Errors](https://fastapi.tiangolo.com/tutorial/handling-errors/#add-custom-headers)
+.venv\Lib\site-packages\fastapi\exceptions.py:94:    [FastAPI docs for WebSockets](https://fastapi.tiangolo.com/advanced/websockets/).
+.venv\Lib\site-packages\fastapi\exceptions.py:101:    from fastapi import (
+.venv\Lib\site-packages\fastapi\exceptions.py:103:        FastAPI,
+.venv\Lib\site-packages\fastapi\exceptions.py:109:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\exceptions.py:161:class FastAPIError(RuntimeError):
+.venv\Lib\site-packages\fastapi\exceptions.py:163:    A generic, FastAPI-specific error.
+.venv\Lib\site-packages\fastapi\exceptions.py:167:class DependencyScopeError(FastAPIError):
+.venv\Lib\site-packages\fastapi\exceptions.py:246:class PydanticV1NotSupportedError(FastAPIError):
+.venv\Lib\site-packages\fastapi\exceptions.py:252:class FastAPIDeprecationWarning(UserWarning):
+.venv\Lib\site-packages\fastapi\logger.py:3:logger = logging.getLogger("fastapi")
+.venv\Lib\site-packages\fastapi\param_functions.py:5:from fastapi import params
+.venv\Lib\site-packages\fastapi\param_functions.py:6:from fastapi._compat import Undefined
+.venv\Lib\site-packages\fastapi\param_functions.py:7:from fastapi.datastructures import _Unset
+.venv\Lib\site-packages\fastapi\param_functions.py:8:from fastapi.openapi.models import Example
+.venv\Lib\site-packages\fastapi\param_functions.py:83:            [FastAPI docs for Path Parameters and Numeric Validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/#declare-metadata)
+.venv\Lib\site-packages\fastapi\param_functions.py:103:            [FastAPI docs about Path parameters numeric validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/#number-validations-greater-than-and-less-than-or-equal)
+.venv\Lib\site-packages\fastapi\param_functions.py:115:            [FastAPI docs about Path parameters numeric validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/#number-validations-greater-than-and-less-than-or-equal)
+.venv\Lib\site-packages\fastapi\param_functions.py:126:            [FastAPI docs about Path parameters numeric validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/#number-validations-greater-than-and-less-than-or-equal)
+.venv\Lib\site-packages\fastapi\param_functions.py:138:            [FastAPI docs about Path parameters numeric validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/#number-validations-greater-than-and-less-than-or-equal)
+.venv\Lib\site-packages\fastapi\param_functions.py:174:            "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\param_functions.py:232:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/)
+.venv\Lib\site-packages\fastapi\param_functions.py:256:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/#using-the-openapi_examples-parameter).
+.venv\Lib\site-packages\fastapi\param_functions.py:307:    [FastAPI docs for Path Parameters and Numeric Validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/).
+.venv\Lib\site-packages\fastapi\param_functions.py:312:    from fastapi import FastAPI, Path
+.venv\Lib\site-packages\fastapi\param_functions.py:314:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\param_functions.py:365:            [FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#alternative-old-query-as-the-default-value)
+.venv\Lib\site-packages\fastapi\param_functions.py:392:            [FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#alias-parameters)
+.venv\Lib\site-packages\fastapi\param_functions.py:430:            [FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#declare-more-metadata)
+.venv\Lib\site-packages\fastapi\param_functions.py:441:            [FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#declare-more-metadata)
+.venv\Lib\site-packages\fastapi\param_functions.py:453:            [FastAPI docs about Path parameters numeric validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/#number-validations-greater-than-and-less-than-or-equal)
+.venv\Lib\site-packages\fastapi\param_functions.py:465:            [FastAPI docs about Path parameters numeric validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/#number-validations-greater-than-and-less-than-or-equal)
+.venv\Lib\site-packages\fastapi\param_functions.py:476:            [FastAPI docs about Path parameters numeric validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/#number-validations-greater-than-and-less-than-or-equal)
+.venv\Lib\site-packages\fastapi\param_functions.py:488:            [FastAPI docs about Path parameters numeric validations](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/#number-validations-greater-than-and-less-than-or-equal)
+.venv\Lib\site-packages\fastapi\param_functions.py:499:            [FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/)
+.venv\Lib\site-packages\fastapi\param_functions.py:510:            [FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/)
+.venv\Lib\site-packages\fastapi\param_functions.py:521:            [FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#add-regular-expressions
+.venv\Lib\site-packages\fastapi\param_functions.py:533:            "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\param_functions.py:591:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/)
+.venv\Lib\site-packages\fastapi\param_functions.py:615:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/#using-the-openapi_examples-parameter).
+.venv\Lib\site-packages\fastapi\param_functions.py:628:            [FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#deprecating-parameters)
+.venv\Lib\site-packages\fastapi\param_functions.py:642:            [FastAPI docs about Query parameters](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi
+.venv\Lib\site-packages\fastapi\param_functions.py:768:            [FastAPI docs for Header Parameters](https://fastapi.tiangolo.com/tutorial/header-params/#automatic-conversion)
+.venv\Lib\site-packages\fastapi\param_functions.py:855:            "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\param_functions.py:913:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/)
+.venv\Lib\site-packages\fastapi\param_functions.py:937:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/#using-the-openapi_examples-parameter).
+.venv\Lib\site-packages\fastapi\param_functions.py:1161:            "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\param_functions.py:1219:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/)
+.venv\Lib\site-packages\fastapi\param_functions.py:1243:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/#using-the-openapi_examples-parameter).
+.venv\Lib\site-packages\fastapi\param_functions.py:1354:            [FastAPI docs for Body - Multiple Parameters](https://fastapi.tiangolo.com/tutorial/body-multiple-params/#embed-a-single-body-parameter).
+.venv\Lib\site-packages\fastapi\param_functions.py:1489:            "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\param_functions.py:1547:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/)
+.venv\Lib\site-packages\fastapi\param_functions.py:1571:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/#using-the-openapi_examples-parameter).
+.venv\Lib\site-packages\fastapi\param_functions.py:1805:            "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\param_functions.py:1863:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/)
+.venv\Lib\site-packages\fastapi\param_functions.py:1887:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/#using-the-openapi_examples-parameter).
+.venv\Lib\site-packages\fastapi\param_functions.py:2120:            "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\param_functions.py:2178:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/)
+.venv\Lib\site-packages\fastapi\param_functions.py:2202:            [FastAPI docs for Declare Request Example Data](https://fastapi.tiangolo.com/tutorial/schema-extra-example/#using-the-openapi_examples-parameter).
+.venv\Lib\site-packages\fastapi\param_functions.py:2290:            Don't call it directly, FastAPI will call it for you, just pass the object
+.venv\Lib\site-packages\fastapi\param_functions.py:2294:            [FastAPI docs for Dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/)
+.venv\Lib\site-packages\fastapi\param_functions.py:2312:            [FastAPI docs about sub-dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/sub-dependencies/#using-the-same-dependency-multiple-times)
+.venv\Lib\site-packages\fastapi\param_functions.py:2335:            [FastAPI docs for FastAPI Dependencies with yield](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-with-yield/#early-exit-and-scope)
+.venv\Lib\site-packages\fastapi\param_functions.py:2341:    Declare a FastAPI dependency.
+.venv\Lib\site-packages\fastapi\param_functions.py:2345:    Don't call it directly, FastAPI will call it for you.
+.venv\Lib\site-packages\fastapi\param_functions.py:2348:    [FastAPI docs for Dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/).
+.venv\Lib\site-packages\fastapi\param_functions.py:2355:    from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\param_functions.py:2357:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\param_functions.py:2379:            Don't call it directly, FastAPI will call it for you, just pass the object
+.venv\Lib\site-packages\fastapi\param_functions.py:2383:            [FastAPI docs for Dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/)
+.venv\Lib\site-packages\fastapi\param_functions.py:2403:            [FastAPI docs about OAuth2 scopes](https://fastapi.tiangolo.com/advanced/security/oauth2-scopes/)
+.venv\Lib\site-packages\fastapi\param_functions.py:2420:            [FastAPI docs about sub-dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/sub-dependencies/#using-the-same-dependency-multiple-times)
+.venv\Lib\site-packages\fastapi\param_functions.py:2426:    Declare a FastAPI Security dependency.
+.venv\Lib\site-packages\fastapi\param_functions.py:2434:    Don't call it directly, FastAPI will call it for you.
+.venv\Lib\site-packages\fastapi\param_functions.py:2437:    [FastAPI docs for Security](https://fastapi.tiangolo.com/tutorial/security/) and
+.venv\Lib\site-packages\fastapi\param_functions.py:2439:    [FastAPI docs for OAuth2 scopes](https://fastapi.tiangolo.com/advanced/security/oauth2-scopes/).
+.venv\Lib\site-packages\fastapi\param_functions.py:2446:    from fastapi import Security, FastAPI
+.venv\Lib\site-packages\fastapi\param_functions.py:2451:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\params.py:7:from fastapi.exceptions import FastAPIDeprecationWarning
+.venv\Lib\site-packages\fastapi\params.py:8:from fastapi.openapi.models import Example
+.venv\Lib\site-packages\fastapi\params.py:51:                "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\params.py:77:                category=FastAPIDeprecationWarning,
+.venv\Lib\site-packages\fastapi\params.py:107:                category=FastAPIDeprecationWarning,
+.venv\Lib\site-packages\fastapi\params.py:162:                "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\params.py:246:                "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\params.py:329:                "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\params.py:412:                "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\params.py:494:                "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\params.py:522:                category=FastAPIDeprecationWarning,
+.venv\Lib\site-packages\fastapi\params.py:552:                category=FastAPIDeprecationWarning,
+.venv\Lib\site-packages\fastapi\params.py:605:                "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\params.py:687:                "Deprecated in FastAPI 0.100.0 and Pydantic v2, use `pattern` instead."
+.venv\Lib\site-packages\fastapi\responses.py:4:from fastapi.exceptions import FastAPIDeprecationWarning
+.venv\Lib\site-packages\fastapi\responses.py:5:from fastapi.sse import EventSourceResponse as EventSourceResponse  # noqa
+.venv\Lib\site-packages\fastapi\responses.py:40:    "UJSONResponse is deprecated, FastAPI now serializes data directly to JSON "
+.venv\Lib\site-packages\fastapi\responses.py:42:    "faster and doesn't need a custom response class. Read more in the FastAPI "
+.venv\Lib\site-packages\fastapi\responses.py:43:    "docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model "
+.venv\Lib\site-packages\fastapi\responses.py:44:    "and https://fastapi.tiangolo.com/tutorial/response-model/",
+.venv\Lib\site-packages\fastapi\responses.py:45:    category=FastAPIDeprecationWarning,
+.venv\Lib\site-packages\fastapi\responses.py:51:    **Deprecated**: `UJSONResponse` is deprecated. FastAPI now serializes data
+.venv\Lib\site-packages\fastapi\responses.py:56:    [FastAPI docs for Custom Response](https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model)
+.venv\Lib\site-packages\fastapi\responses.py:58:    [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\responses.py:60:    **Note**: `ujson` is not included with FastAPI and must be installed
+.venv\Lib\site-packages\fastapi\responses.py:70:    "ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON "
+.venv\Lib\site-packages\fastapi\responses.py:72:    "faster and doesn't need a custom response class. Read more in the FastAPI "
+.venv\Lib\site-packages\fastapi\responses.py:73:    "docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model "
+.venv\Lib\site-packages\fastapi\responses.py:74:    "and https://fastapi.tiangolo.com/tutorial/response-model/",
+.venv\Lib\site-packages\fastapi\responses.py:75:    category=FastAPIDeprecationWarning,
+.venv\Lib\site-packages\fastapi\responses.py:81:    **Deprecated**: `ORJSONResponse` is deprecated. FastAPI now serializes data
+.venv\Lib\site-packages\fastapi\responses.py:86:    [FastAPI docs for Custom Response](https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model)
+.venv\Lib\site-packages\fastapi\responses.py:88:    [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\responses.py:90:    **Note**: `orjson` is not included with FastAPI and must be installed
+.venv\Lib\site-packages\fastapi\routing.py:35:from fastapi import params
+.venv\Lib\site-packages\fastapi\routing.py:36:from fastapi._compat import (
+.venv\Lib\site-packages\fastapi\routing.py:41:from fastapi.datastructures import Default, DefaultPlaceholder
+.venv\Lib\site-packages\fastapi\routing.py:42:from fastapi.dependencies.models import Dependant
+.venv\Lib\site-packages\fastapi\routing.py:43:from fastapi.dependencies.utils import (
+.venv\Lib\site-packages\fastapi\routing.py:53:from fastapi.encoders import jsonable_encoder
+.venv\Lib\site-packages\fastapi\routing.py:54:from fastapi.exceptions import (
+.venv\Lib\site-packages\fastapi\routing.py:56:    FastAPIError,
+.venv\Lib\site-packages\fastapi\routing.py:61:from fastapi.sse import (
+.venv\Lib\site-packages\fastapi\routing.py:68:from fastapi.types import DecoratedCallable, IncEx
+.venv\Lib\site-packages\fastapi\routing.py:69:from fastapi.utils import (
+.venv\Lib\site-packages\fastapi\routing.py:117:                scope["fastapi_inner_astack"] = request_stack
+.venv\Lib\site-packages\fastapi\routing.py:119:                    scope["fastapi_function_astack"] = function_stack
+.venv\Lib\site-packages\fastapi\routing.py:125:                raise FastAPIError(
+.venv\Lib\site-packages\fastapi\routing.py:130:                    "docs: https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-with-yield/#dependencies-with-yield-and-except"
+.venv\Lib\site-packages\fastapi\routing.py:154:                scope["fastapi_inner_astack"] = request_stack
+.venv\Lib\site-packages\fastapi\routing.py:156:                    scope["fastapi_function_astack"] = function_stack
+.venv\Lib\site-packages\fastapi\routing.py:231:    in Starlette. FastAPI keeps it to maintain backward compatibility with
+.venv\Lib\site-packages\fastapi\routing.py:384:        file_stack = request.scope.get("fastapi_middleware_astack")
+.venv\Lib\site-packages\fastapi\routing.py:386:            "fastapi_middleware_astack not found in request scope"
+.venv\Lib\site-packages\fastapi\routing.py:453:        async_exit_stack = request.scope.get("fastapi_inner_astack")
+.venv\Lib\site-packages\fastapi\routing.py:455:            "fastapi_inner_astack not found in request scope"
+.venv\Lib\site-packages\fastapi\routing.py:633:                            # Ref: https://github.com/fastapi/fastapi/issues/14680
+.venv\Lib\site-packages\fastapi\routing.py:664:                            # Ref: https://github.com/fastapi/fastapi/issues/14680
+.venv\Lib\site-packages\fastapi\routing.py:747:        async_exit_stack = websocket.scope.get("fastapi_inner_astack")
+.venv\Lib\site-packages\fastapi\routing.py:749:            "fastapi_inner_astack not found in request scope"
+.venv\Lib\site-packages\fastapi\routing.py:1008:    an app in multiple files. It would then be included in the `FastAPI` app, or
+.venv\Lib\site-packages\fastapi\routing.py:1012:    [FastAPI docs for Bigger Applications - Multiple Files](https://fastapi.tiangolo.com/tutorial/bigger-applications/).
+.venv\Lib\site-packages\fastapi\routing.py:1017:    from fastapi import APIRouter, FastAPI
+.venv\Lib\site-packages\fastapi\routing.py:1019:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:1046:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:1058:                [FastAPI docs for Bigger Applications - Multiple Files](https://fastapi.tiangolo.com/tutorial/bigger-applications/#include-an-apirouter-with-a-custom-prefix-tags-responses-and-dependencies).
+.venv\Lib\site-packages\fastapi\routing.py:1069:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#default-response-class).
+.venv\Lib\site-packages\fastapi\routing.py:1082:                [FastAPI docs for Additional Responses in OpenAPI](https://fastapi.tiangolo.com/advanced/additional-responses/).
+.venv\Lib\site-packages\fastapi\routing.py:1085:                [FastAPI docs for Bigger Applications](https://fastapi.tiangolo.com/tutorial/bigger-applications/#include-an-apirouter-with-a-custom-prefix-tags-responses-and-dependencies).
+.venv\Lib\site-packages\fastapi\routing.py:1099:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\routing.py:1117:                You normally wouldn't use this parameter with FastAPI, it is inherited
+.venv\Lib\site-packages\fastapi\routing.py:1120:                In FastAPI, you normally would use the *path operation methods*,
+.venv\Lib\site-packages\fastapi\routing.py:1147:                Only used internally by FastAPI to handle dependency overrides.
+.venv\Lib\site-packages\fastapi\routing.py:1149:                You shouldn't need to use it. It normally points to the `FastAPI` app
+.venv\Lib\site-packages\fastapi\routing.py:1161:                [FastAPI docs for Custom Request and APIRoute class](https://fastapi.tiangolo.com/how-to/custom-request-and-route/#custom-apiroute-class-in-a-router).
+.venv\Lib\site-packages\fastapi\routing.py:1173:                Read more in the [FastAPI docs for `lifespan`](https://fastapi.tiangolo.com/advanced/events/).
+.venv\Lib\site-packages\fastapi\routing.py:1186:                [FastAPI docs for `lifespan`](https://fastapi.tiangolo.com/advanced/events/).
+.venv\Lib\site-packages\fastapi\routing.py:1200:                [FastAPI docs for `lifespan`](https://fastapi.tiangolo.com/advanced/events/).
+.venv\Lib\site-packages\fastapi\routing.py:1213:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:1227:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\routing.py:1242:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:1265:                [FastAPI docs for Strict Content-Type](https://fastapi.tiangolo.com/advanced/strict-content-type/).
+.venv\Lib\site-packages\fastapi\routing.py:1529:                [FastAPI docs for WebSockets](https://fastapi.tiangolo.com/advanced/websockets/).
+.venv\Lib\site-packages\fastapi\routing.py:1538:        [FastAPI docs for WebSockets](https://fastapi.tiangolo.com/advanced/websockets/).
+.venv\Lib\site-packages\fastapi\routing.py:1545:        from fastapi import APIRouter, FastAPI, WebSocket
+.venv\Lib\site-packages\fastapi\routing.py:1547:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:1593:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:1605:                [FastAPI docs for Bigger Applications - Multiple Files](https://fastapi.tiangolo.com/tutorial/bigger-applications/#include-an-apirouter-with-a-custom-prefix-tags-responses-and-dependencies).
+.venv\Lib\site-packages\fastapi\routing.py:1616:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#default-response-class).
+.venv\Lib\site-packages\fastapi\routing.py:1629:                [FastAPI docs for Additional Responses in OpenAPI](https://fastapi.tiangolo.com/advanced/additional-responses/).
+.venv\Lib\site-packages\fastapi\routing.py:1632:                [FastAPI docs for Bigger Applications](https://fastapi.tiangolo.com/tutorial/bigger-applications/#include-an-apirouter-with-a-custom-prefix-tags-responses-and-dependencies).
+.venv\Lib\site-packages\fastapi\routing.py:1646:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\routing.py:1659:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:1685:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:1694:        [FastAPI docs for Bigger Applications](https://fastapi.tiangolo.com/tutorial/bigger-applications/).
+.venv\Lib\site-packages\fastapi\routing.py:1699:        from fastapi import APIRouter, FastAPI
+.venv\Lib\site-packages\fastapi\routing.py:1701:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:1727:                    raise FastAPIError(
+.venv\Lib\site-packages\fastapi\routing.py:1870:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\routing.py:1874:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\routing.py:1887:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\routing.py:1900:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\routing.py:1912:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\routing.py:1925:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:1943:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:1990:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\routing.py:1993:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:2005:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:2017:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:2029:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:2047:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:2064:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:2081:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\routing.py:2094:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\routing.py:2107:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\routing.py:2131:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\routing.py:2143:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\routing.py:2158:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:2169:        from fastapi import APIRouter, FastAPI
+.venv\Lib\site-packages\fastapi\routing.py:2171:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:2247:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\routing.py:2251:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\routing.py:2264:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\routing.py:2277:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\routing.py:2289:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\routing.py:2302:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:2320:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:2367:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\routing.py:2370:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:2382:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:2394:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:2406:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:2424:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:2441:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:2458:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\routing.py:2471:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\routing.py:2484:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\routing.py:2508:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\routing.py:2520:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\routing.py:2535:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:2546:        from fastapi import APIRouter, FastAPI
+.venv\Lib\site-packages\fastapi\routing.py:2553:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:2629:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\routing.py:2633:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\routing.py:2646:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\routing.py:2659:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\routing.py:2671:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\routing.py:2684:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:2702:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:2749:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\routing.py:2752:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:2764:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:2776:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:2788:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:2806:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:2823:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:2840:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\routing.py:2853:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\routing.py:2866:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\routing.py:2890:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\routing.py:2902:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\routing.py:2917:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:2928:        from fastapi import APIRouter, FastAPI
+.venv\Lib\site-packages\fastapi\routing.py:2935:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:3011:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\routing.py:3015:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\routing.py:3028:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\routing.py:3041:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\routing.py:3053:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\routing.py:3066:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:3084:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:3131:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\routing.py:3134:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:3146:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:3158:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:3170:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:3188:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:3205:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:3222:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\routing.py:3235:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\routing.py:3248:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\routing.py:3272:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\routing.py:3284:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\routing.py:3299:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:3310:        from fastapi import APIRouter, FastAPI
+.venv\Lib\site-packages\fastapi\routing.py:3312:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:3388:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\routing.py:3392:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\routing.py:3405:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\routing.py:3418:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\routing.py:3430:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\routing.py:3443:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:3461:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:3508:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\routing.py:3511:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:3523:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:3535:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:3547:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:3565:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:3582:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:3599:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\routing.py:3612:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\routing.py:3625:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\routing.py:3649:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\routing.py:3661:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\routing.py:3676:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:3687:        from fastapi import APIRouter, FastAPI
+.venv\Lib\site-packages\fastapi\routing.py:3689:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:3765:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\routing.py:3769:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\routing.py:3782:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\routing.py:3795:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\routing.py:3807:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\routing.py:3820:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:3838:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:3885:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\routing.py:3888:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:3900:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:3912:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:3924:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:3942:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:3959:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:3976:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\routing.py:3989:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\routing.py:4002:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\routing.py:4026:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\routing.py:4038:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\routing.py:4053:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:4064:        from fastapi import APIRouter, FastAPI
+.venv\Lib\site-packages\fastapi\routing.py:4071:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:4147:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\routing.py:4151:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\routing.py:4164:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\routing.py:4177:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\routing.py:4189:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\routing.py:4202:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:4220:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:4267:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\routing.py:4270:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:4282:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:4294:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:4306:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:4324:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:4341:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:4358:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\routing.py:4371:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\routing.py:4384:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\routing.py:4408:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\routing.py:4420:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\routing.py:4435:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:4446:        from fastapi import APIRouter, FastAPI
+.venv\Lib\site-packages\fastapi\routing.py:4453:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:4529:                    so it's an error from the API developer. So, FastAPI will raise an
+.venv\Lib\site-packages\fastapi\routing.py:4533:                [FastAPI docs for Response Model](https://fastapi.tiangolo.com/tutorial/response-model/).
+.venv\Lib\site-packages\fastapi\routing.py:4546:                [FastAPI docs for Response Status Code](https://fastapi.tiangolo.com/tutorial/response-status-code/).
+.venv\Lib\site-packages\fastapi\routing.py:4559:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/#tags).
+.venv\Lib\site-packages\fastapi\routing.py:4571:                [FastAPI docs for Dependencies in path operation decorators](https://fastapi.tiangolo.com/tutorial/dependencies/dependencies-in-path-operation-decorators/).
+.venv\Lib\site-packages\fastapi\routing.py:4584:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:4602:                [FastAPI docs for Path Operation Configuration](https://fastapi.tiangolo.com/tutorial/path-operation-configuration/).
+.venv\Lib\site-packages\fastapi\routing.py:4649:                `generate_unique_id_function` in the `FastAPI` class.
+.venv\Lib\site-packages\fastapi\routing.py:4652:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:4664:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:4676:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:4688:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_include-and-response_model_exclude).
+.venv\Lib\site-packages\fastapi\routing.py:4706:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:4723:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#use-the-response_model_exclude_unset-parameter).
+.venv\Lib\site-packages\fastapi\routing.py:4740:                [FastAPI docs for Response Model - Return Type](https://fastapi.tiangolo.com/tutorial/response-model/#response_model_exclude_none).
+.venv\Lib\site-packages\fastapi\routing.py:4753:                [FastAPI docs for Query Parameters and String Validations](https://fastapi.tiangolo.com/tutorial/query-params-str-validations/#exclude-parameters-from-openapi).
+.venv\Lib\site-packages\fastapi\routing.py:4766:                [FastAPI docs for Custom Response - HTML, Stream, File, others](https://fastapi.tiangolo.com/advanced/custom-response/#redirectresponse).
+.venv\Lib\site-packages\fastapi\routing.py:4790:                [FastAPI docs for OpenAPI Callbacks](https://fastapi.tiangolo.com/advanced/openapi-callbacks/).
+.venv\Lib\site-packages\fastapi\routing.py:4802:                [FastAPI docs for Path Operation Advanced Configuration](https://fastapi.tiangolo.com/advanced/path-operation-advanced-configuration/#custom-openapi-path-operation-schema).
+.venv\Lib\site-packages\fastapi\routing.py:4817:                [FastAPI docs about how to Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/#custom-generate-unique-id-function).
+.venv\Lib\site-packages\fastapi\routing.py:4828:        from fastapi import APIRouter, FastAPI
+.venv\Lib\site-packages\fastapi\routing.py:4835:        app = FastAPI()
+.venv\Lib\site-packages\fastapi\routing.py:4929:        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+.venv\Lib\site-packages\fastapi\routing.py:4949:        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/#alternative-events-deprecated).
+.venv\Lib\site-packages\fastapi\sse.py:29:    The actual encoding logic lives in the FastAPI routing layer. This class
+.venv\Lib\site-packages\fastapi\utils.py:9:import fastapi
+.venv\Lib\site-packages\fastapi\utils.py:10:from fastapi._compat import (
+.venv\Lib\site-packages\fastapi\utils.py:16:from fastapi.datastructures import DefaultPlaceholder, DefaultType
+.venv\Lib\site-packages\fastapi\utils.py:17:from fastapi.exceptions import FastAPIDeprecationWarning, PydanticV1NotSupportedError
+.venv\Lib\site-packages\fastapi\utils.py:54:    "https://fastapi.tiangolo.com/tutorial/response-model/"
+.venv\Lib\site-packages\fastapi\utils.py:68:            "pydantic.v1 models are no longer supported by FastAPI."
+.venv\Lib\site-packages\fastapi\utils.py:75:        raise fastapi.exceptions.FastAPIError(
+.venv\Lib\site-packages\fastapi\utils.py:84:        message="fastapi.utils.generate_operation_id_for_path() was deprecated, "
+.venv\Lib\site-packages\fastapi\utils.py:86:        category=FastAPIDeprecationWarning,
+.venv\Lib\site-packages\fastapi\dependencies\models.py:8:from fastapi._compat import ModelField
+.venv\Lib\site-packages\fastapi\dependencies\models.py:9:from fastapi.security.base import SecurityBase
+.venv\Lib\site-packages\fastapi\dependencies\models.py:10:from fastapi.types import DependencyCacheKey
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:29:from fastapi import params
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:30:from fastapi._compat import (
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:52:from fastapi.background import BackgroundTasks
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:53:from fastapi.concurrency import (
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:57:from fastapi.dependencies.models import Dependant
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:58:from fastapi.exceptions import DependencyScopeError
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:59:from fastapi.logger import logger
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:60:from fastapi.security.oauth2 import SecurityScopes
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:61:from fastapi.types import DependencyCacheKey
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:62:from fastapi.utils import create_model_field, get_path_param_names
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:217:        # Handle type annotations with if TYPE_CHECKING, not used by FastAPI
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:351:                f"Cannot specify multiple FastAPI annotations for {param_name!r}"
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:414:        fastapi_annotations = [
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:419:        fastapi_specific_annotations = [
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:421:            for arg in fastapi_annotations
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:431:        if fastapi_specific_annotations:
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:432:            fastapi_annotation: FieldInfo | params.Depends | None = (
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:433:                fastapi_specific_annotations[-1]
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:436:            fastapi_annotation = None
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:438:        if isinstance(fastapi_annotation, FieldInfo):
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:441:                field_info=fastapi_annotation,
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:456:        elif isinstance(fastapi_annotation, params.Depends):
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:457:            depends = fastapi_annotation
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:465:            "Cannot specify a FastAPI annotation in `Annotated` and `Depends` as a"
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:472:            "Cannot specify FastAPI annotations in `Annotated` and default value"
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:500:            f"Cannot specify FastAPI annotation for type {type_annotation!r}"
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:612:    request_astack = request.scope.get("fastapi_inner_astack")
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:614:        "fastapi_inner_astack not found in request scope"
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:616:    function_astack = request.scope.get("fastapi_function_astack")
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:618:        "fastapi_function_astack not found in request scope"
+.venv\Lib\site-packages\fastapi\dependencies\utils.py:871:    from fastapi.types import UnionType
+.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py:10:        self, app: ASGIApp, context_name: str = "fastapi_middleware_astack"
+.venv\Lib\site-packages\fastapi\openapi\docs.py:5:from fastapi.encoders import jsonable_encoder
+.venv\Lib\site-packages\fastapi\openapi\docs.py:48:            This is normally done automatically by FastAPI using the default URL
+.venv\Lib\site-packages\fastapi\openapi\docs.py:52:            [FastAPI docs for Conditional OpenAPI](https://fastapi.tiangolo.com/how-to/conditional-openapi/#conditional-openapi-from-settings-and-env-vars)
+.venv\Lib\site-packages\fastapi\openapi\docs.py:63:            [FastAPI docs for Custom Docs UI Static Assets](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/)
+.venv\Lib\site-packages\fastapi\openapi\docs.py:76:            [FastAPI docs for Custom Docs UI Static Assets](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/)
+.venv\Lib\site-packages\fastapi\openapi\docs.py:89:            [FastAPI docs for Custom Docs UI Static Assets](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/)
+.venv\Lib\site-packages\fastapi\openapi\docs.py:100:    ] = "https://fastapi.tiangolo.com/img/favicon.png",
+.venv\Lib\site-packages\fastapi\openapi\docs.py:105:            The OAuth2 redirect URL, it is normally automatically handled by FastAPI.
+.venv\Lib\site-packages\fastapi\openapi\docs.py:108:            [FastAPI docs for Custom Docs UI Static Assets](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/)
+.venv\Lib\site-packages\fastapi\openapi\docs.py:129:            It defaults to [swagger_ui_default_parameters][fastapi.openapi.docs.swagger_ui_default_parameters].
+.venv\Lib\site-packages\fastapi\openapi\docs.py:132:            [FastAPI docs about how to Configure Swagger UI](https://fastapi.tiangolo.com/how-to/configure-swagger-ui/).
+.venv\Lib\site-packages\fastapi\openapi\docs.py:145:    [FastAPI docs for Configure Swagger UI](https://fastapi.tiangolo.com/how-to/configure-swagger-ui/)
+.venv\Lib\site-packages\fastapi\openapi\docs.py:146:    and the [FastAPI docs for Custom Docs UI Static Assets (Self-Hosting)](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/).
+.venv\Lib\site-packages\fastapi\openapi\docs.py:205:            This is normally done automatically by FastAPI using the default URL
+.venv\Lib\site-packages\fastapi\openapi\docs.py:209:            [FastAPI docs for Conditional OpenAPI](https://fastapi.tiangolo.com/how-to/conditional-openapi/#conditional-openapi-from-settings-and-env-vars)
+.venv\Lib\site-packages\fastapi\openapi\docs.py:220:            [FastAPI docs for Custom Docs UI Static Assets](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/)
+.venv\Lib\site-packages\fastapi\openapi\docs.py:233:            [FastAPI docs for Custom Docs UI Static Assets](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/)
+.venv\Lib\site-packages\fastapi\openapi\docs.py:244:    ] = "https://fastapi.tiangolo.com/img/favicon.png",
+.venv\Lib\site-packages\fastapi\openapi\docs.py:262:    [FastAPI docs for Custom Docs UI Static Assets (Self-Hosting)](https://fastapi.tiangolo.com/how-to/custom-docs-ui-assets/).
+.venv\Lib\site-packages\fastapi\openapi\models.py:5:from fastapi._compat import with_info_plain_validator_function
+.venv\Lib\site-packages\fastapi\openapi\models.py:6:from fastapi.logger import logger
+.venv\Lib\site-packages\fastapi\openapi\utils.py:8:from fastapi import routing
+.venv\Lib\site-packages\fastapi\openapi\utils.py:9:from fastapi._compat import (
+.venv\Lib\site-packages\fastapi\openapi\utils.py:17:from fastapi.datastructures import DefaultPlaceholder, _Unset
+.venv\Lib\site-packages\fastapi\openapi\utils.py:18:from fastapi.dependencies.models import Dependant
+.venv\Lib\site-packages\fastapi\openapi\utils.py:19:from fastapi.dependencies.utils import (
+.venv\Lib\site-packages\fastapi\openapi\utils.py:25:from fastapi.encoders import jsonable_encoder
+.venv\Lib\site-packages\fastapi\openapi\utils.py:26:from fastapi.exceptions import FastAPIDeprecationWarning
+.venv\Lib\site-packages\fastapi\openapi\utils.py:27:from fastapi.openapi.constants import METHODS_WITH_BODY, REF_PREFIX
+.venv\Lib\site-packages\fastapi\openapi\utils.py:28:from fastapi.openapi.models import OpenAPI
+.venv\Lib\site-packages\fastapi\openapi\utils.py:29:from fastapi.params import Body, ParamTypes
+.venv\Lib\site-packages\fastapi\openapi\utils.py:30:from fastapi.responses import Response
+.venv\Lib\site-packages\fastapi\openapi\utils.py:31:from fastapi.sse import _SSE_EVENT_SCHEMA
+.venv\Lib\site-packages\fastapi\openapi\utils.py:32:from fastapi.types import ModelNameMap
+.venv\Lib\site-packages\fastapi\openapi\utils.py:33:from fastapi.utils import (
+.venv\Lib\site-packages\fastapi\openapi\utils.py:219:        message="fastapi.openapi.utils.generate_operation_id() was deprecated, "
+.venv\Lib\site-packages\fastapi\openapi\utils.py:221:        category=FastAPIDeprecationWarning,
+.venv\Lib\site-packages\fastapi\security\api_key.py:4:from fastapi.openapi.models import APIKey, APIKeyIn
+.venv\Lib\site-packages\fastapi\security\api_key.py:5:from fastapi.security.base import SecurityBase
+.venv\Lib\site-packages\fastapi\security\api_key.py:73:    from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\security\api_key.py:74:    from fastapi.security import APIKeyQuery
+.venv\Lib\site-packages\fastapi\security\api_key.py:76:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\security\api_key.py:165:    from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\security\api_key.py:166:    from fastapi.security import APIKeyHeader
+.venv\Lib\site-packages\fastapi\security\api_key.py:168:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\security\api_key.py:253:    from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\security\api_key.py:254:    from fastapi.security import APIKeyCookie
+.venv\Lib\site-packages\fastapi\security\api_key.py:256:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\security\base.py:1:from fastapi.openapi.models import SecurityBase as SecurityBaseModel
+.venv\Lib\site-packages\fastapi\security\http.py:6:from fastapi.exceptions import HTTPException
+.venv\Lib\site-packages\fastapi\security\http.py:7:from fastapi.openapi.models import HTTPBase as HTTPBaseModel
+.venv\Lib\site-packages\fastapi\security\http.py:8:from fastapi.openapi.models import HTTPBearer as HTTPBearerModel
+.venv\Lib\site-packages\fastapi\security\http.py:9:from fastapi.security.base import SecurityBase
+.venv\Lib\site-packages\fastapi\security\http.py:10:from fastapi.security.utils import get_authorization_scheme_param
+.venv\Lib\site-packages\fastapi\security\http.py:22:    [FastAPI docs for HTTP Basic Auth](https://fastapi.tiangolo.com/advanced/security/http-basic-auth/).
+.venv\Lib\site-packages\fastapi\security\http.py:119:    [FastAPI docs for HTTP Basic Auth](https://fastapi.tiangolo.com/advanced/security/http-basic-auth/).
+.venv\Lib\site-packages\fastapi\security\http.py:126:    from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\security\http.py:127:    from fastapi.security import HTTPBasic, HTTPBasicCredentials
+.venv\Lib\site-packages\fastapi\security\http.py:129:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\security\http.py:238:    from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\security\http.py:239:    from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
+.venv\Lib\site-packages\fastapi\security\http.py:241:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\security\http.py:323:    **Warning**: this is only a stub to connect the components with OpenAPI in FastAPI,
+.venv\Lib\site-packages\fastapi\security\http.py:341:    from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\security\http.py:342:    from fastapi.security import HTTPAuthorizationCredentials, HTTPDigest
+.venv\Lib\site-packages\fastapi\security\http.py:344:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\security\oauth2.py:4:from fastapi.exceptions import HTTPException
+.venv\Lib\site-packages\fastapi\security\oauth2.py:5:from fastapi.openapi.models import OAuth2 as OAuth2Model
+.venv\Lib\site-packages\fastapi\security\oauth2.py:6:from fastapi.openapi.models import OAuthFlows as OAuthFlowsModel
+.venv\Lib\site-packages\fastapi\security\oauth2.py:7:from fastapi.param_functions import Form
+.venv\Lib\site-packages\fastapi\security\oauth2.py:8:from fastapi.security.base import SecurityBase
+.venv\Lib\site-packages\fastapi\security\oauth2.py:9:from fastapi.security.utils import get_authorization_scheme_param
+.venv\Lib\site-packages\fastapi\security\oauth2.py:26:    [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:33:    from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\security\oauth2.py:34:    from fastapi.security import OAuth2PasswordRequestForm
+.venv\Lib\site-packages\fastapi\security\oauth2.py:36:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\security\oauth2.py:73:                [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:86:                [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:99:                [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:126:                [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:180:    [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:187:    from fastapi import Depends, FastAPI
+.venv\Lib\site-packages\fastapi\security\oauth2.py:188:    from fastapi.security import OAuth2PasswordRequestForm
+.venv\Lib\site-packages\fastapi\security\oauth2.py:190:    app = FastAPI()
+.venv\Lib\site-packages\fastapi\security\oauth2.py:239:                [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:252:                [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:265:                [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:292:                [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:340:    [FastAPI docs for Security](https://fastapi.tiangolo.com/tutorial/security/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:413:        ones in FastAPI (based on bearer tokens), you might want to override this.
+.venv\Lib\site-packages\fastapi\security\oauth2.py:439:    [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:452:                [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:474:                [FastAPI docs for Simple OAuth2 with Password and Bearer](https://fastapi.tiangolo.com/tutorial/security/simple-oauth2/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:663:    [FastAPI docs for OAuth2 scopes](https://fastapi.tiangolo.com/advanced/security/oauth2-scopes/).
+.venv\Lib\site-packages\fastapi\security\oauth2.py:672:                This will be filled by FastAPI.
+.venv\Lib\site-packages\fastapi\security\open_id_connect_url.py:4:from fastapi.openapi.models import OpenIdConnect as OpenIdConnectModel
+.venv\Lib\site-packages\fastapi\security\open_id_connect_url.py:5:from fastapi.security.base import SecurityBase
+.venv\Lib\site-packages\fastapi\security\open_id_connect_url.py:16:    **Warning**: this is only a stub to connect the components with OpenAPI in FastAPI,
+.venv\Lib\site-packages\fastapi\_compat\shared.py:17:from fastapi.types import UnionType
+.venv\Lib\site-packages\fastapi\_compat\v2.py:18:from fastapi._compat import lenient_issubclass, shared
+.venv\Lib\site-packages\fastapi\_compat\v2.py:19:from fastapi.openapi.constants import REF_TEMPLATE
+.venv\Lib\site-packages\fastapi\_compat\v2.py:20:from fastapi.types import IncEx, ModelNameMap, UnionType
+.venv\Lib\site-packages\fastapi\_compat\v2.py:350:    from fastapi import params
+.venv\Lib\site-packages\pip\__main__.py:14:    # __file__ is pip-*.whl/pip/__main__.py
+.venv\Lib\site-packages\pip\__main__.py:15:    # first dirname call strips of '/__main__.py', second strips off '/pip'
+.venv\Lib\site-packages\pip\__main__.py:21:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\__pip-runner__.py:49:assert __name__ == "__main__", "Cannot run __pip-runner__.py as a non-main module"
+.venv\Lib\site-packages\pip\__pip-runner__.py:50:runpy.run_module("pip", run_name="__main__", alter_sys=True)
+.venv\Lib\site-packages\pip\_internal\cli\main.py:34:#     runpy.run_module("pip", run_name="__main__")
+.venv\Lib\site-packages\pip\_internal\cli\main.py:46:    # which imports __main__ for each spawned subprocess.
+.venv\Lib\site-packages\pip\_internal\operations\install\wheel.py:413:        if __name__ == '__main__':
+.venv\Lib\site-packages\pip\_internal\utils\misc.py:109:        if prog in ("__main__.py", "-c"):
+.venv\Lib\site-packages\pip\_vendor\cachecontrol\_cmd.py:69:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\distlib\scripts.py:45:if __name__ == '__main__':
+.venv\Lib\site-packages\pip\_vendor\distlib\scripts.py:273:                    zinfo = ZipInfo(filename='__main__.py', date_time=date_time)
+.venv\Lib\site-packages\pip\_vendor\distlib\scripts.py:276:                    zf.writestr('__main__.py', script_bytes)
+.venv\Lib\site-packages\pip\_vendor\distro\__main__.py:3:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\distro\distro.py:1402:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\packaging\_musllinux.py:75:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\pkg_resources\__init__.py:649:            from __main__ import __requires__
+.venv\Lib\site-packages\pip\_vendor\platformdirs\__main__.py:54:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\pygments\__main__.py:2:    pygments.__main__
+.venv\Lib\site-packages\pip\_vendor\pygments\unistring.py:110:if __name__ == '__main__':  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py:388:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\requests\certs.py:17:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\requests\help.py:123:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\rich\__init__.py:176:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\__main__.py:209:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\_log_render.py:89:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\_ratio.py:143:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\rich\_win32_console.py:575:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\rich\_windows.py:64:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\rich\_wrap.py:81:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\abc.py:21:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\align.py:285:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\ansi.py:214:if sys.platform != "win32" and __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\box.py:424:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\cells.py:168:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\color.py:594:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\columns.py:174:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\console.py:1132:            >>> from rich.__main__ import make_test_card
+.venv\Lib\site-packages\pip\_vendor\rich\console.py:2627:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\control.py:211:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\default_styles.py:172:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\diagnose.py:38:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\emoji.py:76:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\highlighter.py:201:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\json.py:105:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\rich\layout.py:418:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\rich\live.py:296:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\logging.py:242:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\markup.py:234:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\padding.py:138:if __name__ == "__main__":  #  pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\pager.py:28:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\pager.py:29:    from .__main__ import make_test_card
+.venv\Lib\site-packages\pip\_vendor\rich\palette.py:75:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\panel.py:300:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\pretty.py:106:        # OSError handles case where object is defined in __main__ scope, e.g. REPL - no filename available.
+.venv\Lib\site-packages\pip\_vendor\rich\pretty.py:955:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\progress_bar.py:210:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\progress.py:1653:if __name__ == "__main__":  # pragma: no coverage
+.venv\Lib\site-packages\pip\_vendor\rich\prompt.py:366:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\repr.py:123:if __name__ == "__main__":
+.venv\Lib\site-packages\pip\_vendor\rich\rule.py:117:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\scope.py:70:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\segment.py:721:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\spinner.py:117:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\status.py:109:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\styled.py:37:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\syntax.py:868:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\table.py:929:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\text.py:1336:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\theme.py:113:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\traceback.py:873:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pip\_vendor\rich\tree.py:204:if __name__ == "__main__":  # pragma: no cover
+.venv\Lib\site-packages\pydantic\config.py:341:    #> pet=<__main__.Pet object at 0x0123456789ab> owner='Harry'
+.venv\Lib\site-packages\pydantic\config.py:343:    #> <__main__.Pet object at 0x0123456789ab>
+.venv\Lib\site-packages\pydantic\config.py:347:    #> <class '__main__.Pet'>
+.venv\Lib\site-packages\pydantic\config.py:364:    #> pet=<__main__.Pet object at 0x0123456789ab> owner='Harry'
+.venv\Lib\site-packages\pydantic\config.py:366:    #> <__main__.Pet object at 0x0123456789ab>
+.venv\Lib\site-packages\pydantic\config.py:370:    #> <class '__main__.Pet'>
+.venv\Lib\site-packages\pydantic\config.py:875:    It can be useful when using frameworks (such as FastAPI) that may generate different schemas for validation
+.venv\Lib\site-packages\pydantic\fields.py:266:        # For compatibility with FastAPI<=0.110.0, we preserve the existing value if it is not overridden
+.venv\Lib\site-packages\pydantic\fields.py:438:        # HACK 2: FastAPI is subclassing `FieldInfo` and historically expected the actual
+.venv\Lib\site-packages\pydantic\type_adapter.py:344:        type_: Any = _typing_extra.annotated_type(self._type) or self._type  # Eg FastAPI heavily uses Annotated
+.venv\Lib\site-packages\pydantic\version.py:46:        'fastapi',
+.venv\Lib\site-packages\pydantic\_internal\_generate_schema.py:2259:                # HACK: we don't want to emit the warning for `FieldInfo` subclasses, because FastAPI does weird manipulations
+.venv\Lib\site-packages\pydantic\_internal\_generics.py:359:        #> TypeError: Too few arguments for <class '__main__.Model'>; actual 1, expected at least 2
+.venv\Lib\site-packages\pydantic\_internal\_generics.py:362:        #> TypeError: Too many arguments for <class '__main__.Model'>; actual 4, expected 3
+.venv\Lib\site-packages\pydantic\_internal\_validators.py:80:    """Inspired by uvicorn — dotted paths should include a colon before the final item if that item is not a module.
+.venv\Lib\site-packages\uvicorn\__init__.py:1:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\__init__.py:2:from uvicorn.main import Server, main, run
+.venv\Lib\site-packages\uvicorn\__main__.py:1:import uvicorn
+.venv\Lib\site-packages\uvicorn\__main__.py:3:if __name__ == "__main__":
+.venv\Lib\site-packages\uvicorn\__main__.py:4:    uvicorn.main()
+.venv\Lib\site-packages\uvicorn\_subprocess.py:15:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\_subprocess.py:30:    * config - The Uvicorn configuration instance.
+.venv\Lib\site-packages\uvicorn\_subprocess.py:63:    * config - The Uvicorn configuration instance.
+.venv\Lib\site-packages\uvicorn\config.py:19:from uvicorn._compat import iscoroutinefunction
+.venv\Lib\site-packages\uvicorn\config.py:20:from uvicorn._types import ASGIApplication
+.venv\Lib\site-packages\uvicorn\config.py:21:from uvicorn.importer import ImportFromStringError, import_from_string
+.venv\Lib\site-packages\uvicorn\config.py:22:from uvicorn.logging import TRACE_LOG_LEVEL
+.venv\Lib\site-packages\uvicorn\config.py:23:from uvicorn.middleware.asgi2 import ASGI2Middleware
+.venv\Lib\site-packages\uvicorn\config.py:24:from uvicorn.middleware.message_logger import MessageLoggerMiddleware
+.venv\Lib\site-packages\uvicorn\config.py:25:from uvicorn.middleware.proxy_headers import ProxyHeadersMiddleware
+.venv\Lib\site-packages\uvicorn\config.py:26:from uvicorn.middleware.wsgi import WSGIMiddleware
+.venv\Lib\site-packages\uvicorn\config.py:43:    "auto": "uvicorn.protocols.http.auto:AutoHTTPProtocol",
+.venv\Lib\site-packages\uvicorn\config.py:44:    "h11": "uvicorn.protocols.http.h11_impl:H11Protocol",
+.venv\Lib\site-packages\uvicorn\config.py:45:    "httptools": "uvicorn.protocols.http.httptools_impl:HttpToolsProtocol",
+.venv\Lib\site-packages\uvicorn\config.py:48:    "auto": "uvicorn.protocols.websockets.auto:AutoWebSocketsProtocol",
+.venv\Lib\site-packages\uvicorn\config.py:50:    "websockets": "uvicorn.protocols.websockets.websockets_impl:WebSocketProtocol",
+.venv\Lib\site-packages\uvicorn\config.py:51:    "websockets-sansio": "uvicorn.protocols.websockets.websockets_sansio_impl:WebSocketsSansIOProtocol",
+.venv\Lib\site-packages\uvicorn\config.py:52:    "wsproto": "uvicorn.protocols.websockets.wsproto_impl:WSProtocol",
+.venv\Lib\site-packages\uvicorn\config.py:55:    "auto": "uvicorn.lifespan.on:LifespanOn",
+.venv\Lib\site-packages\uvicorn\config.py:56:    "on": "uvicorn.lifespan.on:LifespanOn",
+.venv\Lib\site-packages\uvicorn\config.py:57:    "off": "uvicorn.lifespan.off:LifespanOff",
+.venv\Lib\site-packages\uvicorn\config.py:61:    "auto": "uvicorn.loops.auto:auto_loop_factory",
+.venv\Lib\site-packages\uvicorn\config.py:62:    "asyncio": "uvicorn.loops.asyncio:asyncio_loop_factory",
+.venv\Lib\site-packages\uvicorn\config.py:63:    "uvloop": "uvicorn.loops.uvloop:uvloop_loop_factory",
+.venv\Lib\site-packages\uvicorn\config.py:74:            "()": "uvicorn.logging.DefaultFormatter",
+.venv\Lib\site-packages\uvicorn\config.py:79:            "()": "uvicorn.logging.AccessFormatter",
+.venv\Lib\site-packages\uvicorn\config.py:96:        "uvicorn": {"handlers": ["default"], "level": "INFO", "propagate": False},
+.venv\Lib\site-packages\uvicorn\config.py:97:        "uvicorn.error": {"level": "INFO"},
+.venv\Lib\site-packages\uvicorn\config.py:98:        "uvicorn.access": {"handlers": ["access"], "level": "INFO", "propagate": False},
+.venv\Lib\site-packages\uvicorn\config.py:102:logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\config.py:387:                        "Install the PyYAML package or uvicorn[standard] to use `--log-config` with YAML files."
+.venv\Lib\site-packages\uvicorn\config.py:403:            logging.getLogger("uvicorn.error").setLevel(log_level)
+.venv\Lib\site-packages\uvicorn\config.py:404:            logging.getLogger("uvicorn.access").setLevel(log_level)
+.venv\Lib\site-packages\uvicorn\config.py:405:            logging.getLogger("uvicorn.asgi").setLevel(log_level)
+.venv\Lib\site-packages\uvicorn\config.py:407:            logging.getLogger("uvicorn.access").handlers = []
+.venv\Lib\site-packages\uvicorn\config.py:408:            logging.getLogger("uvicorn.access").propagate = False
+.venv\Lib\site-packages\uvicorn\config.py:429:            [(b"server", b"uvicorn")] + encoded_headers
+.venv\Lib\site-packages\uvicorn\config.py:491:            "The `setup_event_loop` method was replaced by `get_loop_factory` in uvicorn 0.36.0.\n"
+.venv\Lib\site-packages\uvicorn\config.py:493:            "https://github.com/Kludex/uvicorn/discussions/2706. Thank you, and sorry for the inconvenience."
+.venv\Lib\site-packages\uvicorn\config.py:522:            message = "Uvicorn running on unix socket %s (Press CTRL+C to quit)"
+.venv\Lib\site-packages\uvicorn\config.py:524:            color_message = "Uvicorn running on " + click.style(sock_name_format, bold=True) + " (Press CTRL+C to quit)"
+.venv\Lib\site-packages\uvicorn\config.py:528:            message = "Uvicorn running on socket %s (Press CTRL+C to quit)"
+.venv\Lib\site-packages\uvicorn\config.py:530:            color_message = "Uvicorn running on " + click.style(fd_name_format, bold=True) + " (Press CTRL+C to quit)"
+.venv\Lib\site-packages\uvicorn\config.py:549:            message = f"Uvicorn running on {addr_format} (Press CTRL+C to quit)"
+.venv\Lib\site-packages\uvicorn\config.py:550:            color_message = "Uvicorn running on " + click.style(addr_format, bold=True) + " (Press CTRL+C to quit)"
+.venv\Lib\site-packages\uvicorn\main.py:16:import uvicorn
+.venv\Lib\site-packages\uvicorn\main.py:17:from uvicorn._types import ASGIApplication
+.venv\Lib\site-packages\uvicorn\main.py:18:from uvicorn.config import (
+.venv\Lib\site-packages\uvicorn\main.py:31:from uvicorn.server import Server
+.venv\Lib\site-packages\uvicorn\main.py:32:from uvicorn.supervisors import ChangeReload, Multiprocess
+.venv\Lib\site-packages\uvicorn\main.py:45:logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\main.py:52:        "Running uvicorn {version} with {py_implementation} {py_version} on {system}".format(  # noqa: UP032
+.venv\Lib\site-packages\uvicorn\main.py:53:            version=uvicorn.__version__,
+.venv\Lib\site-packages\uvicorn\main.py:62:@click.command(context_settings={"auto_envvar_prefix": "UVICORN"})
+.venv\Lib\site-packages\uvicorn\main.py:63:@click.argument("app", envvar="UVICORN_APP")
+.venv\Lib\site-packages\uvicorn\main.py:359:    help="Display the uvicorn version and exit.",
+.venv\Lib\site-packages\uvicorn\main.py:605:        logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\main.py:631:            "uvicorn.main.ServerState is deprecated, use uvicorn.server.ServerState instead.",
+.venv\Lib\site-packages\uvicorn\main.py:634:        from uvicorn.server import ServerState
+.venv\Lib\site-packages\uvicorn\main.py:640:if __name__ == "__main__":
+.venv\Lib\site-packages\uvicorn\server.py:22:from uvicorn._compat import asyncio_run
+.venv\Lib\site-packages\uvicorn\server.py:23:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\server.py:26:    from uvicorn.protocols.http.h11_impl import H11Protocol
+.venv\Lib\site-packages\uvicorn\server.py:27:    from uvicorn.protocols.http.httptools_impl import HttpToolsProtocol
+.venv\Lib\site-packages\uvicorn\server.py:28:    from uvicorn.protocols.websockets.websockets_impl import WebSocketProtocol
+.venv\Lib\site-packages\uvicorn\server.py:29:    from uvicorn.protocols.websockets.websockets_sansio_impl import WebSocketsSansIOProtocol
+.venv\Lib\site-packages\uvicorn\server.py:30:    from uvicorn.protocols.websockets.wsproto_impl import WSProtocol
+.venv\Lib\site-packages\uvicorn\server.py:41:logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\server.py:203:                "Uvicorn running on socket %s (Press CTRL+C to quit)",
+.venv\Lib\site-packages\uvicorn\server.py:208:            logger.info("Uvicorn running on unix socket %s (Press CTRL+C to quit)", config.uds)
+.venv\Lib\site-packages\uvicorn\server.py:222:            message = f"Uvicorn running on {addr_format} (Press CTRL+C to quit)"
+.venv\Lib\site-packages\uvicorn\server.py:223:            color_message = "Uvicorn running on " + click.style(addr_format, bold=True) + " (Press CTRL+C to quit)"
+.venv\Lib\site-packages\uvicorn\workers.py:13:from uvicorn._compat import asyncio_run
+.venv\Lib\site-packages\uvicorn\workers.py:14:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\workers.py:15:from uvicorn.server import Server
+.venv\Lib\site-packages\uvicorn\workers.py:18:    "The `uvicorn.workers` module is deprecated. Please use `uvicorn-worker` package instead.\n"
+.venv\Lib\site-packages\uvicorn\workers.py:19:    "For more details, see https://github.com/Kludex/uvicorn-worker.",
+.venv\Lib\site-packages\uvicorn\workers.py:24:class UvicornWorker(Worker):
+.venv\Lib\site-packages\uvicorn\workers.py:35:        logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\workers.py:40:        logger = logging.getLogger("uvicorn.access")
+.venv\Lib\site-packages\uvicorn\workers.py:77:        # See: https://github.com/Kludex/uvicorn/issues/894
+.venv\Lib\site-packages\uvicorn\workers.py:88:        - https://github.com/Kludex/uvicorn/issues/1116
+.venv\Lib\site-packages\uvicorn\workers.py:110:class UvicornH11Worker(UvicornWorker):
+.venv\Lib\site-packages\uvicorn\lifespan\off.py:5:from uvicorn import Config
+.venv\Lib\site-packages\uvicorn\lifespan\on.py:8:from uvicorn import Config
+.venv\Lib\site-packages\uvicorn\lifespan\on.py:9:from uvicorn._types import (
+.venv\Lib\site-packages\uvicorn\lifespan\on.py:37:        self.logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\lifespan\on.py:53:        # See https://github.com/Kludex/uvicorn/pull/972
+.venv\Lib\site-packages\uvicorn\loops\auto.py:11:        from uvicorn.loops.asyncio import asyncio_loop_factory as loop_factory
+.venv\Lib\site-packages\uvicorn\loops\auto.py:15:        from uvicorn.loops.uvloop import uvloop_loop_factory
+.venv\Lib\site-packages\uvicorn\middleware\asgi2.py:1:from uvicorn._types import (
+.venv\Lib\site-packages\uvicorn\middleware\message_logger.py:4:from uvicorn._types import (
+.venv\Lib\site-packages\uvicorn\middleware\message_logger.py:12:from uvicorn.logging import TRACE_LOG_LEVEL
+.venv\Lib\site-packages\uvicorn\middleware\message_logger.py:40:        self.logger = logging.getLogger("uvicorn.asgi")
+.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py:5:from uvicorn._types import ASGI3Application, ASGIReceiveCallable, ASGISendCallable, Scope
+.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py:53:                    # See: https://github.com/Kludex/uvicorn/issues/1068
+.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py:173:        # See https://github.com/Kludex/uvicorn/issues/1068#issuecomment-855371576
+.venv\Lib\site-packages\uvicorn\middleware\wsgi.py:11:from uvicorn._types import (
+.venv\Lib\site-packages\uvicorn\middleware\wsgi.py:85:            "Uvicorn's native WSGI implementation is deprecated, you should switch to a2wsgi (`pip install a2wsgi`).",
+.venv\Lib\site-packages\uvicorn\protocols\utils.py:7:from uvicorn._types import WWWScope
+.venv\Lib\site-packages\uvicorn\protocols\http\auto.py:9:    from uvicorn.protocols.http.h11_impl import H11Protocol
+.venv\Lib\site-packages\uvicorn\protocols\http\auto.py:13:    from uvicorn.protocols.http.httptools_impl import HttpToolsProtocol
+.venv\Lib\site-packages\uvicorn\protocols\http\flow_control.py:3:from uvicorn._types import ASGIReceiveCallable, ASGISendCallable, Scope
+.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py:15:from uvicorn._types import (
+.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py:24:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py:25:from uvicorn.logging import TRACE_LOG_LEVEL
+.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py:26:from uvicorn.protocols.http.flow_control import CLOSE_HEADER, HIGH_WATER_LIMIT, FlowControl, service_unavailable
+.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py:27:from uvicorn.protocols.utils import get_client_addr, get_local_addr, get_path_with_query_string, get_remote_addr, is_ssl
+.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py:28:from uvicorn.server import ServerState
+.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py:55:        self.logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py:56:        self.access_logger = logging.getLogger("uvicorn.access")
+.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py:160:            msg = "No supported WebSocket library detected. Please use \"pip install 'uvicorn[standard]'\", or install 'websockets' or 'wsproto' manually."  # noqa: E501
+.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py:17:from uvicorn._types import (
+.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py:24:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py:25:from uvicorn.logging import TRACE_LOG_LEVEL
+.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py:26:from uvicorn.protocols.http.flow_control import CLOSE_HEADER, HIGH_WATER_LIMIT, FlowControl, service_unavailable
+.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py:27:from uvicorn.protocols.utils import get_client_addr, get_local_addr, get_path_with_query_string, get_remote_addr, is_ssl
+.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py:28:from uvicorn.server import ServerState
+.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py:59:        self.logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py:60:        self.access_logger = logging.getLogger("uvicorn.access")
+.venv\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py:162:            msg = "No supported WebSocket library detected. Please use \"pip install 'uvicorn[standard]'\", or install 'websockets' or 'wsproto' manually."  # noqa: E501
+.venv\Lib\site-packages\uvicorn\protocols\websockets\auto.py:15:        from uvicorn.protocols.websockets.wsproto_impl import WSProtocol
+.venv\Lib\site-packages\uvicorn\protocols\websockets\auto.py:19:    from uvicorn.protocols.websockets.websockets_impl import WebSocketProtocol
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_impl.py:17:from websockets.server import WebSocketServerProtocol
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_impl.py:20:from uvicorn._types import (
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_impl.py:28:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_impl.py:29:from uvicorn.logging import TRACE_LOG_LEVEL
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_impl.py:30:from uvicorn.protocols.utils import (
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_impl.py:38:from uvicorn.server import ServerState
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_impl.py:108:            logger=logging.getLogger("uvicorn.error"),
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_impl.py:221:        # itself (see https://github.com/Kludex/uvicorn/issues/920)
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py:18:from websockets.server import ServerProtocol
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py:20:from uvicorn._types import (
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py:25:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py:26:from uvicorn.logging import TRACE_LOG_LEVEL
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py:27:from uvicorn.protocols.utils import (
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py:35:from uvicorn.server import ServerState
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py:57:        self.logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py:91:            logger=logging.getLogger("uvicorn.error"),
+.venv\Lib\site-packages\uvicorn\protocols\websockets\wsproto_impl.py:18:from uvicorn._types import ASGI3Application, ASGISendEvent, WebSocketEvent, WebSocketReceiveEvent, WebSocketScope
+.venv\Lib\site-packages\uvicorn\protocols\websockets\wsproto_impl.py:19:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\protocols\websockets\wsproto_impl.py:20:from uvicorn.logging import TRACE_LOG_LEVEL
+.venv\Lib\site-packages\uvicorn\protocols\websockets\wsproto_impl.py:21:from uvicorn.protocols.utils import (
+.venv\Lib\site-packages\uvicorn\protocols\websockets\wsproto_impl.py:29:from uvicorn.server import ServerState
+.venv\Lib\site-packages\uvicorn\protocols\websockets\wsproto_impl.py:76:        self.logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\supervisors\__init__.py:5:from uvicorn.supervisors.basereload import BaseReload
+.venv\Lib\site-packages\uvicorn\supervisors\__init__.py:6:from uvicorn.supervisors.multiprocess import Multiprocess
+.venv\Lib\site-packages\uvicorn\supervisors\__init__.py:12:        from uvicorn.supervisors.watchfilesreload import WatchFilesReload as ChangeReload
+.venv\Lib\site-packages\uvicorn\supervisors\__init__.py:14:        from uvicorn.supervisors.statreload import StatReload as ChangeReload
+.venv\Lib\site-packages\uvicorn\supervisors\basereload.py:15:from uvicorn._subprocess import get_subprocess
+.venv\Lib\site-packages\uvicorn\supervisors\basereload.py:16:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\supervisors\basereload.py:23:logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\supervisors\multiprocess.py:14:from uvicorn._subprocess import get_subprocess
+.venv\Lib\site-packages\uvicorn\supervisors\multiprocess.py:15:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\supervisors\multiprocess.py:23:logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\supervisors\statreload.py:8:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\supervisors\statreload.py:9:from uvicorn.supervisors.basereload import BaseReload
+.venv\Lib\site-packages\uvicorn\supervisors\statreload.py:11:logger = logging.getLogger("uvicorn.error")
+.venv\Lib\site-packages\uvicorn\supervisors\watchfilesreload.py:9:from uvicorn.config import Config
+.venv\Lib\site-packages\uvicorn\supervisors\watchfilesreload.py:10:from uvicorn.supervisors.basereload import BaseReload
+.venv\Lib\site-packages\websockets\__main__.py:4:if __name__ == "__main__":
+.venv\Lib\site-packages\websockets\http11.py:34:    "WEBSOCKETS_SERVER",
+.venv\Lib\site-packages\websockets\protocol.py:84:            or ``logging.getLogger("websockets.server")``;
+.venv\Lib\site-packages\websockets\server.py:73:            defaults to ``logging.getLogger("websockets.server")``;
+.venv\Lib\site-packages\websockets\asyncio\server.py:257:            It defaults to ``logging.getLogger("websockets.server")``.
+.venv\Lib\site-packages\websockets\asyncio\server.py:291:            logger = logging.getLogger("websockets.server")
+.venv\Lib\site-packages\websockets\asyncio\server.py:631:            :class:`~websockets.server.ServerProtocol`!) instance and a list of
+.venv\Lib\site-packages\websockets\asyncio\server.py:635:            <websockets.server.ServerProtocol.select_subprotocol>` method.
+.venv\Lib\site-packages\websockets\asyncio\server.py:674:            It defaults to ``logging.getLogger("websockets.server")``. See the
+.venv\Lib\site-packages\websockets\legacy\server.py:116:            logger = logging.getLogger("websockets.server")
+.venv\Lib\site-packages\websockets\legacy\server.py:660:            It defaults to ``logging.getLogger("websockets.server")``.
+.venv\Lib\site-packages\websockets\legacy\server.py:667:            logger = logging.getLogger("websockets.server")
+.venv\Lib\site-packages\websockets\legacy\server.py:928:            It defaults to ``logging.getLogger("websockets.server")``.
+.venv\Lib\site-packages\websockets\sync\server.py:231:            It defaults to ``logging.getLogger("websockets.server")``.
+.venv\Lib\site-packages\websockets\sync\server.py:245:            logger = logging.getLogger("websockets.server")
+.venv\Lib\site-packages\websockets\sync\server.py:424:            :class:`~websockets.server.ServerProtocol`!) instance and a list of
+.venv\Lib\site-packages\websockets\sync\server.py:428:            <websockets.server.ServerProtocol.select_subprotocol>` method.
+.venv\Lib\site-packages\websockets\sync\server.py:462:            It defaults to ``logging.getLogger("websockets.server")``. See the
+backend\src\app.py:1:from fastapi import FastAPI
+backend\src\app.py:3:app = FastAPI()
+backend\src\websocket.py:290:    async with websockets.serve(
+imports\new-folder-5\init_trey_kb_project.py:39:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\docs\utils\linkfix.py:67:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\scrapy\__main__.py:3:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\scrapy\cmdline.py:237:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\scrapy\utils\benchserver.py:36:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\scrapy\utils\testsite.py:60:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\test_item.py:299:                # TypeError: __class__ set to <class '__main__.MyItem'>
+imports\new-folder-5\scrapy-tags-2.15.0\tests\test_item.py:300:                # defining 'MyItem' as <class '__main__.MyItem'>
+imports\new-folder-5\scrapy-tags-2.15.0\tests\AsyncCrawlerProcess\asyncio_deferred_signal.py:34:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\AsyncCrawlerProcess\caching_hostname_resolver_ipv6.py:14:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\AsyncCrawlerProcess\caching_hostname_resolver.py:27:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\AsyncCrawlerProcess\default_name_resolver.py:15:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\CrawlerProcess\asyncio_deferred_signal.py:34:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\CrawlerProcess\caching_hostname_resolver_ipv6.py:14:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\CrawlerProcess\caching_hostname_resolver.py:27:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\CrawlerProcess\default_name_resolver.py:15:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\CrawlerRunner\ip_address.py:51:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\mockserver\dns.py:66:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\mockserver\ftp.py:75:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\mockserver\http.py:102:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\mockserver\proxy_echo.py:16:if __name__ == "__main__":
+imports\new-folder-5\scrapy-tags-2.15.0\tests\mockserver\simple_https.py:45:if __name__ == "__main__":
+imports\new-folder-5\Trey_KB_Daemon_Starter\http_server.py:73:if __name__ == "__main__":
+imports\new-folder-5\Trey_KB_Daemon_Starter\kb_daemon.py:161:if __name__ == "__main__":
+

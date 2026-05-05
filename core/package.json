@@ -1,0 +1,41 @@
+{
+  "name": "fractured-backend",
+  "version": "1.0.0",
+  "description": "Fractured production backend API (Express + Drizzle + Postgres + OpenAI)",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node src/app.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "migrate": "node src/db/migrate.js"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.3.1",
+    "@capacitor/core": "^8.3.1",
+    "@capacitor/ios": "^8.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.0",
+    "express": "^4.19.0",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "joi": "^17.12.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.3.1",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  }
+}
+
+"dependencies": {
+    "com.unity.demoteam.digital-human.sample": "https://github.com/Unity-Technologies/com.unity.demoteam.digital-human.sample.git",
+    "com.unity.demoteam.digital-human": "https://github.com/Unity-Technologies/com.unity.demoteam.digital-human.git",
+    "com.unity.demoteam.attributes": "https://github.com/Unity-Technologies/com.unity.demoteam.attributes.git",
+    ...
+}

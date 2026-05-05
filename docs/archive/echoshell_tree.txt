@@ -1,0 +1,16 @@
+Folder PATH listing for volume Windows
+Volume serial number is AA2C-2E07
+C:\USERS\TFIEL\PEARL\IMPORTS\ECHOSHELL\ECHO-SHELL
++---affective-ui
++---avatar
++---interaction
++---mobile-cache
++---presence-engine
+|       PRESENCE_PROFILE.json
+|       
++---resonance-display
++---telemetry
++---thought-currents
++---ui
++---vibration-check
+\---voice

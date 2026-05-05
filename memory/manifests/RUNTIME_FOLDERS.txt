@@ -1,0 +1,189 @@
+
+    Directory: C:\Users\tfiel\PEARL
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026 10:28 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\backend\src
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  6:21 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\core
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026 11:08 AM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\core\spine
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  8:09 PM                runtime-services
+
+    Directory: C:\Users\tfiel\PEARL\database
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026 10:11 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\deployment
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026 10:11 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\docs
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  8:11 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\embodiment
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026 10:11 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\imports\aura
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  8:08 PM                pearl-runtime
+
+    Directory: C:\Users\tfiel\PEARL\imports\aura\documentation
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  8:08 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\imports\aura\pearl-spine
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  8:08 PM                runtime-services
+
+    Directory: C:\Users\tfiel\PEARL\imports\aura\system-state
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  8:08 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\imports\projects\TREY\trey-backend\node_modules
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           4/23/2026  3:53 AM                jest-runtime
+
+    Directory: C:\Users\tfiel\PEARL\logs
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  8:25 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\manifests
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  6:23 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\node_modules
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026 11:09 PM                jest-runtime
+
+    Directory: C:\Users\tfiel\PEARL\observatory
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026 11:08 AM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\portal\aura-portal
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  5:24 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\portal\aura-portal\node_modules\@babel
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  6:26 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\portal\aura-portal\node_modules\next\dist\build\webpack\loaders\css-loader\src
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  7:10 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\portal\aura-portal\node_modules\next\dist\build\webpack\loaders\next-style-loader
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  7:10 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\portal\aura-portal\node_modules\next\dist\compiled
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  7:10 PM                @edge-runtime
+d----            5/3/2026  7:10 PM                edge-runtime
+d----            5/3/2026  7:10 PM                regenerator-runtime
+
+    Directory: C:\Users\tfiel\PEARL\portal\aura-portal\node_modules\next\dist\compiled\@babel
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  7:10 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\portal\aura-portal\node_modules\next\dist\esm\build\webpack\loaders\css-loader\src
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  7:10 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\portal\aura-portal\node_modules\next\dist\esm\build\webpack\loaders\next-style-loader
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  7:10 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\portal\aura-portal\node_modules\next\dist\next-devtools\dev-overlay\container
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  7:10 PM                runtime-error
+
+    Directory: C:\Users\tfiel\PEARL\portal\aura-portal\src
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  6:26 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\projects\TREY\trey-backend\node_modules
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  8:21 PM                jest-runtime
+
+    Directory: C:\Users\tfiel\PEARL\runtime\system-state
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026  8:10 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\voice
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026 10:10 PM                runtime
+
+    Directory: C:\Users\tfiel\PEARL\voice-lab
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----            5/3/2026 11:08 AM                runtime
+
